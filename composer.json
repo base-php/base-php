@@ -31,7 +31,7 @@
         {
             "type": "package",
             "package": {
-                "name": "nisadelgado/framework",
+                "name": "nisadelgado/repositories/framework",
                 "version": "1.0.0",
                 "dist": {
                     "url": "https://nisadelgado.com/framework.zip",
