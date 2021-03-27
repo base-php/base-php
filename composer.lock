@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "49b092a3dba242182afa6291a1e524e5",
+    "content-hash": "e89628a39f7fe3bf12f145c3ca475099",
     "packages": [
         {
             "name": "doctrine/inflector",
@@ -1161,7 +1161,7 @@
             "version": "1.0.0",
             "dist": {
                 "type": "zip",
-                "url": "https://nisadelgado.com/framework.zip"
+                "url": "https://nisadelgado.com/repositories/framework.zip"
             },
             "type": "library"
         },

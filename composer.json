@@ -31,10 +31,10 @@
         {
             "type": "package",
             "package": {
-                "name": "nisadelgado/repositories/framework",
+                "name": "nisadelgado/framework",
                 "version": "1.0.0",
                 "dist": {
-                    "url": "https://nisadelgado.com/framework.zip",
+                    "url": "https://nisadelgado.com/repositories/framework.zip",
                     "type": "zip"
                 }
             }
