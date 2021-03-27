@@ -1,4 +1,4 @@
-# base
+# Base
 Base structure for PHP projects
 
 ## Installation
