@@ -1,6 +1,6 @@
 {
     "name": "nisadelgado/base",
-    "description": "Base structure for PHP projects",
+    "description": "Estructura base para proyectos PHP",
     "type": "project",
     "license": "MIT",
     "version": "1.0.0",
