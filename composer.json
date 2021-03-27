@@ -2,6 +2,8 @@
     "name": "nisadelgado/base",
     "description": "Base structure for PHP projects",
     "type": "project",
+    "license": "MIT",
+    "version": "1.0.0",
     "authors": [
         {
             "name": "Nisa Delgado",
