@@ -1,3 +1,5 @@
-/node_modules/
+/node_modules
+/resources/assets/files
 /vendor
+error_log
 desktop.ini
