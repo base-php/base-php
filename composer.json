@@ -39,10 +39,5 @@
                 }
             }
         }
-    ],
-    "scripts": {
-        "post-create-project-cmd": [
-            "npm install"
-        ]
-    }
+    ]
 }
