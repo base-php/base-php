@@ -144,7 +144,7 @@
 		<i class="fas fa-angle-up"></i>
 	</a>
 
-	@include('layouts/logout');
+	@include('layouts/logout')
 
 	<!-- Bootstrap core JavaScript-->
 	<script src="{{ node('jquery/dist/jquery.js') }}"></script>
