@@ -1,12 +1,9 @@
-@extends('layouts/index')
+@component('components.layout')
+	@slot('title', 'Inicio')
 
-@section('content')
-	<!-- Begin Page Content -->
-	<div class="container-fluid">
+	@slot('active', 'home')
 
-		<!-- Page Heading -->
-		<h1 class="h3 mb-4 text-gray-800">Dashboard</h1>
-
-	</div>
-	<!-- /.container-fluid -->
-@endsection
+	@slot('body')
+		<div class="alert alert-info">¡Has iniciado sesión!</div>
+	@endslot
+@endcomponent

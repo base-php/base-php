@@ -47,7 +47,7 @@ class User extends Model
     public function getPhotoAttribute($value)
     {
         if ($value == '') {
-            return 'https://ui-avatars.com/api/?background=000&color=fff&name=' . $this->name;
+            return 'https://ui-avatars.com/api?size=200&background=000&color=fff&name=' . $this->name;
         }
 
         return $value;

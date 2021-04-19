@@ -10,15 +10,19 @@
 |
 */
 
+// Auth
 $route->auth();
 
+// Home
+$route->get('/', 'Home@index');
+
 // Dashboard
-$route->get('/', 'Dashboard@index');
+$route->get('/dashboard', 'Dashboard@index');
 
 // Users
-$route->get('/users', 'Users@index');
-$route->get('/users/create', 'Users@create');
-$route->post('/users/store', 'Users@store');
-$route->get('/users/edit/{id}', 'Users@edit');
-$route->post('/users/update', 'Users@update');
-$route->get('/users/delete/{id}', 'Users@delete');
+$route->get('/dashboard/users', 'Users@index');
+$route->get('/dashboard/users/create', 'Users@create');
+$route->post('/dashboard/users/store', 'Users@store');
+$route->get('/dashboard/users/edit/{id}', 'Users@edit');
+$route->post('/dashboard/users/update', 'Users@update');
+$route->get('/dashboard/users/delete/{id}', 'Users@delete');

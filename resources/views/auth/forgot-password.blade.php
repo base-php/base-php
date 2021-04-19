@@ -42,19 +42,12 @@
                             @component('components.alert')
                             @endcomponent
 
-                            <p>Escribe tu nueva contraseña para recuperar tu cuenta</p>
+                            <p>¿Olvidaste tu contraseña? No hay problema. Simplemente díganos su dirección de correo electrónico y le enviaremos un enlace para restablecer la contraseña que le permitirá elegir una nueva.</p>
 
                             <div class="mb-3 mt-3">
-                                <label for="password">Contraseña</label>
-                                <input type="password" name="password" class="form-control" required>
+                                <label for="email">Correo electrónico</label>
+                                <input type="text" name="email" class="form-control" required>
                             </div>
-
-                            <div class="mb-3 mt-3">
-                                <label for="confirm_password">Confirmar contraseña</label>
-                                <input type="password" name="confirm_password" class="form-control" required>
-                            </div>
-
-                            <input type="hidden" name="id" value="{{ $id }}">
 
                             <div>
                                 <button type="submit" class="btn btn-primary float-end mb-3">Enviar</button>

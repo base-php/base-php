@@ -1,128 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ config('language') }}">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ config('application_name') }}</title>
 
-<!-- Metadata -->
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="">
-<meta name="author" content="">
+    <link rel="stylesheet" href="{{ node('bootstrap/dist/css/bootstrap.css') }}">
 
-<!-- Favicon -->
-<link rel="icon" type="image/png" href="{{ asset('img/app/favicon.png" ') }}">
+    <style>
+        body {
+            background-color: #f4f5f7;
+        }
 
-<title>Base</title>
+        .card {
+            box-shadow: 0px 3px 3px 0px silver;
+        }
 
-<!-- Custom fonts for this template-->
-<link rel="stylesheet" href="{{ node('@fortawesome/fontawesome-free/css/all.css') }}">
-<link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+        .row {
+            margin-top: 20vh;
+        }
 
-<!-- Datatables -->
-<link rel="stylesheet" href="{{ node('datatables.net-bs4/css/dataTables.bootstrap4.css') }}">
+        .btn-primary, .btn-primary:hover, .btn-primary:focus {
+            background-color: black;
+            border-color: black;
+        }
 
-<!-- SweetAlert -->
-<link rel="stylesheet" href="{{ node('sweetalert2/dist/sweetalert2.css') }}">
-
-<!-- Custom styles for this template-->
-<link rel="stylesheet" href="{{ asset('css/style.css') }}">
-
+        a, a:hover, a:focus {
+            text-decoration: none;
+            color: black;
+        }
+    </style>
 </head>
+<body>
+    <div class="container">
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-5">
+                <h2 class="text-center">{{ config('application_name') }}</h2>
+                <div class="card">
+                    <div class="card-body">
+                        @component('components.alert')
+                        @endcomponent
 
-<body class="bg-gradient-primary">
-
-<div class="container">
-
-<!-- Outer Row -->
-    <div class="row justify-content-center">
-        <div class="col-xl-6 col-lg-6 col-md-9">
-            <div class="card o-hidden border-0 shadow-lg my-5">
-                <div class="card-body p-0">
-                    <!-- Nested Row within Card Body -->
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="p-5">
-                                <div class="text-center">
-                                    <h1 class="h4 text-gray-900 mb-4">Iniciar sesión</h1>
-                                </div>
-                                
-                                <form class="user" method="POST" action="/login">
-                                    <b-alert></b-alert>
-
-                                    <div class="form-group">
-                                        <input name="email" type="email" class="form-control" placeholder="Correo electrónico" required>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <div class="input-group">
-                                            <input type="password" class="form-control" name="password" required placeholder="Contraseña">
-                                            <div class="input-group-append">
-                                                <button type="button" class="btn btn-secondary password" placeholder="Contraseña">
-                                                    <i class="fa fa-eye"></i>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <div class="custom-control custom-checkbox small">
-                                            <input type="checkbox" class="custom-control-input" id="customCheck">
-                                            <label class="custom-control-label" for="customCheck">Recuérdame</label>
-                                        </div>
-                                    </div>
-                                    
-                                    <button type="submit" class="btn btn-primary btn-block submit">Iniciar sesión</button>
-
-                                    <hr>
-
-                                    {{--
-                                    <a href="{{ facebook()->url('http://localhost:8080/login/facebook') }}" class="btn btn-facebook btn-block">
-                                        <i class="fab fa-facebook-f fa-fw"></i> Iniciar sesión con Facebook
-                                    </a>
-
-                                    <a href="{{ google()->url() }}" class="btn btn-google btn-block">
-                                        <i class="fab fa-google fa-fw"></i> Iniciar sesión con Google
-                                    </a>
-                                    --}}
-                                </form>
-
-                                <div class="text-center">
-                                    <a class="small" href="/forgot">¿Olvidó su contraseña?</a>
-                                </div>
-                                
-                                <div class="text-center">
-                                    <a class="small" href="/register">Crea una cuenta</a>
-                                </div>
+                        <form action="/login" method="POST">
+                            <div class="mb-3 mt-3">
+                                <label for="email">Correo electrónico</label>
+                                <input type="text" name="email" class="form-control" required>
                             </div>
-                        </div>
+
+                            <div class="mb-3">
+                                <label for="password">Contraseña</label>
+                                <input type="password" name="password" class="form-control" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <input type="checkbox"> Recuérdame
+                            </div>
+
+                            <div>
+                                <button class="btn btn-primary float-end" type="submit">Iniciar sesión</button>
+                                <a href="/forgot-password" class="float-end me-3">¿Olvidaste tu contraseña?</a>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
-<!-- Bootstrap core JavaScript-->
-<script src="{{ node('jquery/dist/jquery.js') }}"></script>
-<script src="{{ node('bootstrap/dist/js/bootstrap.bundle.js') }}"></script>
-
-<!-- Core plugin JavaScript-->
-<script src="{{ node('jquery.easing/jquery.easing.js') }}"></script>
-
-<!-- Datatables -->
-<script src="{{ node('datatables.net/js/jquery.dataTables.js') }}"></script>
-<script src="{{ node('datatables.net-bs4/js/dataTables.bootstrap4.js') }}"></script>
-<script src="{{ node('datatables.net-fixedheader/js/dataTables.fixedHeader.js') }}"></script>
-<script src="{{ node('datatables.net-responsive/js/dataTables.responsive.js') }}"></script>
-<script src="{{ node('datatables.net-responsive-bs4/js/responsive.bootstrap4.js') }}"></script>
-
-<!-- SweetAlert -->
-<script src="{{ node('sweetalert2/dist/sweetalert2.js') }}"></script>
-
-<!-- Custom scripts for all pages-->
-<script src="{{ asset('js/main.js') }}"></script>
-
-{{ components() }}
-
+    <script src="{{ node('jquery/dist/jquery.js') }}"></script>
+    <script src="{{ node('bootstrap/dist/js/bootstrap.js') }}"></script>
 </body>
 </html>

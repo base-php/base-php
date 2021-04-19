@@ -21,17 +21,11 @@ class Auth extends Controller
      */
     public function register()
     {
-        return view('auth/register');
-    }
+        if (post()) {
+            return register(post());
+        }
 
-    /**
-     * Register user.
-     *
-     * @return logup
-     */
-    public function logup()
-    {
-        return logup(post());
+        return view('auth/register');
     }
 
     /**
@@ -69,13 +63,13 @@ class Auth extends Controller
      *
      * @param view|forgot
      */
-    public function forgot()
+    public function forgot_password()
     {
         if (post()) {
             return forgot();
         }
 
-        return view('auth/forgot');
+        return view('auth/forgot-password');
     }
 
     /**
