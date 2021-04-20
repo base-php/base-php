@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ config('application_name') }}</title>
 
+    <link rel="stylesheet" href="{{ node('@fortawesome/fontawesome-free/css/all.css') }}">
+
     <link rel="stylesheet" href="{{ node('bootstrap/dist/css/bootstrap.css') }}">
 
     <style>
@@ -57,7 +59,9 @@
                             </div>
 
                             <div>
-                                <button class="btn btn-primary float-end" type="submit">Iniciar sesión</button>
+                                <button class="btn btn-primary float-end" type="submit">
+                                    <i class="fas fa-sign-in-alt"></i> Iniciar sesión
+                                </button>
                                 <a href="/forgot-password" class="float-end me-3">¿Olvidaste tu contraseña?</a>
                             </div>
                         </form>

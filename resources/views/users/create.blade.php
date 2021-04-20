@@ -1,105 +1,79 @@
-@extends('layouts/index')
+@component('components.layout')
+	@slot('title', 'Crear usuario')
 
-@section('content')
-	<div class="container-fluid">
-		<h1 class="h3 mb-4 text-gray-800">
-			Crear usuario
-		</h1>
+	@slot('active', 'users')
 
-		<b-alert></b-alert>
+	@slot('body')
+		@component('components.alert')
+		@endcomponent
 
-		<form class="store mb-5" enctype="multipart/form-data" action="/users/store" method="POST">
-			<div class="card">
-				<div class="card-body">
-					<div class="row">
-						<div class="col-md-4">
-							Foto
-						</div>
+		<form action="/dashboard/users/store" enctype="multipart/form-data" method="POST">
+			<div class="row p-2">
+				<div class="col-md-4">
+					<h3>Información del perfil</h3>
+					<p>Asigne la foto y la dirección de correo electrónico de tu cuenta.</p>
+				</div>
 
-						<div class="col-md-8 text-center">
-							<label for="user">
-								<img src="{{ asset('img/app/user.png') }}" class="user_photo">
-							</label>
-
-							<input type="file" name="photo" id="user">
-						</div>
-					</div>
-
-					<hr>
-
-					<div class="row">
-						<div class="col-md-4">
-							<label for="name">Nombre</label>
-						</div>
-
-						<div class="col-md-8">
-							<input type="text" class="form-control" name="name" required>
-						</div>
-					</div>
-
-					<hr>
-
-					<div class="row">
-						<div class="col-md-4">
-							<label for="email">Correo electrónico</label>
-						</div>
-
-						<div class="col-md-8">
-							<input type="email" class="form-control" name="email" required>
-						</div>
-					</div>
-
-					<hr>
-
-					<div class="row">
-						<div class="col-md-4">
-							<label for="password">Contraseña</label>
-						</div>
-
-						<div class="col-md-8">
-							<div class="input-group">
-								<input type="password" class="form-control" name="password">
-								<div class="input-group-append">
-									<button type="button" class="btn btn-secondary password">
-										<i class="fa fa-eye"></i>
-									</button>
+				<div class="col-md-8">
+					<div class="card">
+						<div class="card-body pe-3 ps-3">
+							<div>
+								<label for="photo">Foto</label>
+								<div>
+									<img class="img-profile img-profile-edit" src="{{ asset('img/app/user.png') }}" alt="">
 								</div>
+
+								<button type="button" class="btn btn-light btn-photo mt-3">Seleccione una foto</button>
+
+								<input class="input-file" type="file" name="photo">
 							</div>
-						</div>
-					</div>
 
-					<hr>
+							<div class="form-group mt-5">
+								<label for="name">Nombre</label>
+								<input type="text" class="form-control" name="name" value="" required>
+							</div>
 
-					<div class="row">
-						<div class="col-md-4">
-							<label for="confirm_password">Confirmar contraseña</label>
-						</div>
-
-						<div class="col-md-8">
-							<div class="input-group">
-								<input type="password" class="form-control" name="confirm_password">
-								<div class="input-group-append">
-									<button type="button" class="btn btn-secondary password">
-										<i class="fa fa-eye"></i>
-									</button>
-								</div>
+							<div class="form-group mt-3">
+								<label for="email">Correo electrónico</label>
+								<input type="email" class="form-control" name="email" value="" required>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		
-			<div class="row mt-4">
-				<div class="col-md-12">
-					<button type="submit" class="btn btn-primary submit">
-						<i class="fa fa-save"></i> Editar usuario
-					</button>
 
-					<a href="/users" class="btn btn-danger cancel">
-						<i class="fa fa-times"></i> Cancelar
-					</a>
+			<div class="row p-2 mt-5">
+				<div class="col-md-4">
+					<h3>Contraseña</h3>
+					<p>Asegure su cuenta utilizando una contraseña larga y aleatoria, luego guardela en un lugar seguro.</p>
 				</div>
+
+				<div class="col-md-8">
+					<div class="card">
+						<div class="card-body pe-3 ps-3">
+							<div class="form-group mt-5">
+								<label for="password">Contraseña</label>
+								<input type="password" class="form-control" name="password" required>
+							</div>
+
+							<div class="form-group mt-5">
+								<label for="confirm_password">Confirmar contraseña</label>
+								<input type="password" class="form-control" name="confirm_password" required>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="mt-5 float-end">
+				<button type="submit" class="btn btn-primary">
+					<i class="fa fa-save"></i> Guardar
+				</button>
+
+				<a href="/dashboard/users" class="btn btn-danger">
+					<span class="fa fa-times"></span> Cancelar
+				</a>
 			</div>
 		</form>
-	</div>
-@endsection
+	@endslot
+@endcomponent

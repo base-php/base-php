@@ -1,3 +1,17 @@
+.img-profile {
+	width: 200px;
+	height: 200px;
+}
+
+a, a:hover, a:focus {
+	color: black;
+	text-decoration: none;
+}
+
+.fa-trash-alt:hover, .fa-trash-alt:focus {
+	color: red;
+}
+
 body {
     background-color: #f4f5f7;
 }
@@ -8,12 +22,20 @@ nav {
 
 .nav-img-profile {
     width: 30px;
+    height: 30px;
     border-radius: 30px;
 }
 
 .img-profile-edit {
 	border-radius: 200px;
 }
+
+.img-profile-list {
+	width: 30px;
+	height: 30px;
+	border-radius: 30px;
+}
+
 
 .btn-primary, .btn-primary:hover, .btn-primary:focus {
 	background-color: black;

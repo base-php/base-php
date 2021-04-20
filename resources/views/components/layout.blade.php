@@ -5,14 +5,20 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>{{ config('application_name') }}</title>
 
+	<link rel="stylesheet" href="{{ node('@fortawesome/fontawesome-free/css/all.css') }}">
+
 	<link rel="stylesheet" href="{{ node('bootstrap/dist/css/bootstrap.css') }}">
 	<link rel="stylesheet" href="{{ asset('css/style.css') }}">
+
+	<link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/dataTables.bootstrap5.min.css">
+
+	<link rel="stylesheet" href="{{ node('sweetalert2/dist/sweetalert2.css') }}">
 </head>
 <body>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-        <a class="navbar-brand" href="/">
+        <a class="navbar-brand" href="/dashboard">
             <b>{{ config('application_name') }}</b>
         </a>
         <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" type="button">
@@ -27,7 +33,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ ($active == 'users') ? 'active' : '' }}" href="/users">
+                    <a class="nav-link {{ ($active == 'users') ? 'active' : '' }}" href="/dashboard/users">
                         Usuarios
                     </a>
                 </li>
@@ -41,7 +47,7 @@
 				        </a>
 				       	<ul aria-labelledby="navbarDarkDropdownMenuLink" class="dropdown-menu dropdown">
 				            <li><a class="dropdown-item" href="{{ '/dashboard/users/edit/' . auth()->id }}">Perfil</a></li>
-				            <li><a class="dropdown-item" href="/logout">Cerrar sesión</a></li>
+				            <li><a class="dropdown-item confirm" data-href="/logout" data-text="¿Está seguro que desea cerrar sesión?" href="/logout">Cerrar sesión</a></li>
 				        </ul>
 				    </li>
 				</ul>
@@ -68,6 +74,12 @@
 
 <script src="{{ node('jquery/dist/jquery.js') }}"></script>
 <script src="{{ node('bootstrap/dist/js/bootstrap.js') }}"></script>
+
+<script src="{{ node('datatables.net/js/jquery.dataTables.js') }}"></script>
+<script src="https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap5.min.js"></script>
+
+<script src="{{ node('sweetalert2/dist/sweetalert2.js') }}"></script>
+
 <script src="{{ asset('js/main.js') }}"></script>
 
 </body>

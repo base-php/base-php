@@ -7,6 +7,8 @@
 
 <link rel="stylesheet" href="{{ node('bootstrap/dist/css/bootstrap.css') }}">
 
+<link rel="stylesheet" href="{{ node('sweetalert2/dist/sweetalert2.css') }}">
+
 <style>
 	.content {
 		margin-top: 33vh;
@@ -29,6 +31,7 @@
 		<div class="top">
 			<div class="float-end">
 				<a class="me-3" href="/dashboard">Inicio</a>
+				<a class="confirm me-3" data-href="/logout" data-text="¿Está seguro que desea cerrar sesión?" href="/logout">Salir</a>
 			</div>
 		</div>
 	@else
@@ -48,5 +51,9 @@
 
 	<script src="{{ node('jquery/dist/jquery.js') }}"></script>
     <script src="{{ node('bootstrap/dist/js/bootstrap.js') }}"></script>
+
+    <script src="{{ node('sweetalert2/dist/sweetalert2.js') }}"></script>
+
+    <script src="{{ asset('js/main.js') }}"></script>
 </body>
 </html>
