@@ -59,7 +59,7 @@ class Users extends Controller
 
         $user->update(['hash' => md5($user->id)]);
 
-        return redirect('/users', ['info' => 'Usuario registrado satisfactoriamente']);
+        return redirect('/dashboard/users', ['info' => 'Usuario registrado satisfactoriamente']);
     }
 
     /**
@@ -102,7 +102,7 @@ class Users extends Controller
             ]);
         }
 
-        return redirect('/users', ['info' => 'Usuario actualizado satisfactoriamente']);
+        return redirect('/dashboard/users', ['info' => 'Usuario actualizado satisfactoriamente']);
     }
 
     /**
@@ -114,6 +114,6 @@ class Users extends Controller
     {
         User::find($id)->delete();
 
-        return redirect('/users', ['info' => 'Usuario eliminado satisfactoriamente']);
+        return redirect('/dashboard/users', ['info' => 'Usuario eliminado satisfactoriamente']);
     }
 }
