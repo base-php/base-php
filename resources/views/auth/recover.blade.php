@@ -39,8 +39,7 @@
                 <div class="card">
                     <form method="POST" action="/forgot-password">
                         <div class="card-body">
-                            @component('components.alert')
-                            @endcomponent
+                            <x-alert></x-alert>
 
                             <p>Escribe tu nueva contraseña para recuperar tu cuenta</p>
 

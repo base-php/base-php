@@ -16,8 +16,8 @@
         "illuminate/events": "8.20.1",
         "illuminate/pagination": "8.20.1",
         "illuminate/routing": "8.20.1",
-        "jenssegers/blade": "dev-master",
-        "nisadelgado/framework": "1.0.0"
+        "nisadelgado/framework": "1.0.0",
+        "illuminate/view": "^8.38"
     },
     "autoload": {
         "psr-4": {

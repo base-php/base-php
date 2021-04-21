@@ -65,7 +65,7 @@
 				</div>
 
 				<div class="card-body">
-					{{ $body }}
+					{{ $slot }}
 				</div>
 			</div>
 		</div>

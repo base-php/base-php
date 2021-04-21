@@ -40,8 +40,7 @@
                 <h2 class="text-center">{{ config('application_name') }}</h2>
                 <div class="card">
                     <div class="card-body">
-                        @component('components.alert')
-                        @endcomponent
+                        <x-alert></x-alert>
 
                         <form action="/login" method="POST">
                             <div class="mb-3 mt-3">
