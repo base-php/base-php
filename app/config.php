@@ -2,11 +2,13 @@
 
 return [
 	// General
-	'application_name' => 'Base',
+	'application_name' 	=> 'Base',
+	'version'			=> '1.0.0',
 
 	// Region
 	'language' 			=> 'es',
 	'timezone' 			=> 'America/Caracas',
+	'charset'			=> 'utf-8',
 	
 	// Environment
 	'environment' 		=> 'development',

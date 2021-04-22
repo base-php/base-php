@@ -1,4 +1,16 @@
 $(document).ready(function() {
+    $('.show-password').click(function () {
+        input = $(this).attr('data-input');
+
+        type = $('[name=' + input + ']').attr('type');
+
+        if (type == 'password') {
+            $('[name=' + input + ']').attr('type', 'text');
+        } else {
+            $('[name=' + input + ']').attr('type', 'password');
+        }
+    });
+
     $('.btn-photo').click(function() {
         $('.input-file').click();
     });

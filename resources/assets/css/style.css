@@ -1,3 +1,33 @@
+.content {
+	margin-top: 30vh;
+}
+
+.top {
+	margin-top: 15px;
+	margin-right: 30px;
+}
+
+.content > .text-center-home {
+	font-size: 84px;
+	cursor: pointer;
+}
+
+.card-auth {
+    box-shadow: 0px 3px 3px 0px silver;
+}
+
+.row-login {
+    margin-top: 12vh;
+}
+
+.row-forgot, .row-recover {
+	margin-top: 15vh;
+}
+
+.row-register {
+	margin-top: 10vh;
+}
+
 .img-profile {
 	width: 200px;
 	height: 200px;

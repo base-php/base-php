@@ -1,4 +1,4 @@
-<x-layout active="users">
+<x-layout-dashboard active="users">
 	<x-slot name="title">
 		Usuarios
 
@@ -42,4 +42,4 @@
 	@else
 		<div class="alert alert-info">No se han registrado usuarios</div>
 	@endif
-</x-layout>
+</x-layout-dashboard>

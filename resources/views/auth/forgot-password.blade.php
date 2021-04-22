@@ -1,42 +1,13 @@
-<!DOCTYPE html>
-<html lang="{{ config('language') }}">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ config('application_name') }}</title>
-
-    <link rel="stylesheet" href="{{ node('bootstrap/dist/css/bootstrap.css') }}">
-
-    <style>
-        body {
-            background-color: #f4f5f7;
-        }
-
-        .card {
-            box-shadow: 0px 3px 3px 0px silver;
-        }
-
-        .row {
-            margin-top: 20vh;
-        }
-
-        .btn-primary, .btn-primary:hover, .btn-primary:focus {
-            background-color: black;
-            border-color: black;
-        }
-
-        a, a:hover, a:focus {
-            text-decoration: none;
-            color: black;
-        }
-    </style>
-</head>
-<body>
+<x-layout-auth>
     <div class="container">
-        <div class="row d-flex justify-content-center">
+        <div class="row-forgot d-flex justify-content-center">
             <div class="col-md-5">
-                <h2 class="text-center">{{ config('application_name') }}</h2>
-                <div class="card">
+                <h2 class="text-center">
+                    <div class="fa fa-shapes"></div> 
+                    {{ config('application_name') }}
+                </h2>
+
+                <div class="card card-auth mt-5">
                     <form method="POST" action="/forgot-password">
                         <div class="card-body">
                             <x-alert></x-alert>
@@ -49,7 +20,10 @@
                             </div>
 
                             <div>
-                                <button type="submit" class="btn btn-primary float-end mb-3">Enviar</button>
+                                <button type="submit" class="btn btn-primary float-end mb-3">
+                                    <i class="fas fa-unlock-alt"></i> 
+                                    Enviar
+                                </button>
                             </div>
                         </div>
                     </form>
@@ -57,8 +31,4 @@
             </div>
         </div>
     </div>
-
-    <script src="{{ node('jquery/dist/jquery.js') }}"></script>
-    <script src="{{ node('bootstrap/dist/js/bootstrap.js') }}"></script>
-</body>
-</html>
+</x-layout-auth>

@@ -1,4 +1,4 @@
-<x-layout title="Editar usuario" active="users">
+<x-layout-dashboard title="Editar usuario" active="users">
 	<form action="/dashboard/users/update" method="POST" enctype="multipart/form-data">
 		<input type="hidden" name="id" value="{{ $user->id }}">
 
@@ -54,12 +54,22 @@
 					<div class="card-body pe-3 ps-3">
 						<div class="form-group mt-5">
 							<label for="password">Contraseña</label>
-							<input type="password" class="form-control" name="password">
+							<div class="input-group">
+                                <input type="password" name="password" class="form-control" required>
+                                <button type="button" class="btn btn-light show-password" data-input="password">
+                                    <i class="fa fa-eye"></i>
+                                </button>
+                            </div>
 						</div>
 
 						<div class="form-group mt-5">
 							<label for="confirm_password">Confirmar contraseña</label>
-							<input type="password" class="form-control" name="confirm_password">
+							<div class="input-group">
+                                <input type="password" name="confirm_password" class="form-control" required>
+                                <button type="button" class="btn btn-light show-password" data-input="confirm_password">
+                                    <i class="fa fa-eye"></i>
+                                </button>
+                            </div>
 						</div>
 
 						<div class="mt-5 float-end">
@@ -92,4 +102,4 @@
 			</div>
 		</div>
 	</form>
-</x-layout>
+</x-layout-dashboard>

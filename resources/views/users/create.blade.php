@@ -1,4 +1,4 @@
-<x-layout title="Crear usuario" active="users">
+<x-layout-dashboard title="Crear usuario" active="users">
 	<form action="/dashboard/users/store" enctype="multipart/form-data" method="POST">
 		<div class="row p-2">
 			<div class="col-md-4">
@@ -45,12 +45,21 @@
 					<div class="card-body pe-3 ps-3">
 						<div class="form-group mt-5">
 							<label for="password">Contraseña</label>
-							<input type="password" class="form-control" name="password" required>
+							<div class="input-group">
+                                <input type="password" name="password" class="form-control" required>
+                                <button type="button" class="btn btn-light show-password" data-input="password">
+                                    <i class="fa fa-eye"></i>
+                                </button>
+                            </div>
 						</div>
 
 						<div class="form-group mt-5">
-							<label for="confirm_password">Confirmar contraseña</label>
-							<input type="password" class="form-control" name="confirm_password" required>
+							<div class="input-group">
+                                <input type="password" name="confirm_password" class="form-control" required>
+                                <button type="button" class="btn btn-light show-password" data-input="confirm_password">
+                                    <i class="fa fa-eye"></i>
+                                </button>
+                            </div>
 						</div>
 					</div>
 				</div>
@@ -67,4 +76,4 @@
 			</a>
 		</div>
 	</form>
-</x-layout>
+</x-layout-dashboard>

@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="{{ config('language') }}">
 <head>
-	<meta charset="UTF-8">
+	<meta charset="{{ config('charset') }}">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 	<title>{{ config('application_name') }}</title>
+	<link rel="shortcut icon" type="image/png" href="{{ asset('img/app/favicon.ico') }}">
+
 
 	<link rel="stylesheet" href="{{ node('@fortawesome/fontawesome-free/css/all.css') }}">
-
 	<link rel="stylesheet" href="{{ node('bootstrap/dist/css/bootstrap.css') }}">
 	<link rel="stylesheet" href="{{ asset('css/style.css') }}">
-
 	<link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/dataTables.bootstrap5.min.css">
-
 	<link rel="stylesheet" href="{{ node('sweetalert2/dist/sweetalert2.css') }}">
 </head>
 <body>
@@ -19,7 +19,10 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
         <a class="navbar-brand" href="/dashboard">
-            <b>{{ config('application_name') }}</b>
+            <b>
+            	<i class="fa fa-shapes"></i> 
+            	{{ config('application_name') }}
+            </b>
         </a>
         <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" type="button">
             <span class="navbar-toggler-icon">
