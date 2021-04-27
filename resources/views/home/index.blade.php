@@ -3,7 +3,9 @@
 <head>
 <meta charset="{{ config('charset') }}">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>{{ config('application_name') }}</title>
+<link rel="shortcut icon" type="image/png" href="{{ asset('img/app/favicon.ico') }}">
 
 <link rel="stylesheet" href="{{ node('bootstrap/dist/css/bootstrap.css') }}">
 <link rel="stylesheet" href="{{ node('sweetalert2/dist/sweetalert2.css') }}">
