@@ -23,5 +23,5 @@ Utilizamos varios paquetes detrás de escenas para que todo funcione como querem
 - [Paginación](https://laravel.com/docs/8.x/pagination)
 - [Eloquent ORM](https://laravel.com/docs/8.x/eloquent)
 - [Generar PDF](https://github.com/dompdf/dompdf)
-- [Envía de correo electrónicos](https://github.com/PHPMailer/PHPMailer)
+- [Envío de correos electrónicos](https://github.com/PHPMailer/PHPMailer)
 - [Escribir/leer Excel](https://phpspreadsheet.readthedocs.io/en/latest/)
