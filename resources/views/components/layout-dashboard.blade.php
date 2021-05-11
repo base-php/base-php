@@ -50,7 +50,7 @@
 				        </a>
 				       	<ul aria-labelledby="navbarDarkDropdownMenuLink" class="dropdown-menu dropdown">
 				            <li><a class="dropdown-item" href="{{ '/dashboard/users/edit/' . auth()->id }}">Perfil</a></li>
-				            <li><a class="dropdown-item confirm" data-href="/logout" data-text="¿Está seguro que desea cerrar sesión?" href="/logout">Cerrar sesión</a></li>
+				            <li><a class="dropdown-item confirm" data-text="¿Está seguro que desea cerrar sesión?" href="/logout">Cerrar sesión</a></li>
 				        </ul>
 				    </li>
 				</ul>
