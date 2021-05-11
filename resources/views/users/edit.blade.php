@@ -94,7 +94,7 @@
 					<div class="card-body pe-3 ps-3">
 						<p>Una vez que elimine su cuenta, todos los datos se eliminarán permanentemente. Antes de eliminar su cuenta, descargue cualquier dato o información que desee conversar.</p>
 
-						<a data-href="{{ '/dashboard/users/delete/' . $user->id }}" data-text="¿Está seguro que desea realizar esta acción?" href="{{ '/dashboard/users/delete/' . $user->id }}" class="confirm btn btn-danger">
+						<a data-text="¿Está seguro que desea realizar esta acción?" href="{{ '/dashboard/users/delete/' . $user->id }}" class="confirm btn btn-danger">
 							<div class="fa fa-trash"></div> Eliminar
 						</a>
 					</div>

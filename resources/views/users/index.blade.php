@@ -2,7 +2,7 @@
 	<x-slot name="title">
 		Usuarios
 
-		<a href="/dashboard/users/create" class="float-end mt-1">
+		<a data-bs-toggle="tooltip" data-bs-placement="top" title="Agregar nuevo usuario" href="/dashboard/users/create" class="float-end mt-1">
 			<i class="fa fa-plus"></i>
 		</a>
 	</x-slot>
@@ -27,11 +27,11 @@
 						<td>{{ $user->name }}</td>
 						<td>{{ $user->email }}</td>
 						<td>
-							<a href="{{ '/dashboard/users/edit/' . $user->id }}">
+							<a data-bs-toggle="tooltip" data-bs-placement="top" title="Editar usuario" href="{{ '/dashboard/users/edit/' . $user->id }}">
 								<span class="far fa-edit"></span>
 							</a>
 
-							<a class="confirm" data-text="¿Está seguro que desea eliminar este elemento?" data-href="{{ '/dashboard/users/delete/' . $user->id }}" href="{{ '/dashboard/users/delete/' . $user->id }}">
+							<a data-bs-toggle="tooltip" data-bs-placement="top" title="Eliminar usuario" class="confirm" data-text="¿Está seguro que desea eliminar este elemento?" href="{{ '/dashboard/users/delete/' . $user->id }}">
 								<i class="ms-2 fa fa-trash-alt"></i>
 							</a>
 						</td>

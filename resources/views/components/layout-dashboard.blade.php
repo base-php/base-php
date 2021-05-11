@@ -76,7 +76,7 @@
 </div>
 
 <script src="{{ node('jquery/dist/jquery.js') }}"></script>
-<script src="{{ node('bootstrap/dist/js/bootstrap.js') }}"></script>
+<script src="{{ node('bootstrap/dist/js/bootstrap.bundle.js') }}"></script>
 
 <script src="{{ node('datatables.net/js/jquery.dataTables.js') }}"></script>
 <script src="https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap5.min.js"></script>

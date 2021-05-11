@@ -1,4 +1,9 @@
 $(document).ready(function() {
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl);
+    })
+
     $('.show-password').click(function () {
         input = $(this).attr('data-input');
 
@@ -29,7 +34,7 @@ $(document).ready(function() {
     $('.confirm').click(function (event) {
         event.preventDefault();
 
-        href = $(this).attr('data-href');
+        href = $(this).attr('href');
         text = $(this).attr('data-text');
 
         Swal.fire({
