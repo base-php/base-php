@@ -16,8 +16,8 @@
         "illuminate/events": "8.20.1",
         "illuminate/pagination": "8.20.1",
         "illuminate/routing": "8.20.1",
-        "nisadelgado/framework": "1.0.0",
-        "illuminate/view": "^8.38",
+        "illuminate/view": "^8.38",        
+        "nisadelgado/framework": "1.0.0",        
         "phpmailer/phpmailer": "^6.4"
     },
     "autoload": {
