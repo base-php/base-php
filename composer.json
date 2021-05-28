@@ -35,7 +35,7 @@
                 "name": "nisadelgado/framework",
                 "version": "1.0.0",
                 "dist": {
-                    "url": "https://nisadelgado.com/repositories/framework.zip",
+                    "url": "https://github.com/nisa6delgado/framework/archive/refs/heads/main.zip",
                     "type": "zip"
                 }
             }
