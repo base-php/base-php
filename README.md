@@ -8,7 +8,8 @@ git clone https://github.com/nisa6delgado/base.git
 cd base
 composer install
 npm install
-php -S localhost:8000
+php base run-sql
+php base server
 ~~~
 
 ## Doumentación
