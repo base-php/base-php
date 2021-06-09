@@ -16,4 +16,4 @@ CREATE TABLE users (
 
 INSERT INTO
     users (name, email, password, hash)
-VALUES ('Administrator', 'admin@admin.com', MD5('admin'), MD5(id))
+VALUES ('Administrator', 'admin@admin.com', MD5('admin'), MD5(id));
