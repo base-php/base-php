@@ -14,6 +14,7 @@ CREATE TABLE users (
 	date_update DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
 
-INSERT INTO
-    users (name, email, password, hash)
-VALUES ('Administrator', 'admin@admin.com', MD5('admin'), MD5(id));
+INSERT INTO users
+    (name, email, password, hash)
+VALUES
+    ('Administrator', 'admin@admin.com', MD5('admin'), MD5(id));
