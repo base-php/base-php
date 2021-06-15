@@ -8,6 +8,7 @@ git clone https://github.com/nisa6delgado/base.git
 cd base
 composer install
 npm install
+php base create-database
 php base run-sql
 php base server
 ~~~
