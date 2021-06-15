@@ -2,7 +2,7 @@
 Estructura base para proyectos PHP
 
 ## Instalación
-Crear base de datos y agregar credenciales al archivo '/app/config.php'
+Ejecutar los siguientes comandos en consola:
 ~~~
 git clone https://github.com/nisa6delgado/base.git
 cd base
