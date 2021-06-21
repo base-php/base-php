@@ -62,6 +62,8 @@
 <div class="container mt-2 mb-5">
 	<div class="row p-2">
 		<div class="col-md-12">
+			<x-alert></x-alert>
+
 			<div class="card">
 				<div class="card-header">
 					<h3>{{ $title }}</h3>

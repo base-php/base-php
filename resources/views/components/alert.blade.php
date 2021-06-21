@@ -1,9 +1,8 @@
 @if(errors())
 	<div class="alert alert-danger">
 		@foreach(errors() as $error)
-			<li>{{ $error }}</li>
+			<li>{{ error($error) }}</li>
 		@endforeach
-		@php clear() @endphp
 	</div>
 @else
 	@if(messages('error'))

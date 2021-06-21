@@ -55,7 +55,7 @@
 						<div class="form-group mt-5">
 							<label for="password">Contraseña</label>
 							<div class="input-group">
-                                <input type="password" name="password" class="form-control" required>
+                                <input type="password" name="password" class="form-control">
                                 <button type="button" class="btn btn-light show-password" data-input="password">
                                     <i class="fa fa-eye"></i>
                                 </button>
@@ -65,7 +65,7 @@
 						<div class="form-group mt-5">
 							<label for="confirm_password">Confirmar contraseña</label>
 							<div class="input-group">
-                                <input type="password" name="confirm_password" class="form-control" required>
+                                <input type="password" name="confirm_password" class="form-control">
                                 <button type="button" class="btn btn-light show-password" data-input="confirm_password">
                                     <i class="fa fa-eye"></i>
                                 </button>
