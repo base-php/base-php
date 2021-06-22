@@ -22,12 +22,12 @@
 
 						<div class="form-group mt-5">
 							<label for="name">Nombre</label>
-							<input type="text" class="form-control" name="name" value="" required>
+							<input type="text" class="form-control" name="name" value="{{ old('name') }}" required>
 						</div>
 
 						<div class="form-group mt-3">
 							<label for="email">Correo electrónico</label>
-							<input type="email" class="form-control" name="email" value="" required>
+							<input type="email" class="form-control" name="email" value="{{ old('email') }}" required>
 						</div>
 					</div>
 				</div>
