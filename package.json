@@ -1,10 +1,11 @@
 {
     "dependencies": {
-        "@fortawesome/fontawesome-free": "^5.15.3",
-        "bootstrap": "^5.0.0-beta3",
-        "datatables.net": "^1.10.24",
-        "jquery": "^3.6.0",
-        "popper.js": "^1.16.1",
-        "sweetalert2": "^10.16.4"
+        "@fortawesome/fontawesome-free": "5.15.3",
+        "bootstrap": "5.0.2",
+        "datatables.net": "1.10.25",
+        "datatables.net-bs5": "1.10.25",
+        "jquery": "3.6.0",
+        "popper.js": "1.16.1",
+        "sweetalert2": "11.0.18"
     }
 }

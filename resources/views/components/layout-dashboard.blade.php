@@ -11,7 +11,7 @@
 	<link rel="stylesheet" href="{{ node('@fortawesome/fontawesome-free/css/all.css') }}">
 	<link rel="stylesheet" href="{{ node('bootstrap/dist/css/bootstrap.css') }}">
 	<link rel="stylesheet" href="{{ asset('css/style.css') }}">
-	<link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/dataTables.bootstrap5.min.css">
+	<link rel="stylesheet" href="{{ node('datatables.net-bs5/css/dataTables.bootstrap5.css') }}">
 	<link rel="stylesheet" href="{{ node('sweetalert2/dist/sweetalert2.css') }}">
 </head>
 <body>
@@ -81,7 +81,7 @@
 <script src="{{ node('bootstrap/dist/js/bootstrap.bundle.js') }}"></script>
 
 <script src="{{ node('datatables.net/js/jquery.dataTables.js') }}"></script>
-<script src="https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap5.min.js"></script>
+<script src="{{ node('datatables.net-bs5/js/dataTables.bootstrap5.js') }}"></script>
 
 <script src="{{ node('sweetalert2/dist/sweetalert2.js') }}"></script>
 

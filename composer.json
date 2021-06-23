@@ -3,7 +3,7 @@
     "description": "Estructura base para proyectos PHP",
     "type": "project",
     "license": "MIT",
-    "version": "1.0.0",
+    "version": "1.3.5",
     "authors": [
         {
             "name": "Nisa Delgado",
@@ -11,14 +11,16 @@
         }
     ],
     "require": {
-        "filp/whoops": "2.9.1",
-        "illuminate/database": "8.20.1",
-        "illuminate/events": "8.20.1",
-        "illuminate/pagination": "8.20.1",
-        "illuminate/routing": "8.20.1",
-        "illuminate/view": "^8.38",        
-        "nisadelgado/framework": "1.0.0",        
-        "phpmailer/phpmailer": "^6.4"
+        "dompdf/dompdf": "1.0.2",
+        "filp/whoops": "2.13.0",
+        "illuminate/database": "8.48.1",
+        "illuminate/events": "8.48.1",
+        "illuminate/pagination": "8.48.1",
+        "illuminate/routing": "8.48.1",
+        "illuminate/view": "8.48.1",        
+        "nisadelgado/framework": "1.3.5",        
+        "phpmailer/phpmailer": "6.5.0",
+        "phpoffice/phpspreadsheet": "1.18.0"
     },
     "autoload": {
         "psr-4": {
@@ -33,7 +35,7 @@
             "type": "package",
             "package": {
                 "name": "nisadelgado/framework",
-                "version": "1.0.0",
+                "version": "1.3.5",
                 "dist": {
                     "url": "https://github.com/nisa6delgado/framework/archive/refs/heads/main.zip",
                     "type": "zip"
