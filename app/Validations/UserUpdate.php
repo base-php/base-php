@@ -26,11 +26,11 @@ class UserUpdate extends Validation
 	public function messages()
 	{
 		return [
-			'name.required' 		=> 'El campo nombre es obligatorio',
-			'email.required' 		=> 'El campo correo electrónico es obligatorio',
-			'email.email' 			=> 'Debe ingresar un correo electrónico válido',
-			'email.unique' 			=> 'Este correo electrónico ya se encuentra registrado',
-			'confirm_password.same' => 'Las contraseñas no coinciden'
+			'name.required' 		=> 'El campo nombre es obligatorio.',
+			'email.required' 		=> 'El campo correo electrónico es obligatorio.',
+			'email.email' 			=> 'Debe ingresar un correo electrónico válido.',
+			'email.unique' 			=> 'Este correo electrónico ya se encuentra registrado.',
+			'confirm_password.same' => 'Las contraseñas no coinciden.'
 		];
 	}
 }

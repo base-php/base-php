@@ -17,7 +17,7 @@ class Permission
     public function handle($request, Closure $next)
     {
         if (permission()) {
-            return 'You are not allowed to see this page';
+            return 'You are not allowed to see this page.';
         }
         return $next($request);
     }
