@@ -3,7 +3,7 @@
 return [
 	// General
 	'application_name' 	=> 'Base',
-	'version'			=> '1.3.10',
+	'version'			=> '1.3.12',
 
 	// Region
 	'language' 			=> 'es',
