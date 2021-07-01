@@ -51,10 +51,12 @@ class Users extends Controller
         $file = files()->input('photo')->upload('resources/assets/img/users');
 
         $user = User::create([
-            'name'     => post('name'),
-            'email'    => post('email'),
-            'password' => md5(post('password')),
-            'photo'    => $file->filename,
+            'name'          => post('name'),
+            'email'         => post('email'),
+            'password'      => md5(post('password')),
+            'photo'         => $file->filename,
+            'date_create'   => now('Y-m-d H:i:s'),
+            'date_update'   => now('Y-m-d H:i:s')
         ]);
 
         $user->update(['hash' => md5($user->id)]);
@@ -88,6 +90,7 @@ class Users extends Controller
         $user->update([
             'name'  => post('name'),
             'email' => post('email'),
+            'date_update'   => now('Y-m-d H:i:s')
         ]);
 
         if (post('password')) {

@@ -3,7 +3,7 @@
 return [
 	// General
 	'application_name' 	=> 'Base',
-	'version'			=> '1.3.9',
+	'version'			=> '1.3.10',
 
 	// Region
 	'language' 			=> 'es',
@@ -16,7 +16,7 @@ return [
 
 	// Database
 	'database' 			=> [
-		'driver' 		=> 'mysql',
+		'driver' 		=> 'sqlite',
 		'host' 			=> 'localhost',
 		'username' 		=> 'root',
 		'database' 		=> 'base',
