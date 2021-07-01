@@ -16,7 +16,7 @@ return [
 
 	// Database
 	'database' 			=> [
-		'driver' 		=> 'sqlite',
+		'driver' 		=> 'mysql',
 		'host' 			=> 'localhost',
 		'username' 		=> 'root',
 		'database' 		=> 'base',
