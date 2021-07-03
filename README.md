@@ -2,6 +2,9 @@
 Estructura base para proyectos PHP
 
 ## Instalación
+
+*Aquí haría falta incluir instalar el driver de PDO para la DB a utilizar, de otro modo fallará el comando php base create-database y subsiguientes*
+
 Ejecutar los siguientes comandos en consola:
 ~~~
 git clone https://github.com/nisa6delgado/base.git
