@@ -23,6 +23,14 @@ return [
 		'password' 		=> ''
 	],
 
+	// SMTP config
+	'smtp' 				=> [
+		'host' 			=> '',
+		'username' 		=> '',
+		'password'		=> '',
+		'port'			=> ''
+	],
+
 	// Facebook login
 	'facebook'			=> [
 		'app_id' 		=> '',
