@@ -1,20 +1,20 @@
 <?php
 
 return [
-	// General
+	// General.
 	'application_name' 	=> 'Base',
 	'version'			=> '1.3.12',
 
-	// Region
+	// Region.
 	'language' 			=> 'es',
 	'timezone' 			=> 'America/Caracas',
 	'charset'			=> 'utf-8',
 	
-	// Environment
+	// Environment.
 	'environment' 		=> 'development',
 	'errors' 			=> true,
 
-	// Database
+	// Database.
 	'database' 			=> [
 		'driver' 		=> 'mysql',
 		'host' 			=> 'localhost',
@@ -23,7 +23,7 @@ return [
 		'password' 		=> ''
 	],
 
-	// SMTP config
+	// Needed to send emails locally.
 	'smtp' 				=> [
 		'host' 			=> '',
 		'username' 		=> '',
@@ -31,13 +31,13 @@ return [
 		'port'			=> ''
 	],
 
-	// Facebook login
+	// Facebook login.
 	'facebook'			=> [
 		'app_id' 		=> '',
 		'app_secret' 	=> ''
 	],
 
-	// Google login
+	// Google login.
 	'google'			=> [
 		'client_id' 	=> '',
 		'client_secret' => ''
