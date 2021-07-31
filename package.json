@@ -6,6 +6,6 @@
         "datatables.net": "1.10.25",
         "datatables.net-bs5": "1.10.25",
         "jquery": "3.6.0",
-        "sweetalert2": "11.0.18"
+        "sweetalert2": "11.1.0"
     }
 }
