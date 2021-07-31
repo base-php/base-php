@@ -1,6 +1,8 @@
 <x-layout-dashboard title="Crear usuario" active="users">
 	<form action="/dashboard/users/store" enctype="multipart/form-data" method="POST">
 		<div class="row p-2">
+			<x-alert></x-alert>
+
 			<div class="col-md-4">
 				<h3>Información del perfil</h3>
 				<p>Asigne la foto y la dirección de correo electrónico de tu cuenta.</p>

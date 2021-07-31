@@ -7,6 +7,8 @@
 		</a>
 	</x-slot>
 
+	<x-alert></x-alert>
+
 	@if($users->count())
 		<table class="datatable table">
 			<thead>
