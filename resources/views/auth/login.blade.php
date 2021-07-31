@@ -1,46 +1,25 @@
-<x-layout-auth>
-    <div class="container">
-        <div class="row row-login d-flex justify-content-center">
-            <div class="col-md-5">
-                <h2 class="text-center">
-                    <i class="fa fa-shapes"></i> 
-                    {{ config('application_name') }}
-                </h2>
+<x-layout-auth action="/login">
+    <div>
+        <h1 class="h3 mb-3 fw-normal">Iniciar sesión</h1>
 
-                <div class="card card-auth mt-5">
-                    <div class="card-body">
-                        <x-alert></x-alert>
-
-                        <form action="/login" method="POST">
-                            <div class="mb-3 mt-3">
-                                <label for="email">Correo electrónico</label>
-                                <input type="text" name="email" class="form-control" required>
-                            </div>
-
-                            <div class="mb-3">
-                                <label for="password">Contraseña</label>
-                                <div class="input-group">
-                                    <input type="password" name="password" class="form-control" required>
-                                    <button type="button" class="btn btn-light show-password" data-input="password">
-                                        <i class="fa fa-eye"></i>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <div class="mb-3">
-                                <input type="checkbox"> Recuérdame
-                            </div>
-
-                            <div>
-                                <button class="btn btn-primary float-end" type="submit">
-                                    <i class="fas fa-sign-in-alt"></i> Iniciar sesión
-                                </button>
-                                <a href="/forgot-password" class="float-end me-3">¿Olvidaste tu contraseña?</a>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
+        <div class="form-floating">
+            <x-alert></x-alert>
         </div>
+
+        <div class="form-floating">
+            <input required name="email" type="email" class="form-control" id="floatingInput">
+            <label for="floatingInput">Correo electrónico</label>
+        </div>
+
+        <div class="form-floating">
+            <input required name="password" type="password" class="form-control" id="floatingPassword">
+            <label for="floatingPassword">Contraseña</label>
+        </div>
+
+        <div class="form-floating mt-3">
+            <a href="/forgot-password">Recuperar contraseña</a>
+        </div>
+
+        <button class="mt-3 w-100 btn btn-lg btn-primary bg-dark border-dark" type="submit">Iniciar sesión</button>
     </div>
 </x-layout-auth>

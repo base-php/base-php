@@ -23,16 +23,16 @@
 				@foreach($users as $user)
 					<tr>
 						<td>{{ $user->id }}</td>
-						<td><img class="img-profile-list" src="{{ $user->photo }}" alt=""></td>
+						<td><img class="img-user-list" src="{{ $user->photo }}" alt=""></td>
 						<td>{{ $user->name }}</td>
 						<td>{{ $user->email }}</td>
 						<td>
-							<a data-bs-toggle="tooltip" data-bs-placement="top" title="Editar usuario" href="{{ '/dashboard/users/edit/' . $user->id }}">
+							<a class="btn-action" data-bs-toggle="tooltip" data-bs-placement="top" title="Editar usuario" href="{{ '/dashboard/users/edit/' . $user->id }}">
 								<span class="far fa-edit"></span>
 							</a>
 
-							<a data-bs-toggle="tooltip" data-bs-placement="top" title="Eliminar usuario" class="confirm" data-text="¿Está seguro que desea eliminar este elemento?" href="{{ '/dashboard/users/delete/' . $user->id }}">
-								<i class="ms-2 fa fa-trash-alt"></i>
+							<a class="confirm btn-action" data-bs-toggle="tooltip" data-bs-placement="top" title="Eliminar usuario" data-text="¿Está seguro que desea eliminar este elemento?" href="{{ '/dashboard/users/delete/' . $user->id }}">
+								<i class="ms-2 fa fa-trash"></i>
 							</a>
 						</td>
 					</tr>

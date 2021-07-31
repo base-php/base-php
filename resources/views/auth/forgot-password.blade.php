@@ -1,34 +1,12 @@
-<x-layout-auth>
-    <div class="container">
-        <div class="row-forgot d-flex justify-content-center">
-            <div class="col-md-5">
-                <h2 class="text-center">
-                    <div class="fa fa-shapes"></div> 
-                    {{ config('application_name') }}
-                </h2>
+<x-layout-auth action="/forgot-password">
+    <div>
+        <h1 class="h3 mb-3 fw-normal">Recuperar contraseña</h1>
 
-                <div class="card card-auth mt-5">
-                    <form method="POST" action="/forgot-password">
-                        <div class="card-body">
-                            <x-alert></x-alert>
-
-                            <p>¿Olvidaste tu contraseña? No hay problema. Simplemente díganos su dirección de correo electrónico y le enviaremos un enlace para restablecer la contraseña que le permitirá elegir una nueva.</p>
-
-                            <div class="mb-3 mt-3">
-                                <label for="email">Correo electrónico</label>
-                                <input type="text" name="email" class="form-control" required>
-                            </div>
-
-                            <div>
-                                <button type="submit" class="btn btn-primary float-end mb-3">
-                                    <i class="fas fa-unlock-alt"></i> 
-                                    Enviar
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
+        <div class="form-floating">
+            <input name="email" type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+            <label for="floatingInput">Correo electrónico</label>
         </div>
+
+        <button class="w-100 btn btn-lg btn-primary bg-dark border-dark mt-5" type="submit">Enviar</button>
     </div>
 </x-layout-auth>
