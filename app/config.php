@@ -15,12 +15,15 @@ return [
 	'errors' 			=> true,
 
 	// Database.
-	'database' 			=> [
-		'driver' 		=> 'mysql',
-		'host' 			=> 'localhost',
-		'username' 		=> 'root',
-		'database' 		=> 'base',
-		'password' 		=> ''
+	'database' 		=> [
+		[
+			'name'			=> 'default',
+			'driver' 		=> 'mysql',
+			'host' 			=> 'localhost',
+			'username' 		=> 'root',
+			'database' 		=> 'base',
+			'password' 		=> ''
+		]
 	],
 
 	// Needed to send emails locally.
