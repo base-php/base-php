@@ -2,22 +2,22 @@
 	<h1 class="h3 mb-3 fw-normal">Registro</h1>
 
     <div class="form-floating">
-        <input name="name" type="text" class="form-control" id="floatingInput" placeholder="Name Last">
+        <input name="name" type="text" class="form-control" id="floatingInput" required>
         <label for="floatingInput">Nombre</label>
     </div>
 
     <div class="form-floating">
-        <input name="email" type="email" class="form-control" id="floatingInput">
+        <input name="email" type="email" class="form-control" id="floatingInput" required>
         <label for="floatingInput">Correo electrónico</label>
     </div>
 
     <div class="form-floating">
-        <input name="password" type="password" class="form-control" id="floatingPassword">
+        <input name="password" type="password" class="form-control" id="floatingPassword" required>
         <label for="floatingPassword">Contraseña</label>
     </div>
 
     <div class="form-floating">
-        <input name="confirm_password" type="password" class="form-control" id="floatingPassword">
+        <input name="confirm_password" type="password" class="form-control" id="floatingPassword" required>
         <label for="floatingPassword">Confirmar contraseña</label>
     </div>
 
