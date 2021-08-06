@@ -13,7 +13,7 @@ class UserStore extends Validation
 	{
 		return [
 			'name' 				=> 'required',
-			'email' 			=> 'required|email|unique:users',
+			'email' 			=> 'required|email|unique:User',
 			'password' 			=> 'required|min:8',
 			'confirm_password' 	=> 'same:password'
 		];
