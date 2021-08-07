@@ -33,4 +33,17 @@ return [
 		'password'		=> '',
 		'port'			=> ''
 	],
+
+	// Login with social networks
+	'google' => [
+		'client_id' 	=> '',
+		'client_secret' => '',
+		'redirect' 		=> ''
+	],
+
+	'facebook' => [
+		'app_id'		=> '',
+		'app_secret'	=> '',
+		'redirect' 		=> ''
+	]
 ];
