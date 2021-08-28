@@ -16,7 +16,7 @@ $schema->create('users', function ($table) {
 	$table->datetime('date_update')->useCurrent()->seCurrentOnUpdate();
 });
 
-User::create([
+App\Models\User::create([
 	'name' 		=> 'Admin',
 	'email'		=> 'admin@admin.com',
 	'password'	=> '21232f297a57a5a743894a0e4a801fc3',
