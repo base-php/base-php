@@ -1,8 +1,13 @@
 <!DOCTYPE html>
 <html lang="{{ config('language') }}">
+
 <head>
+
 <meta charset="{{ config('charset') }}">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
 <meta name="author" content="Nisa Delgado">
 <meta name="theme-color" content="#212529">
 
@@ -10,80 +15,69 @@
 
 <link rel="icon" href="{{ asset('img/app/favicon.ico') }}">
 
-<link rel="stylesheet" href="{{ node('bootstrap/dist/css/bootstrap.css') }}">
-<link rel="stylesheet" href="{{ node('sweetalert2/dist/sweetalert2.css') }}">
+<link rel="stylesheet" href="{{ node('/tailwindcss/dist/tailwind.css') }}">
 <link rel="stylesheet" href="{{ node('@fortawesome/fontawesome-free/css/all.css') }}">
-<link rel="stylesheet" href="{{ asset('css/home.css') }}">
+
 </head>
+<body class="font-sans leading-normal tracking-normal">
+    <div class="w-10/12 mx-auto">
+        <h1 class="text-4xl font-semibold mt-10">
+            <i class="fa fa-shapes"></i> {{ config('application_name') }}
+        </h1>
 
-<body>
+        <hr class="mb-10 mt-10">
 
-<div class="col-lg-8 mx-auto p-3 py-md-4">
-    <header class="d-flex align-items-center pb-3 mb-4 border-bottom">
-        <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
-            <i class="fa fa-shapes me-2"></i> 
-            <span class="fs-4 font-weight-bold">{{ config('application_name') }}</span>
-        </a>
-    </header>
-
-    <main>
-        <p class="fs-5 col-md-8">Comience rápido y fácilmente su nuevo proyecto con esta estructura base que tiene todo lo requerido para realizar una aplicación web moderna.</p>
-
-        <hr class="col-3 col-md-2 mb-5 mt-5">
-
-        <div class="row g-5">
-            <div class="col-md-6">
-                <h2>Explora</h2>
-
-                <p>Descubre las características que vienen con el proyecto y ya están listas para su eso.</p>
-
-                <ul class="icon-list">
-                	@if(auth())
-	                    <li>
-                            <a class="text-decoration-none text-dark" href="/dashboard">Inicio</a>
-                        </li>
-                    @else
-                        <li>
-                            <a class="text-decoration-none text-dark" href="/login">Inicio de sesión</a>
-                        </li>
-                        
-                        <li>
-                            <a class="text-decoration-none text-dark" href="/register">Registro</a>
-                        </li>
-                    @endif
-                </ul>
-            </div>
-
-            <div class="col-md-6">
-                <h2>Documentación</h2>
-
-                <p>Lea instrucciones y documentación más detalladas sobre el uso de cada uno de sus componentes.</p>
-
-                <ul class="icon-list">
-                    <li>
-                        <a class="text-decoration-none text-dark" target="_blank" href="https://base-php.com/documentacion/rutas">Rutas</a>
-                    </li>
-
-                    <li>
-                        <a class="text-decoration-none text-dark" target="_blank" href="https://base-php.com/documentacion/controladores">Controladores</a>
-                    </li>
-
-                    <li>
-                        <a class="text-decoration-none text-dark" target="_blank" href="https://base-php.com/documentacion/vistas">Vistas</a>
-                    </li>
-
-                    <li>
-                        <a class="text-decoration-none text-dark" target="_blank" href="https://base-php.com/documentacion/datos">Base de datos</a>
-                    </li>
-                </ul>
+        <div class="flex">
+            <div class="w-6/12">
+                <p class="text-2xl">Comience rápido y fácilmente su nuevo proyecto con esta estructura base que tiene todo lo requerido para realizar una aplicación web moderna.</p>
             </div>
         </div>
-    </main>
 
-    <footer class="pt-3 mt-5 text-muted border-top">
-        &copy; 2021
-    </footer>
-</div>
+        <hr class="mb-10 mt-10">
 
+        <div class="flex">
+            <div class="w-6/12">
+                <h2 class="text-3xl font-semibold">Explora</h2>
+
+                <div class="mt-5">
+                    <a href="/login" class="block">
+                        <i class="fa fa-arrow-right"></i> Iniciar sesión
+                    </a>
+
+                    <a href="/register" class="block">
+                        <i class="fa fa-arrow-right"></i> Registro
+                    </a>
+                </div>
+            </div>
+
+            <div class="w-6/12">
+                <h2 class="text-3xl font-semibold">Documentación</h2>
+
+                <div class="mt-5">
+                    <a target="_blank" href="https://base-php.com/rutas" class="block">
+                        <i class="fa fa-arrow-right"></i> Rutas
+                    </a>
+
+                    <a target="_blank" href="https://base-php.com/controladores" class="block">
+                        <i class="fa fa-arrow-right"></i> Controladores
+                    </a>
+
+                    <a target="_blank" href="https://base-php.com/vistas" class="block">
+                        <i class="fa fa-arrow-right"></i> Vistas
+                    </a>
+
+                    <a target="_blank" href="https://base-php.com/datos" class="block">
+                        <i class="fa fa-arrow-right"></i> Base de datos
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <hr class="mb-10 mt-10">
+
+        <div class="text-center">
+            <p>&copy; 2021</p>
+        </div>
+    </div>
 </body>
 </html>

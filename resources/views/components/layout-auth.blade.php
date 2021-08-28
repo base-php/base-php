@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="{{ config('language') }}">
+
 <head>
+
 <meta charset="{{ config('charset') }}">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="author" content="Nisa Delgado">
@@ -10,21 +12,26 @@
 
 <link rel="icon" href="{{ asset('img/app/favicon.ico') }}">
 
+<link rel="stylesheet" href="{{ node('@tailwindcss/forms/dist/forms.css') }}">
+<link rel="stylesheet" href="{{ node('tailwindcss/dist/tailwind.css') }}">
 <link rel="stylesheet" href="{{ node('@fortawesome/fontawesome-free/css/all.css') }}">
-<link rel="stylesheet" href="{{ node('bootstrap/dist/css/bootstrap.css') }}">
-<link rel="stylesheet" href="{{ asset('css/auth.css') }}">
 
 </head>
 
-<body class="text-center">
-    <main class="form-signin">
-        <form method="POST" action="{{ $action }}">
-            <i class="fa fa-shapes mb-4"></i>
-            
+<body class="body-bg min-h-screen pt-12 md:pt-20 pb-2 px-2 md:px-0 bg-gray-100">
+    <header class="max-w-lg mx-auto">
+        <a href="/login">
+            <h1 class="text-4xl font-bold text-center">
+                <i class="fa fa-shapes"></i> Base PHP
+            </h1>
+        </a>
+    </header>
+
+    <main class="bg-white max-w-lg mx-auto p-1 md:p-5 my-5 rounded-lg shadow-2xl">
+        <section>
             {{ $slot }}
-            
-            <p class="mt-5 mb-3 text-muted">&copy; 2021</p>
-        </form>
+        </section>
     </main>
 </body>
+
 </html>

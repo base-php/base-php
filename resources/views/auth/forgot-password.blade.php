@@ -1,12 +1,21 @@
-<x-layout-auth action="/forgot-password">
+<x-layout-auth>
+    <x-alert></x-alert>
+
     <div>
-        <h1 class="h3 mb-3 fw-normal">Recuperar contraseña</h1>
+        <form class="flex flex-col" method="POST" action="/forgot-password">
+            <div>
+                <p class="text-justify">¿Olvidaste tu contraseña? No hay problema. Simplemente dinos tu dirección de correo electrónico y te enviaremos un enlace para reestablecer su contraseña.</p>
+            </div>
 
-        <div class="form-floating">
-            <input name="email" type="email" class="form-control" id="floatingInput" required>
-            <label for="floatingInput">Correo electrónico</label>
-        </div>
+            <div class="mt-3 mb-5">
+                <label for="email">Correo electrónico</label>
+                <input name="email" required type="email" class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+            </div>
 
-        <button class="w-100 btn btn-lg btn-primary bg-dark border-dark mt-5" type="submit">Enviar</button>
+            <button type="submit" class="text-center items-center p-3 appearance-none bg-black border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-black active:bg-black focus:outline-none focus:border-black focus:ring focus:ring-gray-300 disabled:opacity-25 transition">
+                <i class="fas fa-link mr-2"></i> 
+                Enviar enlace
+            </button>
+        </form>
     </div>
 </x-layout-auth>

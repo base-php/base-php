@@ -1,33 +1,46 @@
-<x-layout-auth action="/forgot-password">
-	<h1 class="h3 mb-3 fw-normal">Registro</h1>
+<x-layout-auth>
+    <div>
+        <x-alert></x-alert>
 
-    <div class="form-floating">
-        <input name="name" type="text" class="form-control" id="floatingInput" required>
-        <label for="floatingInput">Nombre</label>
+        <form class="flex flex-col" method="POST" action="/register">
+            <div>
+                <label for="name">Nombre</label>
+                <input name="name" required type="text" class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+            </div>
+
+            <div class="mt-3">
+                <label for="email">Correo electrónico</label>
+                <input name="email" required type="email" class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+            </div>
+
+            <div class="mt-3">
+                <label for="password">Contraseña</label>
+                <input name="password" required type="password" class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+            </div>
+
+            <div class="mt-3 mb-5">
+                <label for="confirm_password">Confirmar contraseña</label>
+                <input name="confirm_password" required type="password" class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+            </div>
+
+            <button type="submit" class="text-center items-center p-3 appearance-none bg-black border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-black active:bg-black focus:outline-none focus:border-black focus:ring focus:ring-gray-300 disabled:opacity-25 transition">
+                <i class="fas fa-sign-in-alt mr-2"></i> 
+                Registrarse
+            </button>
+
+            @if(config('facebook', 'app_id'))
+                <a href="{{ facebook() }}" class="mt-3 text-center items-center p-3 appearance-none bg-blue-600 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-blue-600 active:bg-blue-600 focus:outline-none focus:border-blue-600 focus:ring focus:ring-gray-300 disabled:opacity-25 transition">
+                    <i class="fab fa-facebook mr-2"></i> 
+                    Registrarse
+                </a>
+            @endif
+
+            @if(config('google', 'client_id'))
+                <a href="{{ google() }}" class="mt-3 text-center items-center p-3 appearance-none bg-red-600 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-red-600 active:bg-red-600 focus:outline-none focus:border-red-600 focus:ring focus:ring-gray-300 disabled:opacity-25 transition">
+                    <i class="fab fa-google mr-2"></i> 
+                    Registrarse
+                </a>
+            @endif
+        </form>
     </div>
-
-    <div class="form-floating">
-        <input name="email" type="email" class="form-control" id="floatingInput" required>
-        <label for="floatingInput">Correo electrónico</label>
-    </div>
-
-    <div class="form-floating">
-        <input name="password" type="password" class="form-control" id="floatingPassword" required>
-        <label for="floatingPassword">Contraseña</label>
-    </div>
-
-    <div class="form-floating">
-        <input name="confirm_password" type="password" class="form-control" id="floatingPassword" required>
-        <label for="floatingPassword">Confirmar contraseña</label>
-    </div>
-
-    <button class="mt-3 w-100 btn btn-lg btn-primary bg-dark border-dark" type="submit">Iniciar sesión</button>
-
-    @if(config('facebook', 'app_id'))
-        <a href="{{ facebook() }}" class="mt-1 w-100 btn btn-lg btn-primary bg-primary border-primary" type="submit"><i class="fab fa-facebook"></i> Iniciar sesión</a>
-    @endif
-
-    @if(config('google', 'client_id'))        
-        <a href="{{ google() }}" class="mt-1 w-100 btn btn-lg btn-primary bg-danger border-danger" type="submit"><i class="fab fa-google"></i> Iniciar sesión</a>
-    @endif
 </x-layout-auth>

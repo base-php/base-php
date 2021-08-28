@@ -10,77 +10,85 @@
 
 <link rel="icon" href="{{ asset('img/app/favicon.ico') }}">
 
+<link rel="stylesheet" href="{{ node('@tailwindcss/forms/dist/forms.css') }}">
+<link rel="stylesheet" href="{{ node('tailwindcss/dist/tailwind.css') }}">
 <link rel="stylesheet" href="{{ node('@fortawesome/fontawesome-free/css/all.css') }}">
-<link rel="stylesheet" href="{{ node('bootstrap/dist/css/bootstrap.css') }}">
-<link rel="stylesheet" href="{{ node('datatables.net-bs5/css/dataTables.bootstrap5.css') }}">
-<link rel="stylesheet" href="{{ node('sweetalert2/dist/sweetalert2.css') }}">
-<link rel="stylesheet" href="{{ asset('css/dashboard.css') }}">
 
 </head>
 
-<body>
-    
-<header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
-    <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="/dashboard">
-        <i class="fa fa-shapes"></i>
-        {{ config('application_name') }}
-    </a>
+<body class="bg-gray-100 font-sans leading-normal tracking-normal">
+    <nav id="header" class="bg-white fixed w-full z-10 top-0 shadow">
+        <div class="w-full container mx-auto flex flex-wrap items-center mt-0 pt-3 pb-3 md:pb-0">
+            <div class="w-1/2 pl-2 md:pl-0">
+                <a class="text-gray-900 text-base xl:text-xl no-underline hover:no-underline font-bold" href="/dashboard">
+                    <i class="fa fa-shapes"></i> {{ config('application_name') }}
+                </a>
+            </div>
 
-    <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
+            <div class="w-1/2 pr-0">
+                <div class="flex relative inline-block float-right">
+                    <div class="relative text-sm">
+                        <button id="userButton" class="flex items-center focus:outline-none mr-3">
+                            <img class="w-8 h-8 rounded-full mr-4" src="{{ auth()->photo }}" alt="Avatar of User"> 
+                            <span class="hidden md:inline-block">{{ auth()->name }}</span>
 
-    <input class="form-control form-control-dark w-100" type="text" placeholder="" aria-label="Search">
+                            <svg class="pl-2 h-2" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 129" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 129 129">
+                                <g>
+                                    <path d="m121.3,34.6c-1.6-1.6-4.2-1.6-5.8,0l-51,51.1-51.1-51.1c-1.6-1.6-4.2-1.6-5.8,0-1.6,1.6-1.6,4.2 0,5.8l53.9,53.9c0.8,0.8 1.8,1.2 2.9,1.2 1,0 2.1-0.4 2.9-1.2l53.9-53.9c1.7-1.6 1.7-4.2 0.1-5.8z">
+                                </g>
+                            </svg>
+                        </button>
 
-    <div class="navbar-nav">
-        <div class="nav-item text-nowrap">
-            <a class="nav-link px-3" href="/logout">Cerrar sesión</a>
-        </div>
-    </div>
-</header>
+                        <div id="userMenu" class="bg-white rounded shadow-md mt-2 absolute mt-12 top-0 right-0 min-w-full overflow-auto z-30 invisible">
+                            <ul class="list-reset">
+                                <li>
+                                    <a href="{{ '/dashboard/users/edit/' . auth()->id }}" class="px-4 py-2 block text-gray-900 hover:bg-gray-400 no-underline hover:no-underline">Perfil</a>
+                                </li>
 
-<div class="container-fluid">
-    <div class="row">
-        <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
-            <div class="position-sticky pt-3">
-                <ul class="nav flex-column">
-                    <li class="nav-item">
-                        <a class="nav-link {{ ($active == 'home') ? 'active' : '' }}" aria-current="page" href="/dashboard">
-                            <i class="fa fa-home"></i>
-                            Inicio
+                                <li>
+                                    <a href="/logout" class="px-4 py-2 block text-gray-900 hover:bg-gray-400 no-underline hover:no-underline">Cerrar sesión</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="block lg:hidden pr-4">
+                        <button id="nav-toggle" class="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-gray-900 hover:border-teal-500 appearance-none focus:outline-none">
+                            <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <title>Menu</title>
+                                <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z">
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-full flex-grow lg:flex lg:items-center hidden lg:w-auto lg:block mt-2 lg:mt-0 bg-white z-20" id="nav-content">
+                <ul class="list-reset lg:flex flex-1 items-center px-4 md:px-0">
+                    <li class="mr-6 my-2 md:my-0">
+                        <a href="/dashboard" class="{{ ($active == 'home') ? 'block py-1 md:py-3 pl-1 align-middle text-silver-600 no-underline hover:text-gray-900 border-b-2 border-orange-600 hover:border-orange-600' : 'block py-1 md:py-3 pl-1 align-middle text-gray-500 no-underline hover:text-gray-900 border-b-2 border-white hover:border-silver-500' }}">
+                            <i class="fas fa-home fa-fw mr-3 text-silver-600"></i> <span class="pb-1 md:pb-0 text-sm">Inicio</span>
                         </a>
                     </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link {{ ($active == 'users') ? 'active' : '' }}" href="/dashboard/users">
-                            <i class="fa fa-users"></i>
-                            Usuarios
+                    <li class="mr-6 my-2 md:my-0">
+                        <a href="/dashboard/users" class="{{ ($active == 'users') ? 'block py-1 md:py-3 pl-1 align-middle text-silver-600 no-underline hover:text-gray-900 border-b-2 border-orange-600 hover:border-orange-600' : 'block py-1 md:py-3 pl-1 align-middle text-gray-500 no-underline hover:text-gray-900 border-b-2 border-white hover:border-silver-500' }}">
+                            <i class="fas fa-users fa-fw mr-3"></i> <span class="pb-1 md:pb-0 text-sm">Usuarios</span>
                         </a>
                     </li>
                 </ul>
             </div>
-        </nav>
+        </div>
+    </nav>
 
-        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-            <div class="justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                <h1 class="h2">{{ $title }}</h1>
+    <div class="container w-full mx-auto pt-20">
+        <div class="w-full px-4 md:px-0 md:mt-8 mb-16 text-gray-800 leading-normal">
+            <div class="flex flex-wrap">
+                {{ $slot }}
             </div>
-
-            {{ $slot }}
-        </main>
+        </div>
     </div>
-</div>
 
-<script src="{{ node('jquery/dist/jquery.js') }}"></script>
-
-<script src="{{ node('bootstrap/dist/js/bootstrap.bundle.js') }}"></script>
-
-<script src="{{ node('datatables.net/js/jquery.dataTables.js') }}"></script>
-<script src="{{ node('datatables.net-bs5/js/dataTables.bootstrap5.js') }}"></script>
-
-<script src="{{ node('sweetalert2/dist/sweetalert2.js') }}"></script>
-
-<script src="{{ asset('js/main.js') }}"></script>
-
+    <script src="{{ asset('js/main.js') }}"></script>
 </body>
 </html>
