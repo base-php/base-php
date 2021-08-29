@@ -34,12 +34,12 @@
 
 	                <div class="mt-5">
 	                    <label for="name">Nombre</label>
-	                    <input name="name" value="{{ $value->name }}" required type="text" class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+	                    <input name="name" value="{{ old('name') }}" required type="text" class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
 	                </div>
 
 	                <div class="mt-5">
 	                    <label for="email">Correo electrónico</label>
-	                    <input name="email" value="{{ $value->email }}" required type="email" class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+	                    <input name="email" value="{{ old('email') }}" required type="email" class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
 	                </div>
 	            </div>
 	        </div>
