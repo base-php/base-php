@@ -2,9 +2,37 @@
 	<div class="w-full p-3">
         <h1 class="text-3xl mb-4">Usuarios</h1>
 
-        <div class="grid grid-cols-2 mb-5">
+        <div class="grid grid-cols-2 mb-5" x-data="{
+            search (input) {
+                var input, filter, table, tr, td, i, j, visible;
+                filter = input.value.toUpperCase();
+                table = document.getElementById('table');
+                tr = table.getElementsByTagName('tr');
+
+                for (i = 1; i < tr.length; i++) {
+                    visible = false;
+                    td = tr[i].getElementsByTagName('td');
+
+                    for (j = 0; j < td.length; j++) {
+                        if (td[j] && td[j].innerHTML.toUpperCase().indexOf(filter) > -1) {
+                            visible = true;
+                        }
+                    }
+
+                    if (!tr[0]) {
+                        tr[0].style.display = '';
+                    }
+
+                    if (visible === true) {
+                        tr[i].style.display = '';
+                    } else {
+                        tr[i].style.display = 'none';
+                    }
+                }
+            }
+        }">
             <div>
-                <input autofocus type="text" placeholder="Buscar..." id="search" class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+                <input @keyup="search($el)" autofocus type="text" placeholder="Buscar..." class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
             </div>
 
             <div class="text-right">
