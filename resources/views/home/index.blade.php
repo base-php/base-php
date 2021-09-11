@@ -51,23 +51,23 @@
             </div>
 
             <div class="w-6/12">
-                <h2 class="text-3xl font-semibold">Documentación</h2>
+                <h2 class="text-3xl font-semibold">Más información</h2>
 
                 <div class="mt-5">
-                    <a target="_blank" href="https://base-php.com/rutas" class="block">
-                        <i class="fa fa-arrow-right"></i> Rutas
+                    <a target="_blank" href="https://twitter.com/nisa6delgado" class="block">
+                        <i class="fab fa-twitter"></i> Twitter
                     </a>
 
-                    <a target="_blank" href="https://base-php.com/controladores" class="block">
-                        <i class="fa fa-arrow-right"></i> Controladores
+                    <a target="_blank" href="https://www.youtube.com/channel/UCTgu94owdYN98yBZQnW0ihA" class="block">
+                        <i class="fab fa-youtube"></i> Youtube
                     </a>
 
-                    <a target="_blank" href="https://base-php.com/vistas" class="block">
-                        <i class="fa fa-arrow-right"></i> Vistas
+                    <a target="_blank" href="https://nisadelgado.com" class="block">
+                        <i class="fas fa-globe-americas"></i> Sitio web
                     </a>
 
-                    <a target="_blank" href="https://base-php.com/datos" class="block">
-                        <i class="fa fa-arrow-right"></i> Base de datos
+                    <a target="_blank" href="mailto:nisadelgado@gmail.com" class="block">
+                        <i class="fas fa-envelope"></i> Correo electrónico
                     </a>
                 </div>
             </div>
