@@ -14,20 +14,32 @@
 	            </div>
 
 	            <div class="w-7/12 rounded bg-white p-7">                
-	                <div>
+	                <div
+	                	x-init="$watch('photo', value => preview(value))"
+	                	x-data="{
+	                		photo: '',
+	                		preview (value) {
+	                			input = document.getElementById('photo');
+
+							    if (input.files && input.files[0]) {
+							        var reader = new FileReader();
+							        reader.onload = function (event) {
+							            document.getElementById('photo-preview').setAttribute('src', event.target.result);
+							        }
+
+							        reader.readAsDataURL(input.files[0]);
+							    }
+	                		}
+	                	}"
+	                >
 	                    <label for="photo">Foto</label>
-	                    <input class="hidden" id="photo" type="file" name="photo">
+	                    <input class="hidden" x-model="photo" id="photo" type="file" name="photo">
 	                    <img id="photo-preview" class="rounded-full mb-2 block w-1/4" src="http://simpleicon.com/wp-content/uploads/user1.png" alt="">
 
 	                    <div>
-	                        <button type="button" id="open-file-selector" class="inline-flex items-center p-2 appearance-none bg-white border border-gray-200 border-transparent rounded-md font-semibold text-xs text-black uppercase tracking-widest hover:bg-white active:bg-white focus:outline-none focus:border-white focus:ring focus:ring-gray-300 disabled:opacity-25 transition">
+	                        <button type="button" x-on:click="document.getElementById('photo').click()" class="inline-flex items-center p-2 appearance-none bg-white border border-gray-200 border-transparent rounded-md font-semibold text-xs text-black uppercase tracking-widest hover:bg-white active:bg-white focus:outline-none focus:border-white focus:ring focus:ring-gray-300 disabled:opacity-25 transition">
 	                            <i class="fa fa-upload mr-2"></i>
 	                            Seleccionar nueva foto
-	                        </button>
-
-	                        <button type="button" class="hidden inline-flex items-center p-2 appearance-none bg-red-500 border border-gray-200 border-red-500 rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-red-500 active:bg-red-500 focus:outline-none focus:border-red-500 focus:ring focus:ring-gray-300 disabled:opacity-25 transition">
-	                            <i class="fa fa-upload mr-2"></i>
-	                            Eliminar foto
 	                        </button>
 	                    </div>
 	                </div>
