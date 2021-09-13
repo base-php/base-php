@@ -11,8 +11,8 @@
         }
     ],
     "require": {
-        "guzzlehttp/guzzle": "^7.3",
         "filp/whoops": "2.14.0",
+        "guzzlehttp/guzzle": "^7.3",
         "illuminate/database": "8.52.0",
         "illuminate/events": "8.52.0",
         "illuminate/pagination": "8.52.0",
