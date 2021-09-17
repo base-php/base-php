@@ -1,38 +1,55 @@
 <x-layout-dashboard active="users">
-	<div class="w-full p-3">
-        <h1 class="text-3xl mb-4">Usuarios</h1>
+	<div class="w-full p-3" x-data="{
+        search (input) {
+            var input, filter, table, tr, td, i, j, visible;
+            filter = input.value.toUpperCase();
+            table = document.getElementById('table');
+            tr = table.getElementsByTagName('tr');
 
-        <div class="grid grid-cols-2 mb-5" x-data="{
-            search (input) {
-                var input, filter, table, tr, td, i, j, visible;
-                filter = input.value.toUpperCase();
-                table = document.getElementById('table');
-                tr = table.getElementsByTagName('tr');
+            for (i = 1; i < tr.length; i++) {
+                visible = false;
+                td = tr[i].getElementsByTagName('td');
 
-                for (i = 1; i < tr.length; i++) {
-                    visible = false;
-                    td = tr[i].getElementsByTagName('td');
-
-                    for (j = 0; j < td.length; j++) {
-                        if (td[j] && td[j].innerHTML.toUpperCase().indexOf(filter) > -1) {
-                            visible = true;
-                        }
-                    }
-
-                    if (!tr[0]) {
-                        tr[0].style.display = '';
-                    }
-
-                    if (visible === true) {
-                        tr[i].style.display = '';
-                    } else {
-                        tr[i].style.display = 'none';
+                for (j = 0; j < td.length; j++) {
+                    if (td[j] && td[j].innerHTML.toUpperCase().indexOf(filter) > -1) {
+                        visible = true;
                     }
                 }
+
+                if (!tr[0]) {
+                    tr[0].style.display = '';
+                }
+
+                if (visible === true) {
+                    tr[i].style.display = '';
+                } else {
+                    tr[i].style.display = 'none';
+                }
             }
-        }">
+        },
+
+        confirmDelete (event, element) {
+            event.preventDefault();
+
+            Swal.fire({
+                title: '¿Estás seguro que desea eliminar este elemento?',
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonText: 'Aceptar',
+                confirmButtonColor: 'black',
+                cancelButtonText: 'Cancelar'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    window.location.href = element.href;
+                }
+            });
+        }
+    }">
+        <h1 class="text-3xl mb-4">Usuarios</h1>
+
+        <div class="grid grid-cols-2 mb-5">
             <div>
-                <input @keyup="search($el)" autofocus type="text" placeholder="Buscar..." class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+                <input x-on:keyup="search($el)" autofocus type="text" placeholder="Buscar..." class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
             </div>
 
             <div class="text-right">
@@ -49,10 +66,10 @@
             <table id="table" class="w-full">
                 <thead class="border-b-2">
                     <tr class="hover:bg-gray-100">
-                        <th class="text-left p-2">ID</th>
+                        <th class="text-left p-2 hidden sm:table-cell">ID</th>
                         <th class="text-left p-2">Foto</th>
                         <th class="text-left p-2">Nombre</th>
-                        <th class="text-left p-2">Correo electrónico</th>
+                        <th class="text-left p-2 hidden sm:table-cell">Correo electrónico</th>
                         <th class="text-left p-2"></th>
                     </tr>
                 </thead>
@@ -60,18 +77,18 @@
                 <tbody>
                 	@foreach($users as $user)
                     <tr class="hover:bg-gray-100">
-                        <td class="p-2">{{ $user->id }}</td>
+                        <td class="p-2 hidden sm:table-cell">{{ $user->id }}</td>
                         <td class="p-2">
                             <img class="w-8 h-8 rounded-full mr-4" src="{{ $user->photo }}" alt="{{ $user->name }}"> 
                         </td>
                         <td class="p-2">{{ $user->name }}</td>
-                        <td class="p-2">{{ $user->email }}</td>
+                        <td class="p-2 hidden sm:table-cell">{{ $user->email }}</td>
                         <td class="p-2 text-right">
                             <a class="hover:text-blue-600 p-1" href="{{ '/dashboard/users/edit/' . $user->id }}" title="Editar usuario">
                                 <fa class="fa fa-edit"></fa>
                             </a>
 
-                            <a class="hover:text-red-600 p-1" href="{{ '/dashboard/users/delete/' . $user->id }}" title="Eliminar usuario">
+                            <a x-on:click="confirmDelete(event, $el)" class="hover:text-red-600 p-1" href="{{ '/dashboard/users/delete/' . $user->id }}" title="Eliminar usuario">
                                 <fa class="fa fa-trash"></fa>
                             </a>
                         </td>

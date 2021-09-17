@@ -13,6 +13,7 @@
 <link rel="stylesheet" href="{{ node('@tailwindcss/forms/dist/forms.css') }}">
 <link rel="stylesheet" href="{{ node('tailwindcss/dist/tailwind.css') }}">
 <link rel="stylesheet" href="{{ node('@fortawesome/fontawesome-free/css/all.css') }}">
+<link rel="stylesheet" href="{{ node('sweetalert2/dist/sweetalert2.css') }}">
 
 </head>
 
@@ -93,6 +94,7 @@
         </div>
     </div>
 
-    <script src="{{ node('alpinejs/dist/cdn.js') }}" defer></script>
+    <script src="{{ node('alpinejs/dist/cdn.js') }}"></script>
+    <script src="{{ node('sweetalert2/dist/sweetalert2.js') }}"></script>
 </body>
 </html>

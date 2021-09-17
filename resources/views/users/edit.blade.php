@@ -1,5 +1,37 @@
 <x-layout-dashboard title="Editar usuario" active="users">
-	<div>
+	<div x-init="$watch('photo', value => preview(value))" x-data="{
+        photo: '',
+
+        preview (value) {
+            input = document.getElementById('photo');
+
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function (event) {
+                    document.getElementById('photo-preview').setAttribute('src', event.target.result);
+                }
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        },
+
+        confirmDelete (event, element) {
+            event.preventDefault();
+
+            Swal.fire({
+                title: '¿Estás seguro que desea eliminar este elemento?',
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonText: 'Aceptar',
+                confirmButtonColor: 'black',
+                cancelButtonText: 'Cancelar'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    window.location.href = element.href;
+                }
+            });
+        }
+    }">
 		<div class="w-full p-3">
             <h1 class="text-4xl">Crear usuario</h1>
 
@@ -17,24 +49,7 @@
                     <form action="/dashboard/users/update" method="POST" enctype="multipart/form-data">
                         <input type="hidden" name="id" value="{{ $user->id }}">
 
-                        <div
-                            x-init="$watch('photo', value => preview(value))"
-                            x-data="{
-                                photo: '',
-                                preview (value) {
-                                    input = document.getElementById('photo');
-
-                                    if (input.files && input.files[0]) {
-                                        var reader = new FileReader();
-                                        reader.onload = function (event) {
-                                            document.getElementById('photo-preview').setAttribute('src', event.target.result);
-                                        }
-
-                                        reader.readAsDataURL(input.files[0]);
-                                    }
-                                }
-                            }"
-                        >
+                        <div>
                             <label for="photo">Foto</label>
                             <input class="hidden" x-model="photo" id="photo" type="file" name="photo">
                             <img id="photo-preview" class="rounded-full mb-2 block w-1/4" src="{{ $user->photo }}" alt="">
@@ -119,7 +134,7 @@
                     </div>
 
                     <div class="mt-5">
-                        <a href="{{ '/users/delete/' . $user->id }}" class="inline-flex items-center p-3 appearance-none bg-red-500 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-red-500 active:bg-red-500 focus:outline-none focus:border-red-500 focus:ring focus:ring-gray-300 disabled:opacity-25 transition">
+                        <a x-on:click="confirmDelete(event, $el)" href="{{ '/dashboard/users/delete/' . $user->id }}" class="inline-flex items-center p-3 appearance-none bg-red-500 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-red-500 active:bg-red-500 focus:outline-none focus:border-red-500 focus:ring focus:ring-gray-300 disabled:opacity-25 transition">
                             <i class="fa fa-trash mr-2"></i> 
                             Eliminar cuenta
                         </a>
