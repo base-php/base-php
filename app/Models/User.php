@@ -34,7 +34,7 @@ class User extends Model
     public function setPhotoAttribute($value)
     {
         if ($value != '') {
-            $this->attributes['photo'] = '/resources/assets/img/users/' . $value;
+            $this->attributes['photo'] = '/resources/assets/img/' . $value;
         }
     }
 

@@ -48,7 +48,7 @@ class Users extends Controller
     {
         UserStore::validate();
 
-        $file = storage()->save('resources/assets/img/users', 'photo');
+        $file = storage()->save('resources/assets/img', 'photo');
 
         $user = User::create([
             'name'          => post('name'),
@@ -84,7 +84,7 @@ class Users extends Controller
     {
         UserUpdate::validate();
 
-        $file = storage()->save('resources/assets/img/users', 'photo');
+        $file = storage()->save('resources/assets/img', 'photo');
 
         $user = User::find(post('id'));
         $user->update([

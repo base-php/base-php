@@ -13,7 +13,7 @@
 
 <title>{{ config('application_name') }}</title>
 
-<link rel="icon" href="{{ asset('img/app/favicon.ico') }}">
+<link rel="icon" href="{{ asset('img/favicon.ico') }}">
 
 <link rel="stylesheet" href="{{ node('/tailwindcss/dist/tailwind.css') }}">
 <link rel="stylesheet" href="{{ node('@fortawesome/fontawesome-free/css/all.css') }}">

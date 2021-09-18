@@ -34,7 +34,7 @@
 	                >
 	                    <label for="photo">Foto</label>
 	                    <input class="hidden" x-model="photo" id="photo" type="file" name="photo">
-	                    <img id="photo-preview" class="rounded-full mb-2 block w-1/4" src="http://simpleicon.com/wp-content/uploads/user1.png" alt="">
+	                    <img id="photo-preview" class="rounded-full mb-2 block w-1/4" src="{{ asset('img/user.png') }}" alt="">
 
 	                    <div>
 	                        <button type="button" x-on:click="document.getElementById('photo').click()" class="inline-flex items-center p-2 appearance-none bg-white border border-gray-200 border-transparent rounded-md font-semibold text-xs text-black uppercase tracking-widest hover:bg-white active:bg-white focus:outline-none focus:border-white focus:ring focus:ring-gray-300 disabled:opacity-25 transition">
