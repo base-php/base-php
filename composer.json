@@ -11,6 +11,7 @@
         }
     ],
     "require": {
+        "fakerphp/faker": "1.16.0",
         "filp/whoops": "2.14.1",
         "guzzlehttp/guzzle": "7.3.0",
         "illuminate/database": "8.61.0",
@@ -21,8 +22,7 @@
         "league/flysystem": "2.2.3",
         "maximebf/debugbar": "1.17.1",
         "nisadelgado/framework": "1.3.46",
-        "phpmailer/phpmailer": "6.5.1",
-        "fakerphp/faker": "^1.16"
+        "phpmailer/phpmailer": "6.5.1"
     },
     "autoload": {
         "psr-4": {
