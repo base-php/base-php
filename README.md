@@ -1,9 +1,9 @@
 # Base
-Estructura base para proyectos PHP
+Comience rápido y fácilmente su nuevo proyecto con esta estructura base que tiene todo lo requerido para realizar una aplicación web moderna.
 
 ## Instalación
 Ejecutar los siguientes comandos en consola:
-~~~
+~~~bash
 git clone https://github.com/nisa6delgado/base.git
 cd base
 composer install
@@ -13,17 +13,11 @@ php base run-sql
 php base server
 ~~~
 
-## Doumentación
-Utilizamos varios paquetes detrás de escenas para que todo funcione como queremos:
+## Mas información
 
-- [Rutas](https://laravel.com/docs/8.x/routing)
-- [Middleware](https://laravel.com/docs/8.x/middleware)
-- [Controladores](https://laravel.com/docs/8.x/controllers)
-- [Vistas](https://laravel.com/docs/8.x/views)
-- [Plantillas Blade](https://laravel.com/docs/8.x/blade)
-- [Base de datos](https://laravel.com/docs/8.x/database)
-- [Paginación](https://laravel.com/docs/8.x/pagination)
-- [Eloquent ORM](https://laravel.com/docs/8.x/eloquent)
-- [Generar PDF](https://github.com/dompdf/dompdf)
-- [Envío de correos electrónicos](https://github.com/PHPMailer/PHPMailer)
-- [Escribir/leer Excel](https://phpspreadsheet.readthedocs.io/en/latest/)
+Para obtener más información acerca del estado del framework, su uso o cualquier otra duda, visite las siguientes URLs:
+
+- [Twitter](https://twitter.com/nisa6delgado)
+- [Youtube](https://www.youtube.com/channel/UCTgu94owdYN98yBZQnW0ihA)
+- [Sitio web](https://nisadelgado.com)
+- [Correo electrónico](mailto:nisadelgado@gmail.com)
