@@ -1,37 +1,5 @@
 <x-layout-dashboard title="Editar usuario" active="users">
-	<div x-init="$watch('photo', value => preview(value))" x-data="{
-        photo: '',
-
-        preview (value) {
-            input = document.getElementById('photo');
-
-            if (input.files && input.files[0]) {
-                var reader = new FileReader();
-                reader.onload = function (event) {
-                    document.getElementById('photo-preview').setAttribute('src', event.target.result);
-                }
-
-                reader.readAsDataURL(input.files[0]);
-            }
-        },
-
-        confirmDelete (event, element) {
-            event.preventDefault();
-
-            Swal.fire({
-                title: '¿Estás seguro que desea eliminar este elemento?',
-                icon: 'warning',
-                showCancelButton: true,
-                confirmButtonText: 'Aceptar',
-                confirmButtonColor: 'black',
-                cancelButtonText: 'Cancelar'
-            }).then((result) => {
-                if (result.isConfirmed) {
-                    window.location.href = element.href;
-                }
-            });
-        }
-    }">
+	<div x-init="$watch('photo', value => preview(value))">
 		<div class="w-full p-3">
             <h1 class="text-4xl">Crear usuario</h1>
 

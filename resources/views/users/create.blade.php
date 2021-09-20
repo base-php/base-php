@@ -14,24 +14,7 @@
 	            </div>
 
 	            <div class="w-7/12 rounded bg-white p-7">                
-	                <div
-	                	x-init="$watch('photo', value => preview(value))"
-	                	x-data="{
-	                		photo: '',
-	                		preview (value) {
-	                			input = document.getElementById('photo');
-
-							    if (input.files && input.files[0]) {
-							        var reader = new FileReader();
-							        reader.onload = function (event) {
-							            document.getElementById('photo-preview').setAttribute('src', event.target.result);
-							        }
-
-							        reader.readAsDataURL(input.files[0]);
-							    }
-	                		}
-	                	}"
-	                >
+	                <div x-init="$watch('photo', value => preview(value))">
 	                    <label for="photo">Foto</label>
 	                    <input class="hidden" x-model="photo" id="photo" type="file" name="photo">
 	                    <img id="photo-preview" class="rounded-full mb-2 block w-1/4" src="{{ asset('img/user.png') }}" alt="">

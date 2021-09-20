@@ -1,9 +1,9 @@
-# Base
+# ![favicon](https://raw.githubusercontent.com/nisa6delgado/base/master/resources/assets/img/favicon.ico) Base
 Comience rápido y fácilmente su nuevo proyecto con esta estructura base que tiene todo lo requerido para realizar una aplicación web moderna.
 
 ## Instalación
 Ejecutar los siguientes comandos en consola:
-~~~bash
+~~~
 git clone https://github.com/nisa6delgado/base.git
 cd base
 composer install

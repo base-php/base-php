@@ -17,12 +17,8 @@
 
 </head>
 
-<body class="bg-gray-100 font-sans leading-normal tracking-normal">
-    <nav class="bg-white fixed w-full z-10 top-0 shadow"
-        x-data="{
-            showUserMenu: false,
-            showMainMenu: (window.innerWidth > 800) ? true : false
-        }">
+<body x-data="app()" class="bg-gray-100 font-sans leading-normal tracking-normal">
+    <nav class="bg-white fixed w-full z-10 top-0 shadow">
         <div class="w-full container mx-auto flex flex-wrap items-center mt-0 pt-3 pb-3 md:pb-0">
             <div class="w-1/2 pl-2 md:pl-0">
                 <a class="text-gray-900 text-base xl:text-xl no-underline hover:no-underline font-bold" href="/dashboard">
@@ -94,7 +90,8 @@
         </div>
     </div>
 
-    <script src="{{ node('alpinejs/dist/cdn.js') }}"></script>
+    <script src="{{ node('alpinejs/dist/cdn.js') }}" defer></script>
     <script src="{{ node('sweetalert2/dist/sweetalert2.js') }}"></script>
+    <script src="{{ asset('js/main.js') }}"></script>
 </body>
 </html>
