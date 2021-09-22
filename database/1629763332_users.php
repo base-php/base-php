@@ -13,7 +13,7 @@ $schema->create('users', function ($table) {
 	$table->string('oauth')->nullable();
 	$table->string('hash')->nullable();
 	$table->datetime('date_create')->useCurrent();
-	$table->datetime('date_update')->useCurrent()->seCurrentOnUpdate();
+	$table->datetime('date_update')->useCurrent()->setCurrentOnUpdate();
 });
 
 App\Models\User::create([
