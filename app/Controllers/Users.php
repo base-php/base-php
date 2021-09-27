@@ -61,7 +61,7 @@ class Users extends Controller
 
         $user->update(['hash' => md5($user->id)]);
 
-        return redirect('/dashboard/users')->with('info', 'Usuario registrado satisfactoriamente.');
+        return redirect('/dashboard/users')->with('info', __('users.store'));
     }
 
     /**
@@ -110,7 +110,7 @@ class Users extends Controller
             session('photo', $user->photo);
         }
 
-        return redirect('/dashboard/users')->with('info', 'Usuario actualizado satisfactoriamente.');
+        return redirect('/dashboard/users')->with('info', __('users.update'));
     }
 
     /**
@@ -121,11 +121,11 @@ class Users extends Controller
     public function delete($id)
     {
         if ($id == session('id')) {
-            return redirect('/dashboard/users')->with('error', 'No se puede borrar, el usuario está en uso.');
+            return redirect('/dashboard/users')->with('error', __('users.in_use'));
         }
 
         User::find($id)->delete();
 
-        return redirect('/dashboard/users')->with('info', 'Usuario eliminado satisfactoriamente.');
+        return redirect('/dashboard/users')->with('info', __('users.delete'));
     }
 }

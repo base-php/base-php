@@ -2,7 +2,7 @@
 
 return [
 	// General.
-	'application_name' 	=> 'Base',
+	'application_name' 	=> 'Base PHP',
 	'version'			=> '1.3.46',
 
 	// Region.

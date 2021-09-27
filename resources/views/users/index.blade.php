@@ -1,16 +1,16 @@
 <x-layout-dashboard active="users">
 	<div class="w-full p-3">
-        <h1 class="text-3xl mb-4">Usuarios</h1>
+        <h1 class="text-3xl mb-4">{{ __('users.users') }}</h1>
 
         <div class="grid grid-cols-2 mb-5">
             <div>
-                <input x-on:keyup="search($el)" autofocus type="text" placeholder="Buscar..." class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+                <input x-on:keyup="search($el)" autofocus type="text" placeholder="{{ __('users.search') }}" class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
             </div>
 
             <div class="text-right">
                 <a href="/dashboard/users/create" class="inline-flex items-center p-3 appearance-none bg-black border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-black active:bg-black focus:outline-none focus:border-black focus:ring focus:ring-gray-300 disabled:opacity-25 transition">
                     <i class="fa fa-plus mr-2"></i> 
-                    Crear nuevo usuario
+                    {{ __('users.create') }}
                 </a>
             </div>
         </div>
@@ -21,10 +21,10 @@
             <table id="table" class="w-full">
                 <thead class="border-b-2">
                     <tr class="hover:bg-gray-100">
-                        <th class="text-left p-2 hidden sm:table-cell">ID</th>
-                        <th class="text-left p-2">Foto</th>
-                        <th class="text-left p-2">Nombre</th>
-                        <th class="text-left p-2 hidden sm:table-cell">Correo electrónico</th>
+                        <th class="text-left p-2 hidden sm:table-cell">{{ __('users.id') }}</th>
+                        <th class="text-left p-2">{{ __('users.photo') }}</th>
+                        <th class="text-left p-2">{{ __('users.name') }}</th>
+                        <th class="text-left p-2 hidden sm:table-cell">{{ __('users.email') }}</th>
                         <th class="text-left p-2"></th>
                     </tr>
                 </thead>
@@ -39,11 +39,11 @@
                         <td class="p-2">{{ $user->name }}</td>
                         <td class="p-2 hidden sm:table-cell">{{ $user->email }}</td>
                         <td class="p-2 text-right">
-                            <a class="hover:text-blue-600 p-1" href="{{ '/dashboard/users/edit/' . $user->id }}" title="Editar usuario">
+                            <a class="hover:text-blue-600 p-1" href="{{ '/dashboard/users/edit/' . $user->id }}" title="{{ __('users.edit') }}">
                                 <fa class="fa fa-edit"></fa>
                             </a>
 
-                            <a x-on:click="confirmDelete(event, $el)" class="hover:text-red-600 p-1" href="{{ '/dashboard/users/delete/' . $user->id }}" title="Eliminar usuario">
+                            <a x-on:click="confirmDelete(event, $el)" class="hover:text-red-600 p-1" href="{{ '/dashboard/users/delete/' . $user->id }}" title="{{ __('users.delete') }}">
                                 <fa class="fa fa-trash"></fa>
                             </a>
                         </td>

@@ -37,13 +37,17 @@ function app () {
         confirmDelete (event, element) {
             event.preventDefault();
 
+            title = document.getElementById('confirm_delete_text').value;
+            confirmButtonText = document.getElementById('confirm_delete_accept').value;
+            cancelButtonText = document.getElementById('confirm_delete_cancel').value;
+
             Swal.fire({
-                title: '¿Estás seguro que desea eliminar este elemento?',
+                title: title,
                 icon: 'warning',
                 showCancelButton: true,
-                confirmButtonText: 'Aceptar',
+                confirmButtonText: confirmButtonText,
                 confirmButtonColor: 'black',
-                cancelButtonText: 'Cancelar'
+                cancelButtonText: cancelButtonText
             }).then((result) => {
                 if (result.isConfirmed) {
                     window.location.href = element.href;

@@ -27,13 +27,13 @@ class UserStore extends Validation
 	public function messages()
 	{
 		return [
-			'name.required' 		=> 'El campo nombre es obligatorio.',
-			'email.required' 		=> 'El campo correo electrónico es obligatorio.',
-			'email.email' 			=> 'Debe ingresar un correo electrónico válido.',
-			'email.unique' 			=> 'Este correo electrónico ya se encuentra registrado.',
-			'password.required' 	=> 'El campo contraseña es obligatorio.',
-			'password.min'			=> 'El campo contraseña debe ser mayor o igual a 8 caracteres.',
-			'confirm_password.same' => 'Las contraseñas no coinciden.'
+			'name.required' 		=> __('validations.name_required'),
+			'email.required' 		=> __('validations.email_required'),
+			'email.email' 			=> __('validations.email_email'),
+			'email.unique' 			=> __('validations.email_unique'),
+			'password.required' 	=> __('validations.password_required'),
+			'password.min'			=> __('validations.password_min'),
+			'confirm_password.same' => __('validations.password_same')
 		];
 	}
 }

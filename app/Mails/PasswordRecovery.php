@@ -16,7 +16,7 @@ class PasswordRecovery extends Mail
 	 * 
 	 * @var string $subject
 	 */
-	public $subject = 'Recuperación de contraseña de Base PHP';
+	public $subject = __('auth.email_subject');
 
 	/**
 	 * Set attach for email.
@@ -38,7 +38,7 @@ class PasswordRecovery extends Mail
 	/**
      * Build the email.
      *
-     * @return $this
+     * @return view
      */
 	public function build()
 	{

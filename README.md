@@ -1,4 +1,4 @@
-# ![favicon](https://raw.githubusercontent.com/nisa6delgado/base/master/resources/assets/img/favicon.ico) Base
+# ![favicon](https://raw.githubusercontent.com/nisa6delgado/base/master/resources/assets/img/favicon.ico) Base PHP
 Comience rápido y fácilmente su nuevo proyecto con esta estructura base que tiene todo lo requerido para realizar una aplicación web moderna.
 
 ## Instalación
