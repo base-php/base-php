@@ -61,7 +61,7 @@ class Auth extends Controller
     /**
      * Show and process forgot password form.
      *
-     * @param view|forgot
+     * @return view|forgot
      */
     public function forgot_password()
     {
@@ -75,9 +75,10 @@ class Auth extends Controller
     /**
      * Show and process recover password form.
      *
-     * @param view|recover
+     * @param string $id
+     * @return view|recover
      */
-    public function recover($id)
+    public function recover(string $id)
     {
         if (post()) {
             return recover();
