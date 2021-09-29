@@ -4,7 +4,7 @@ Comience rápido y fácilmente su nuevo proyecto con esta estructura base que ti
 ## Instalación
 Ejecutar los siguientes comandos en consola:
 ~~~
-git clone https://github.com/nisa6delgado/base.git
+composer create-project nisadelgado/base
 cd base
 composer install
 npm install
