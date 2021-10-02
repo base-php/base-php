@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6c3927ea8d0e8a740b6e8272d6c294ef",
+    "content-hash": "bcc8ee572a7e90e8746cb78a82c35b03",
     "packages": [
         {
             "name": "doctrine/inflector",
@@ -168,16 +168,16 @@
         },
         {
             "name": "filp/whoops",
-            "version": "2.14.1",
+            "version": "2.14.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/filp/whoops.git",
-                "reference": "15ead64e9828f0fc90932114429c4f7923570cb1"
+                "reference": "89584ce67dd32307f1063cc43846674f4679feda"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/filp/whoops/zipball/15ead64e9828f0fc90932114429c4f7923570cb1",
-                "reference": "15ead64e9828f0fc90932114429c4f7923570cb1",
+                "url": "https://api.github.com/repos/filp/whoops/zipball/89584ce67dd32307f1063cc43846674f4679feda",
+                "reference": "89584ce67dd32307f1063cc43846674f4679feda",
                 "shasum": ""
             },
             "require": {
@@ -227,7 +227,7 @@
             ],
             "support": {
                 "issues": "https://github.com/filp/whoops/issues",
-                "source": "https://github.com/filp/whoops/tree/2.14.1"
+                "source": "https://github.com/filp/whoops/tree/2.14.3"
             },
             "funding": [
                 {
@@ -235,7 +235,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-08-29T12:00:00+00:00"
+            "time": "2021-09-19T12:00:00+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -683,16 +683,16 @@
         },
         {
             "name": "illuminate/database",
-            "version": "v8.61.0",
+            "version": "v8.62.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/database.git",
-                "reference": "acc11d6839ddb3b694bc6585177fa5141b70c693"
+                "reference": "327c22dc8f117c07a3e00ecfb4f5011ede445407"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/database/zipball/acc11d6839ddb3b694bc6585177fa5141b70c693",
-                "reference": "acc11d6839ddb3b694bc6585177fa5141b70c693",
+                "url": "https://api.github.com/repos/illuminate/database/zipball/327c22dc8f117c07a3e00ecfb4f5011ede445407",
+                "reference": "327c22dc8f117c07a3e00ecfb4f5011ede445407",
                 "shasum": ""
             },
             "require": {
@@ -706,7 +706,7 @@
                 "symfony/console": "^5.1.4"
             },
             "suggest": {
-                "doctrine/dbal": "Required to rename columns and drop SQLite columns (^2.6|^3.0).",
+                "doctrine/dbal": "Required to rename columns and drop SQLite columns (^2.13.3|^3.1.2).",
                 "fakerphp/faker": "Required to use the eloquent factory builder (^1.9.1).",
                 "illuminate/console": "Required to use the database commands (^8.0).",
                 "illuminate/events": "Required to use the observers with Eloquent (^8.0).",
@@ -747,20 +747,20 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2021-09-13T18:43:43+00:00"
+            "time": "2021-09-28T13:10:43+00:00"
         },
         {
             "name": "illuminate/events",
-            "version": "v8.61.0",
+            "version": "v8.62.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/events.git",
-                "reference": "7def78033f29cd0c0383513b27c291d233a7f90e"
+                "reference": "b7f06cafb6c09581617f2ca05d69e9b159e5a35d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/events/zipball/7def78033f29cd0c0383513b27c291d233a7f90e",
-                "reference": "7def78033f29cd0c0383513b27c291d233a7f90e",
+                "url": "https://api.github.com/repos/illuminate/events/zipball/b7f06cafb6c09581617f2ca05d69e9b159e5a35d",
+                "reference": "b7f06cafb6c09581617f2ca05d69e9b159e5a35d",
                 "shasum": ""
             },
             "require": {
@@ -802,7 +802,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2021-08-16T21:45:47+00:00"
+            "time": "2021-09-15T14:32:50+00:00"
         },
         {
             "name": "illuminate/filesystem",
@@ -972,7 +972,7 @@
         },
         {
             "name": "illuminate/pagination",
-            "version": "v8.61.0",
+            "version": "v8.62.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/pagination.git",
@@ -1070,16 +1070,16 @@
         },
         {
             "name": "illuminate/routing",
-            "version": "v8.61.0",
+            "version": "v8.62.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/routing.git",
-                "reference": "1bdf26d75351dd5d55f6a67a5262e9c9f9a26356"
+                "reference": "d57ccf8f7dfabf807957d6148549ffd9a7147b0e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/routing/zipball/1bdf26d75351dd5d55f6a67a5262e9c9f9a26356",
-                "reference": "1bdf26d75351dd5d55f6a67a5262e9c9f9a26356",
+                "url": "https://api.github.com/repos/illuminate/routing/zipball/d57ccf8f7dfabf807957d6148549ffd9a7147b0e",
+                "reference": "d57ccf8f7dfabf807957d6148549ffd9a7147b0e",
                 "shasum": ""
             },
             "require": {
@@ -1129,7 +1129,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2021-09-07T19:17:50+00:00"
+            "time": "2021-09-15T14:32:50+00:00"
         },
         {
             "name": "illuminate/session",
@@ -1257,16 +1257,16 @@
         },
         {
             "name": "illuminate/view",
-            "version": "v8.61.0",
+            "version": "v8.62.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/view.git",
-                "reference": "f47b9261a4f275885d51bd389cb320f9f3b7a6f8"
+                "reference": "875ca9f548b17e1a225469e0b0f8bae3c9e4ff71"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/view/zipball/f47b9261a4f275885d51bd389cb320f9f3b7a6f8",
-                "reference": "f47b9261a4f275885d51bd389cb320f9f3b7a6f8",
+                "url": "https://api.github.com/repos/illuminate/view/zipball/875ca9f548b17e1a225469e0b0f8bae3c9e4ff71",
+                "reference": "875ca9f548b17e1a225469e0b0f8bae3c9e4ff71",
                 "shasum": ""
             },
             "require": {
@@ -1307,20 +1307,20 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2021-09-13T16:16:22+00:00"
+            "time": "2021-09-20T14:39:52+00:00"
         },
         {
             "name": "league/flysystem",
-            "version": "2.2.3",
+            "version": "2.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem.git",
-                "reference": "811bdc2d52a07eafbb6cb68a7b368b0668b362c8"
+                "reference": "499313f8b65f9a4dae1c779cd974d59a6fcf0f15"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/811bdc2d52a07eafbb6cb68a7b368b0668b362c8",
-                "reference": "811bdc2d52a07eafbb6cb68a7b368b0668b362c8",
+                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/499313f8b65f9a4dae1c779cd974d59a6fcf0f15",
+                "reference": "499313f8b65f9a4dae1c779cd974d59a6fcf0f15",
                 "shasum": ""
             },
             "require": {
@@ -1376,7 +1376,7 @@
             ],
             "support": {
                 "issues": "https://github.com/thephpleague/flysystem/issues",
-                "source": "https://github.com/thephpleague/flysystem/tree/2.2.3"
+                "source": "https://github.com/thephpleague/flysystem/tree/2.3.0"
             },
             "funding": [
                 {
@@ -1392,7 +1392,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-08-18T19:59:31+00:00"
+            "time": "2021-09-22T06:09:19+00:00"
         },
         {
             "name": "league/mime-type-detection",
@@ -1611,7 +1611,7 @@
         },
         {
             "name": "nisadelgado/framework",
-            "version": "1.3.46",
+            "version": "1.3.62",
             "dist": {
                 "type": "zip",
                 "url": "https://github.com/nisa6delgado/framework/archive/refs/heads/main.zip"
