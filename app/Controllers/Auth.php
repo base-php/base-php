@@ -22,7 +22,7 @@ class Auth extends Controller
     public function register()
     {
         if (post()) {
-            return register(post());
+            return register(request());
         }
 
         return view('auth/register');
@@ -35,7 +35,7 @@ class Auth extends Controller
      */
     public function login()
     {
-        return login(post());
+        return login(request());
     }
 
     /**

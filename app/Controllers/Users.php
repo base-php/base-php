@@ -51,9 +51,9 @@ class Users extends Controller
         $file = storage()->save('resources/assets/img', 'photo');
 
         $user = User::create([
-            'name'          => post('name'),
-            'email'         => post('email'),
-            'password'      => md5(post('password')),
+            'name'          => request('name'),
+            'email'         => request('email'),
+            'password'      => md5(request('password')),
             'photo'         => $file->filename,
             'date_create'   => now('Y-m-d H:i:s'),
             'date_update'   => now('Y-m-d H:i:s')
@@ -86,16 +86,16 @@ class Users extends Controller
 
         $file = storage()->save('resources/assets/img', 'photo');
 
-        $user = User::find(post('id'));
+        $user = User::find(request('id'));
         $user->update([
-            'name'  => post('name'),
-            'email' => post('email'),
+            'name'  => request('name'),
+            'email' => request('email'),
             'date_update'   => now('Y-m-d H:i:s')
         ]);
 
-        if (post('password')) {
+        if (request('password')) {
             $user->update([
-                'password' => md5(post('password')),
+                'password' => md5(request('password')),
             ]);
         }
 
