@@ -2,6 +2,8 @@
 
 namespace App\Controllers;
 
+use View;
+
 class Dashboard extends Controller
 {
 	/**
@@ -17,9 +19,9 @@ class Dashboard extends Controller
 	/**
 	 * Show home page.
 	 *
-	 * @return view
+	 * @return View
 	 */
-    public function index()
+    public function index(): View
     {
         return view('dashboard/index');
     }

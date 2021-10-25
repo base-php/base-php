@@ -5,6 +5,8 @@ namespace App\Controllers;
 use App\Models\User;
 use App\Validations\UserStore;
 use App\Validations\UserUpdate;
+use Redirect;
+use View;
 
 class Users extends Controller
 {
@@ -21,9 +23,9 @@ class Users extends Controller
     /**
      * Show home page.
      *
-     * @return view
+     * @return View
      */
-    public function index()
+    public function index(): View
     {
         $users = User::get();
         return view('users/index', compact('users'));
@@ -32,9 +34,9 @@ class Users extends Controller
     /**
      * Show create user page.
      *
-     * @return view
+     * @return View
      */
-    public function create()
+    public function create(): View
     {
         return view('users/create');
     }
@@ -42,9 +44,9 @@ class Users extends Controller
     /**
      * Store user in database.
      *
-     * @return redirect
+     * @return Redirect
      */
-    public function store()
+    public function store(): Redirect
     {
         UserStore::validate();
 
@@ -67,9 +69,9 @@ class Users extends Controller
     /**
      * Show edit user page.
      *
-     * @return view
+     * @return View
      */
-    public function edit($id)
+    public function edit($id): View
     {
         $user = User::find($id);
         return view('users/edit', compact('user'));
@@ -78,9 +80,9 @@ class Users extends Controller
     /**
      * Update user in database.
      *
-     * @return redirect
+     * @return Redirect
      */
-    public function update()
+    public function update(): Redirect
     {
         UserUpdate::validate();
 
@@ -116,9 +118,9 @@ class Users extends Controller
     /**
      * Delete user in database.
      *
-     * @return void
+     * @return Redirect
      */
-    public function delete($id)
+    public function delete($id): Redirect
     {
         if ($id == session('id')) {
             return redirect('/dashboard/users')->with('error', __('users.in_use'));

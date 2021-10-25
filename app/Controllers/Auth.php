@@ -2,14 +2,16 @@
 
 namespace App\Controllers;
 
+use View;
+
 class Auth extends Controller
 {
     /**
      * Show login form.
      *
-     * @return view
+     * @return View
      */
-    public function index()
+    public function index(): View
     {
         return view('auth/login');
     }
@@ -17,7 +19,7 @@ class Auth extends Controller
     /**
      * Show register form.
      *
-     * @return view
+     * @return View
      */
     public function register()
     {
@@ -61,7 +63,7 @@ class Auth extends Controller
     /**
      * Show and process forgot password form.
      *
-     * @return view|forgot
+     * @return View|forgot
      */
     public function forgot_password()
     {
@@ -76,7 +78,7 @@ class Auth extends Controller
      * Show and process recover password form.
      *
      * @param string $id
-     * @return view|recover
+     * @return View|recover
      */
     public function recover(string $id)
     {
