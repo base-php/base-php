@@ -2,6 +2,8 @@
 
 namespace App\Mails;
 
+use View;
+
 class PasswordRecovery extends Mail
 {
 	/**
@@ -9,21 +11,21 @@ class PasswordRecovery extends Mail
 	 * 
 	 * @var string $from
 	 */
-	public $from = 'info@base.com';
+	public string $from = 'info@base.com';
 
 	/**
 	 * Set subject for email.
 	 * 
 	 * @var string $subject
 	 */
-	public $subject = __('auth.email_subject');
+	public string $subject = __('auth.email_subject');
 
 	/**
 	 * Set attach for email.
 	 * 
 	 * @var array $attach
 	 */
-	public $attach = [];
+	public array $attach = [];
 
 	/**
      * Create a email instance.
@@ -38,9 +40,9 @@ class PasswordRecovery extends Mail
 	/**
      * Build the email.
      *
-     * @return view
+     * @return View
      */
-	public function build()
+	public function build(): View
 	{
 		return view('recover', ['user' => $this->user]);
 	}

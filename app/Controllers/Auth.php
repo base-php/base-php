@@ -2,6 +2,9 @@
 
 namespace App\Controllers;
 
+use Facebook;
+use Google;
+use Redirect;
 use View;
 
 class Auth extends Controller
@@ -19,9 +22,9 @@ class Auth extends Controller
     /**
      * Show register form.
      *
-     * @return View
+     * @return View|Redirect
      */
-    public function register()
+    public function register(): View|Redirect
     {
         if (post()) {
             return register(request());
@@ -33,9 +36,9 @@ class Auth extends Controller
     /**
      * Login user.
      *
-     * @return login
+     * @return Redirect
      */
-    public function login()
+    public function login(): Redirect
     {
         return login(request());
     }
@@ -43,9 +46,9 @@ class Auth extends Controller
     /**
      * Login user with Facebook account.
      *
-     * @return google
+     * @return Facebook
      */
-    public function facebook()
+    public function facebook(): ?Facebook
     {
         return facebook()->login();
     }
@@ -53,9 +56,9 @@ class Auth extends Controller
     /**
      * Login user with Google account.
      *
-     * @return google
+     * @return Google
      */
-    public function google()
+    public function google(): ?Google
     {
         return google()->login();
     }
@@ -63,9 +66,9 @@ class Auth extends Controller
     /**
      * Show and process forgot password form.
      *
-     * @return View|forgot
+     * @return View|Redirect
      */
-    public function forgot_password()
+    public function forgot_password(): View|Redirect
     {
         if (post()) {
             return forgot();
@@ -78,9 +81,9 @@ class Auth extends Controller
      * Show and process recover password form.
      *
      * @param string $id
-     * @return View|recover
+     * @return View|Redirect
      */
-    public function recover(string $id)
+    public function recover(string $id): View|Redirect
     {
         if (post()) {
             return recover();
@@ -92,9 +95,9 @@ class Auth extends Controller
     /**
      * Logout user.
      *
-     * @return redirect
+     * @return Redirect
      */
-    public function logout()
+    public function logout(): Redirect
     {
         logout();
         return redirect('/login');

@@ -9,7 +9,7 @@ class UserStore extends Validation
 	*
 	* @return array
 	*/
-	public function rules()
+	public function rules(): array
 	{
 		return [
 			'name' 				=> 'required',
@@ -24,7 +24,7 @@ class UserStore extends Validation
 	 *
 	 * @return array
 	 */
-	public function messages()
+	public function messages(): array
 	{
 		return [
 			'name.required' 		=> __('validations.name_required'),

@@ -4,6 +4,7 @@ namespace App\Middleware;
 
 use App\Models\User;
 use Closure;
+use View;
 
 class Permission
 {

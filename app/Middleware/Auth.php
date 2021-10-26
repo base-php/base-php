@@ -3,6 +3,7 @@
 namespace App\Middleware;
 
 use Closure;
+use Redirect;
 
 class Auth
 {
@@ -11,7 +12,7 @@ class Auth
 	 *
 	 * @param  Request $request
 	 * @param  Closure $next
-	 * @return Closure
+	 * @return Closure|Redirect
 	 */
     public function handle($request, Closure $next)
     {

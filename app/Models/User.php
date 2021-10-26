@@ -31,7 +31,7 @@ class User extends Model
      * @param  string $value
      * @return void
      */
-    public function setPhotoAttribute($value)
+    public function setPhotoAttribute(?string $value)
     {
         if ($value != '') {
             $this->attributes['photo'] = '/resources/assets/img/' . $value;
@@ -44,7 +44,7 @@ class User extends Model
      * @param  string $value
      * @return void
      */
-    public function getPhotoAttribute($value)
+    public function getPhotoAttribute(?string $value)
     {
         if ($value == '') {
             return 'https://ui-avatars.com/api?size=200&background=000&color=fff&name=' . $this->name;
