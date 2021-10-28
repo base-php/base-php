@@ -16,7 +16,7 @@ class Auth extends Controller
      */
     public function index(): View
     {
-        return view('auth/login');
+        return view('auth.login');
     }
 
     /**
@@ -30,7 +30,7 @@ class Auth extends Controller
             return register(request());
         }
 
-        return view('auth/register');
+        return view('auth.register');
     }
 
     /**
@@ -74,7 +74,7 @@ class Auth extends Controller
             return forgot();
         }
 
-        return view('auth/forgot-password');
+        return view('auth.forgot-password');
     }
 
     /**
@@ -89,7 +89,7 @@ class Auth extends Controller
             return recover();
         }
 
-        return view('auth/recover', compact('id'));
+        return view('auth.recover', compact('id'));
     }
 
     /**

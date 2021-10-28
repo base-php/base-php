@@ -28,7 +28,7 @@ class Users extends Controller
     public function index(): View
     {
         $users = User::get();
-        return view('users/index', compact('users'));
+        return view('users.index', compact('users'));
     }
 
     /**
@@ -38,7 +38,7 @@ class Users extends Controller
      */
     public function create(): View
     {
-        return view('users/create');
+        return view('users.create');
     }
 
     /**
@@ -74,7 +74,7 @@ class Users extends Controller
     public function edit($id): View
     {
         $user = User::find($id);
-        return view('users/edit', compact('user'));
+        return view('users.edit', compact('user'));
     }
 
     /**

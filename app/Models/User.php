@@ -42,9 +42,9 @@ class User extends Model
      * Get the user photo.
      *
      * @param  string $value
-     * @return void
+     * @return string
      */
-    public function getPhotoAttribute(?string $value)
+    public function getPhotoAttribute(?string $value): string
     {
         if ($value == '') {
             return 'https://ui-avatars.com/api?size=200&background=000&color=fff&name=' . $this->name;
