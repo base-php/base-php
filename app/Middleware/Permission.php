@@ -7,11 +7,11 @@ class Permission
     /**
      * Verify if user can access module.
      *
-     * @param  Request $request
-     * @param  Closure $next
-     * @return Closure
+     * @param  $request
+     * @param  $next
+     * @return mixed
      */
-    public function handle($request, Closure $next)
+    public function handle($request, $next)
     {
         if (permission()) {
             return view('401');

@@ -7,9 +7,9 @@ class Auth
 	/**
 	 * Verify if user is logged.
 	 *
-	 * @param  Request $request
-	 * @param  Closure $next
-	 * @return Closure|Redirect
+	 * @param  $request
+	 * @param  $next
+	 * @return mixed
 	 */
     public function handle($request, $next)
     {
