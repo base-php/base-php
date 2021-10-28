@@ -69,9 +69,10 @@ class Users extends Controller
     /**
      * Show edit user page.
      *
+     * @param int $id
      * @return View
      */
-    public function edit($id): View
+    public function edit(int $id): View
     {
         $user = User::find($id);
         return view('users.edit', compact('user'));
@@ -118,9 +119,10 @@ class Users extends Controller
     /**
      * Delete user in database.
      *
+     * @param int $id
      * @return Redirect
      */
-    public function delete($id): Redirect
+    public function delete(int $id): Redirect
     {
         if ($id == session('id')) {
             return redirect('/dashboard/users')->with('error', __('users.in_use'));

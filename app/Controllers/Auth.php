@@ -24,7 +24,7 @@ class Auth extends Controller
      *
      * @return View|Redirect
      */
-    public function register(): View|Redirect
+    public function register()
     {
         if (post()) {
             return register(request());
@@ -68,7 +68,7 @@ class Auth extends Controller
      *
      * @return View|Redirect
      */
-    public function forgot_password(): View|Redirect
+    public function forgot_password()
     {
         if (post()) {
             return forgot();
@@ -83,7 +83,7 @@ class Auth extends Controller
      * @param string $id
      * @return View|Redirect
      */
-    public function recover(string $id): View|Redirect
+    public function recover($id)
     {
         if (post()) {
             return recover();
