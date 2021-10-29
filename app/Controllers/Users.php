@@ -46,10 +46,8 @@ class Users extends Controller
      *
      * @return Redirect
      */
-    public function store(): Redirect
+    public function store(UserStore $validation): Redirect
     {
-        UserStore::validate();
-
         $file = request('photo')->save('resources/assets/img');
 
         $user = User::create([

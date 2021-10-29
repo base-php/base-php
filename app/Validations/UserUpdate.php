@@ -13,7 +13,7 @@ class UserUpdate extends Validation
 	{
 		return [
 			'name' 				=> 'required',
-			'email' 			=> 'required|email|unique:User',
+			'email' 			=> 'required|email|unique:users',
 			'confirm_password' 	=> 'same:password'
 		];
 	}
