@@ -46,7 +46,7 @@ class Users extends Controller
      *
      * @return Redirect
      */
-    public function store(UserStore): Redirect
+    public function store(UserStore $validation): Redirect
     {
         $file = request('photo')->save('resources/assets/img');
 
@@ -81,7 +81,7 @@ class Users extends Controller
      *
      * @return Redirect
      */
-    public function update(UserUpdate): Redirect
+    public function update(UserUpdate $validation): Redirect
     {
         $file = request('photo')->save('resources/assets/img');
 
