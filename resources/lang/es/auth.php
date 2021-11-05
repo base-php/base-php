@@ -18,7 +18,6 @@ return [
     'email_not_match'        => 'No podemos encontrar un usuario con esa dirección de correo electrónico.',
     'check_email'            => 'Revise su correo electrónico para recuperar su contraseña.',
     'link_invalid'           => 'Enlace de recuperación de contraseña inválido.',
-    'email_subject'          => 'Recuperación de contraseña de Base PHP',
     'email_greeting'         => 'Hola',
     'email_text'             => 'Estas recibiendo este correo electrónico porque hiciste una solicitud de recuperación de contraseña para tu cuenta.',
     'email_recover_password' => 'Recuperar contraseña',
