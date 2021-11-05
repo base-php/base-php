@@ -11,8 +11,6 @@
         }
     ],
     "require": {
-        "fakerphp/faker": "1.16.0",
-        "filp/whoops": "2.14.4",
         "guzzlehttp/guzzle": "7.4.0",
         "illuminate/database": "8.68.1",
         "illuminate/events": "8.68.1",
@@ -21,8 +19,12 @@
         "illuminate/validation": "8.68.1",
         "illuminate/view": "8.68.1",
         "league/flysystem": "2.3.0",
+        "nisadelgado/framework": "1.3.91"
+    },
+    "require-dev": {
+        "fakerphp/faker": "1.16.0",
+        "filp/whoops": "2.14.4",
         "maximebf/debugbar": "1.17.2",
-        "nisadelgado/framework": "1.3.91",
         "phpmailer/phpmailer": "6.5.1",
         "phpunit/phpunit": "9.5.10"
     },
