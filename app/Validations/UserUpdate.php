@@ -2,6 +2,8 @@
 
 namespace App\Validations;
 
+use App\Models\User;
+
 class UserUpdate extends Validation
 {
 	/**
@@ -13,7 +15,7 @@ class UserUpdate extends Validation
 	{
 		return [
 			'name' 				=> 'required',
-			'email' 			=> 'required|email|unique:users',
+			'email' 			=> 'required|email|unique:User',
 			'confirm_password' 	=> 'same:password'
 		];
 	}
