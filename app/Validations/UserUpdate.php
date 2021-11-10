@@ -16,6 +16,11 @@ class UserUpdate extends Validation
 		return [
 			'name' 				=> 'required',
 			'email' 			=> 'required|email|unique:User',
+			'email' 			=> [
+				'required',
+				'email',
+				Rule::unique('users')->ignore(request('id'))
+			],
 			'confirm_password' 	=> 'same:password'
 		];
 	}
