@@ -9,7 +9,7 @@ cd base
 composer install
 npm install
 php base create-database
-php base run-sql
+php base migrate
 php base server
 ~~~
 
