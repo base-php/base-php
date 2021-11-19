@@ -13,6 +13,10 @@
                 <input name="password" required type="password" class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
             </div>
 
+            @if(get('redirect'))
+                <input type="hidden" name="redirect" value="{{ get('redirect') }}">
+            @endif
+
             <div class="text-center p-5">
                 <a href="/forgot-password" class="text-sm text-black hover:text-black hover:underline mb-6">{{ __('auth.recover') }}</a>
             </div>
