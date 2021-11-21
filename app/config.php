@@ -14,15 +14,18 @@ return [
 	'environment' 		=> 'development',
 	'errors' 			=> true,
 
+	// Redirect after login
+	'redirect_login' 	=> '/dashboard',
+
 	// Database.
-	'database' 		=> [
+	'database' 			=> [
 		[
-			'name'			=> 'default',
-			'driver' 		=> 'mysql',
-			'host' 			=> 'localhost',
-			'username' 		=> 'root',
-			'password' 		=> '',
-			'database' 		=> 'base',
+			'name'		=> 'default',
+			'driver' 	=> 'mysql',
+			'host' 		=> 'localhost',
+			'username' 	=> 'root',
+			'password' 	=> '',
+			'database' 	=> 'base',
 		]
 	],
 
