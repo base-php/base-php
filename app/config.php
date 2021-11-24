@@ -20,13 +20,13 @@ return [
 	// Database.
 	'database' 			=> [
 		[
-			'name'		=> 'default',
-			'driver' 	=> 'mysql',
-			'host' 		=> 'localhost',
-			'username' 	=> 'root',
-			'password' 	=> '',
-			'database' 	=> 'base',
-		]
+            'name'      => 'default',
+            'driver'    => 'mysql',
+            'host'      => 'localhost',
+            'username'  => 'root',
+            'password'  => '',
+            'database'  => 'base',
+        ]
 	],
 
 	// Needed to send emails locally.

@@ -29,7 +29,7 @@
 
         <div class="flex">
             <div class="w-6/12">
-                <p class="text-2xl">{{ __('home.intro') }}</p>
+                <p class="text-2xl">{{ lang('home.intro') }}</p>
             </div>
         </div>
 
@@ -37,21 +37,21 @@
 
         <div class="flex">
             <div class="w-6/12">
-                <h2 class="text-3xl font-semibold">{{ __('home.explorer') }}</h2>
+                <h2 class="text-3xl font-semibold">{{ lang('home.explorer') }}</h2>
 
                 <div class="mt-5">
                     <a href="/login" class="block">
-                        <i class="fa fa-arrow-right"></i> {{ __('home.login') }}
+                        <i class="fa fa-arrow-right"></i> {{ lang('home.login') }}
                     </a>
 
                     <a href="/register" class="block">
-                        <i class="fa fa-arrow-right"></i> {{ __('home.register') }}
+                        <i class="fa fa-arrow-right"></i> {{ lang('home.register') }}
                     </a>
                 </div>
             </div>
 
             <div class="w-6/12">
-                <h2 class="text-3xl font-semibold">{{ __('home.info') }}</h2>
+                <h2 class="text-3xl font-semibold">{{ lang('home.info') }}</h2>
 
                 <div class="mt-5">
                     <a target="_blank" href="https://twitter.com/nisa6delgado" class="block">
@@ -63,11 +63,11 @@
                     </a>
 
                     <a target="_blank" href="https://nisadelgado.com" class="block">
-                        <i class="fas fa-globe-americas"></i> {{ __('home.web') }}
+                        <i class="fas fa-globe-americas"></i> {{ lang('home.web') }}
                     </a>
 
                     <a target="_blank" href="mailto:nisadelgado@gmail.com" class="block">
-                        <i class="fas fa-envelope"></i> {{ __('home.email') }}
+                        <i class="fas fa-envelope"></i> {{ lang('home.email') }}
                     </a>
                 </div>
             </div>

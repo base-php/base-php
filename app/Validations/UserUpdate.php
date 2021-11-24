@@ -2,8 +2,6 @@
 
 namespace App\Validations;
 
-use App\Models\User;
-
 class UserUpdate extends Validation
 {
 	/**
@@ -15,7 +13,6 @@ class UserUpdate extends Validation
 	{
 		return [
 			'name' 				=> 'required',
-			'email' 			=> 'required|email|unique:User',
 			'email' 			=> [
 				'required',
 				'email',
@@ -33,11 +30,11 @@ class UserUpdate extends Validation
 	public function messages(): array
 	{
 		return [
-			'name.required' 		=> __('validations.name_required'),
-			'email.required' 		=> __('validations.email_required'),
-			'email.email' 			=> __('validations.email_email'),
-			'email.unique' 			=> __('validations.email_unique'),
-			'confirm_password.same' => __('validations.password_same')
+			'name.required' 		=> lang('validations.name_required'),
+			'email.required' 		=> lang('validations.email_required'),
+			'email.email' 			=> lang('validations.email_email'),
+			'email.unique' 			=> lang('validations.email_unique'),
+			'confirm_password.same' => lang('validations.password_same')
 		];
 	}
 }

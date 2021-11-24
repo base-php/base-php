@@ -2,11 +2,9 @@
 
 namespace App\Validations;
 
-use App\Models\User;
-
 class UserStore extends Validation
 {
-	/**
+    /**
 	* Get the validation rules that apply to the request.
 	*
 	* @return array
@@ -15,7 +13,7 @@ class UserStore extends Validation
 	{
 		return [
 			'name' 				=> 'required',
-			'email' 			=> 'required|email|unique:User',
+			'email' 			=> 'required|email|unique:users',
 			'password' 			=> 'required|min:8',
 			'confirm_password' 	=> 'same:password'
 		];
@@ -29,13 +27,13 @@ class UserStore extends Validation
 	public function messages(): array
 	{
 		return [
-			'name.required' 		=> __('validations.name_required'),
-			'email.required' 		=> __('validations.email_required'),
-			'email.email' 			=> __('validations.email_email'),
-			'email.unique' 			=> __('validations.email_unique'),
-			'password.required' 	=> __('validations.password_required'),
-			'password.min'			=> __('validations.password_min'),
-			'confirm_password.same' => __('validations.password_same')
+			'name.required' 		=> lang('validations.name_required'),
+			'email.required' 		=> lang('validations.email_required'),
+			'email.email' 			=> lang('validations.email_email'),
+			'email.unique' 			=> lang('validations.email_unique'),
+			'password.required' 	=> lang('validations.password_required'),
+			'password.min'			=> lang('validations.password_min'),
+			'confirm_password.same' => lang('validations.password_same')
 		];
 	}
 }

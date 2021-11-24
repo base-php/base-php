@@ -27,6 +27,13 @@ class PasswordRecovery extends Mail
 	 */
 	public array $attach = [];
 
+    /**
+     * User data for email
+     *
+     * @var mixed $user
+     */
+    public mixed $user;
+
 	/**
      * Create a email instance.
      *
