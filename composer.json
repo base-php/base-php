@@ -27,7 +27,7 @@
         "mockery/mockery": "1.4.4",
         "maximebf/debugbar": "1.17.2",
         "phpmailer/phpmailer": "6.5.1",
-        "phpmetrics/phpmetrics": "2.7.4",
+        "phpstan/phpstan": "1.2.0",
         "phpunit/phpunit": "9.5.10"
     },
     "autoload": {
