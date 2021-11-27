@@ -13,6 +13,8 @@
                     <h2>{{ lang('users.edit_name_email') }}</h2>
                 </div>
 
+                <input type="hidden" id="photo-url" value="{{ $user->photo }}">
+
                 <div class="w-7/12 rounded bg-white p-7">
                     <form action="/dashboard/users/update" method="POST" enctype="multipart/form-data">
                         <input type="hidden" name="id" value="{{ $user->id }}">
@@ -20,12 +22,17 @@
                         <div>
                             <label for="photo">Foto</label>
                             <input class="hidden" x-model="photo" id="photo" type="file" name="photo">
-                            <img id="photo-preview" class="rounded-full mb-2 block w-1/4" src="{{ $user->photo }}" alt="">
+                            <img id="photo-preview" class="rounded-full mb-2 block w-1/4" src="{{ $user->photo }}" alt="{{ $user->name }}">
 
                             <div>
-                                <button x-on:click="document.getElementById('photo').click()" type="button" id="open-file-selector" class="inline-flex items-center p-2 appearance-none bg-white border border-gray-200 border-transparent rounded-md font-semibold text-xs text-black uppercase tracking-widest hover:bg-white active:bg-white focus:outline-none focus:border-white focus:ring focus:ring-gray-300 disabled:opacity-25 transition">
+                                <button x-show="photo == ''" x-on:click="document.getElementById('photo').click()" type="button" id="open-file-selector" class="inline-flex items-center p-2 appearance-none bg-white border border-gray-200 border-transparent rounded-md font-semibold text-xs text-black uppercase tracking-widest hover:bg-white active:bg-white focus:outline-none focus:border-white focus:ring focus:ring-gray-300 disabled:opacity-25 transition">
                                     <i class="fa fa-upload mr-2"></i>
                                     {{ lang('users.select_photo') }}
+                                </button>
+
+                                <button x-show="photo != ''" x-on:click="removePhoto()" type="button" class="inline-flex items-center p-2 appearance-none bg-red-500 border border-white border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-red-500 active:bg-red-500 focus:outline-none focus:border-red-500 focus:ring focus:ring-red-300 disabled:opacity-25 transition">
+                                    <i class="fa fa-trash mr-2"></i>
+                                    Eliminar
                                 </button>
                             </div>
                         </div>

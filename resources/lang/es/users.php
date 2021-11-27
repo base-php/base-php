@@ -14,6 +14,7 @@ return [
     'add_name_email'             => 'Agregue el nombre y correo electrónico.',
     'photo'                      => 'Foto',
     'select_photo'               => 'Seleccionar nueva foto',
+    'delete_photo'               => 'Eliminar foto',
     'name'                       => 'Nombre',
     'email'                      => 'Correo electrónico',
     'change_password'            => 'Cambia contraseña',

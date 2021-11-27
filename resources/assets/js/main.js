@@ -66,6 +66,11 @@ function app () {
 
 		        reader.readAsDataURL(input.files[0]);
 		    }
-		}
+		},
+
+        removePhoto () {
+            this.photo = '';
+            document.getElementById('photo-preview').src = document.getElementById('photo-url').value;
+        }
 	}
 }
