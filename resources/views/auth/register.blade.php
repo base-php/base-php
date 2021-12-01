@@ -36,7 +36,7 @@
             @endif
 
             @if(config('google')->client_id)
-                <a href="{{ google() }}" class="mt-3 text-center items-center p-3 appearance-none bg-red-600 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-red-600 active:bg-red-600 focus:outline-none focus:border-red-600 focus:ring focus:ring-gray-300 disabled:opacity-25 transition">
+                <a href="{{ google()->url() }}" class="mt-3 text-center items-center p-3 appearance-none bg-red-600 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-red-600 active:bg-red-600 focus:outline-none focus:border-red-600 focus:ring focus:ring-gray-300 disabled:opacity-25 transition">
                     <i class="fab fa-google mr-2"></i> 
                     {{ lang('auth.register') }}
                 </a>
