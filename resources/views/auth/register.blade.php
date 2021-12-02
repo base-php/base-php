@@ -29,7 +29,7 @@
             </button>
 
             @if(config('facebook')->app_id)
-                <a href="{{ facebook() }}" class="mt-3 text-center items-center p-3 appearance-none bg-blue-600 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-blue-600 active:bg-blue-600 focus:outline-none focus:border-blue-600 focus:ring focus:ring-gray-300 disabled:opacity-25 transition">
+                <a href="{{ facebook()->url() }}" class="mt-3 text-center items-center p-3 appearance-none bg-blue-600 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-blue-600 active:bg-blue-600 focus:outline-none focus:border-blue-600 focus:ring focus:ring-gray-300 disabled:opacity-25 transition">
                     <i class="fab fa-facebook mr-2"></i> 
                     {{ lang('auth.register') }}
                 </a>
