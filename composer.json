@@ -23,12 +23,12 @@
     },
     "require-dev": {
         "fakerphp/faker": "1.16.0",
-        "filp/whoops": "2.14.4",
         "mockery/mockery": "1.4.4",
         "maximebf/debugbar": "1.17.3",
         "phpmailer/phpmailer": "6.5.3",
         "phpstan/phpstan": "1.2.0",
-        "phpunit/phpunit": "9.5.10"
+        "phpunit/phpunit": "9.5.10",
+        "spatie/ignition": "dev-ignition-v3"
     },
     "autoload": {
         "psr-4": {
