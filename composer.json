@@ -27,8 +27,7 @@
         "phpmailer/phpmailer": "6.5.3",
         "phpstan/phpstan": "1.2.0",
         "phpunit/phpunit": "9.5.10",
-        "psy/psysh": "0.10.12",
-        "spatie/ignition": "dev-ignition-v3"
+        "psy/psysh": "0.10.12"
     },
     "autoload": {
         "psr-4": {
