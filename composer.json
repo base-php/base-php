@@ -4,6 +4,7 @@
     "type": "project",
     "license": "MIT",
     "version": "1.2.35",
+    "minimum-stability": "dev",
     "authors": [
         {
             "name": "Nisa Delgado",
@@ -18,13 +19,13 @@
         "illuminate/validation": "8.74.0",
         "illuminate/view": "8.74.0",
         "league/flysystem": "2.3.2",
-        "nisadelgado/framework": "1.2.35"
+        "nisadelgado/framework": "1.2.35",
+        "phpmailer/phpmailer": "6.5.3"
     },
     "require-dev": {
         "fakerphp/faker": "1.16.0",
         "filp/whoops": "2.14.4",
         "maximebf/debugbar": "1.17.3",
-        "phpmailer/phpmailer": "6.5.3",
         "phpstan/phpstan": "1.2.0",
         "phpunit/phpunit": "9.5.10",
         "psy/psysh": "0.10.12"
