@@ -10,6 +10,14 @@ use View;
 class Auth extends Controller
 {
     /**
+     * Where the user will be redirected when they log in.
+     *
+     * @var string
+     */
+    public $redirect_login = '/dashboard';
+
+
+    /**
      * Show login form.
      *
      * @return View
