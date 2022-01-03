@@ -23,6 +23,7 @@
         "phpmailer/phpmailer": "6.5.3"
     },
     "require-dev": {
+        "beyondcode/expose": "2.0.2",
         "fakerphp/faker": "1.17.0",
         "filp/whoops": "2.14.4",
         "maximebf/debugbar": "1.17.3",
