@@ -41,13 +41,19 @@
                 <h2 class="text-3xl font-semibold">{{ lang('home.explorer') }}</h2>
 
                 <div class="mt-5">
-                    <a href="/login" class="block">
-                        <i class="fa fa-arrow-right"></i> {{ lang('home.login') }}
-                    </a>
+                    @if(auth())
+                        <a href="/dashboard" class="block">
+                            <i class="fa fa-arrow-right"></i> {{ lang('dashboard.home') }}
+                        </a>
+                    @else
+                        <a href="/login" class="block">
+                            <i class="fa fa-arrow-right"></i> {{ lang('home.login') }}
+                        </a>
 
-                    <a href="/register" class="block">
-                        <i class="fa fa-arrow-right"></i> {{ lang('home.register') }}
-                    </a>
+                        <a href="/register" class="block">
+                            <i class="fa fa-arrow-right"></i> {{ lang('home.register') }}
+                        </a>
+                    @endif
                 </div>
             </div>
 
