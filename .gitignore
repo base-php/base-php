@@ -6,4 +6,5 @@
 .ftpquota
 error_log
 desktop.ini
+npm-debug.log
 sftp-config.json
