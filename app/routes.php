@@ -20,9 +20,4 @@ $route->get('/', 'Home@index');
 $route->get('/dashboard', 'Dashboard@index');
 
 // Users
-$route->get('/dashboard/users', 'Users@index');
-$route->get('/dashboard/users/create', 'Users@create');
-$route->post('/dashboard/users/store', 'Users@store');
-$route->get('/dashboard/users/edit/{id}', 'Users@edit');
-$route->post('/dashboard/users/update', 'Users@update');
-$route->get('/dashboard/users/delete/{id}', 'Users@delete');
+$route->resource('dashboard/users', 'Users');
