@@ -24,10 +24,12 @@ App\Models\User::create([
 ]);
 
 for ($i = 0; $i < 99; $i++) {
+    $name = faker()->name();
+
     $user = App\Models\User::create([
-        'name'      => faker()->name(),
+        'name'      => $title,
         'email'     => faker()->email(),
-        'password'  => md5(faker()->name())
+        'password'  => md5($title)
     ]);
 
     $user->update(['hash' => md5($user->id)]);
