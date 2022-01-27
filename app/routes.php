@@ -20,4 +20,4 @@ $route->get('/', 'Home@index');
 $route->get('/dashboard', 'Dashboard@index');
 
 // Users
-$route->resource('dashboard/users', 'Users');
+$route->resource('/dashboard/users', 'Users');
