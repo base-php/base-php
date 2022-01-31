@@ -73,6 +73,8 @@
 	                {{ lang('users.save') }}
 	            </button>
 	        </div>
+
+            <input type="hidden" name="redirect" value="/dashboard/users/create">
         </form>
     </div>
 </x-layout-dashboard>
