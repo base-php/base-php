@@ -21,7 +21,7 @@ return [
     'email_greeting'         => 'Hola',
     'email_text'             => 'Estas recibiendo este correo electrónico porque hiciste una solicitud de recuperación de contraseña para tu cuenta.',
     'email_recover_password' => 'Recuperar contraseña',
-    'email_footer'           => 'Si tienes problemas al hacer click en el botón \'Recuperarcontraseña\', copia y pega la siguiente URL en tu navegador web',
+    'email_footer'           => 'Si tienes problemas al hacer click en el botón \'Recuperar contraseña\', copia y pega la siguiente URL en tu navegador web',
     'email_warning'          => 'Si no realizaste esta solicitud, no se requiere realizar ninguna acción.',
     'email_fired'            => 'Saludos',
 ];

@@ -19,7 +19,7 @@
         "illuminate/view": "9.0.0-beta.4",
         "league/flysystem": "3.0.2",
         "nisadelgado/framework": "1.2.98",
-        "symfony/mailer": "v6.0.3"
+        "phpmailer/phpmailer": "v6.5.3"
     },
     "require-dev": {
         "fakerphp/faker": "1.18.0",

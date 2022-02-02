@@ -14,9 +14,6 @@ return [
 	'environment' 		=> 'development',
 	'errors' 			=> true,
 
-	// Redirect after login
-	'redirect_login' 	=> '/dashboard',
-
 	// Database.
 	'database' 			=> [
 		[
