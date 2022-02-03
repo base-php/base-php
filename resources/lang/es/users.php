@@ -33,5 +33,6 @@ return [
     'update'                     => 'Usuario actualizado satisfactoriamente.',
     'delete'                     => 'Usuario eliminado satisfactoriamente.',
     'in_use'                     => 'No se puede borrar, el usuario está en uso.',
+    'delete_photo'               => 'Eliminar foto'
 
 ];

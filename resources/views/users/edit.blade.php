@@ -1,11 +1,11 @@
 <x-layout-dashboard title="Editar usuario" active="users">
-	<div x-init="$watch('photo', value => preview(value))">
-		<div class="w-full p-3">
-            <h1 class="text-4xl">{{ lang('users.create') }}</h1>
+    <div x-init="$watch('photo', value => preview(value))">
+        <div class="w-full p-3">
+            <h1 class="text-4xl">{{ lang('users.edit') }}</h1>
 
             <hr class="my-5">
 
-            <x-alert></x-alert>
+            <x-alert/>
 
             <div class="flex">
                 <div class="w-5/12 p-3">
@@ -17,7 +17,7 @@
 
                 <div class="w-7/12 rounded bg-white p-7">
                     <form action="/dashboard/users/update" method="POST" enctype="multipart/form-data">
-                        <input type="hidden" name="id" value="{{ $user->id }}">
+                        <x-input type="hidden" name="id" value="{{ $user->id }}"/>
 
                         <div>
                             <label for="photo">Foto</label>
@@ -25,33 +25,33 @@
                             <img id="photo-preview" class="rounded-full mb-2 block w-1/4" src="{{ $user->photo }}" alt="{{ $user->name }}">
 
                             <div>
-                                <button x-show="photo == ''" x-on:click="document.getElementById('photo').click()" type="button" id="open-file-selector" class="inline-flex items-center p-2 appearance-none bg-white border border-gray-200 border-transparent rounded-md font-semibold text-xs text-black uppercase tracking-widest hover:bg-white active:bg-white focus:outline-none focus:border-white focus:ring focus:ring-gray-300 disabled:opacity-25 transition">
+                                <x-file-button show="photo == ''" click="document.getElementById('photo').click()" id="open-file-selector" background="white" text="black">
                                     <i class="fa fa-upload mr-2"></i>
                                     {{ lang('users.select_photo') }}
-                                </button>
+                                </x-file-button>
 
-                                <button x-show="photo != ''" x-on:click="removePhoto()" type="button" class="inline-flex items-center p-2 appearance-none bg-red-500 border border-white border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-red-500 active:bg-red-500 focus:outline-none focus:border-red-500 focus:ring focus:ring-red-300 disabled:opacity-25 transition">
+                                <x-file-button show="photo != ''" click="removePhoto()" background="red-500" text="white">
                                     <i class="fa fa-trash mr-2"></i>
-                                    Eliminar
-                                </button>
+                                    {{ lang('users.delete_photo') }}
+                                </x-file-button>
                             </div>
                         </div>
 
                         <div class="mt-5">
-                            <label for="name">{{ lang('users.name') }}</label>
-                            <input value="{{ $user->name }}" name="name" required type="text" class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+                            <x-label for="name" text="{{ lang('users.name') }}"/>
+                            <x-input name="name" value="{{ $user->name }}" required/>
                         </div>
 
                         <div class="mt-5">
-                            <label for="email">{{ lang('users.email') }}</label>
-                            <input value="{{ $user->email }}" name="email" required type="email" class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+                            <x-label for="email" text="{{ lang('users.email') }}"/>
+                            <x-input name="email" value="{{ $user->email }}" required type="email"/>
                         </div>
 
                         <div class="mt-5">
-                            <button type="submit" class="inline-flex items-center p-3 appearance-none bg-black border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-black active:bg-black focus:outline-none focus:border-black focus:ring focus:ring-gray-300 disabled:opacity-25 transition">
-                                <i class="fa fa-save mr-2"></i> 
+                            <x-button color="black">
+                                <i class="fa fa-save mr-2"></i>
                                 {{ lang('users.save') }}
-                            </button>
+                            </x-button>
                         </div>
 
                         <input type="hidden" name="password" value="">
@@ -70,23 +70,23 @@
 
                 <div class="w-7/12 rounded bg-white p-7">
                     <form action="/dashboard/users/update" method="POST">
-                        <input type="hidden" name="id" value="{{ $user->id }}">
+                        <x-input type="hidden" name="id" value="{{ $user->id }}"/>
 
                         <div class="mt-5">
-                            <label for="password">{{ lang('users.password') }}</label>
-                            <input name="password" required type="password" class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+                            <x-label for="password" text="{{ lang('users.password') }}"/>
+                            <x-input name="password" type="password" required/>
                         </div>
 
                         <div class="mt-5">
-                            <label for="confirm_password">{{ lang('users.confirm_password') }}</label>
-                            <input name="confirm_password" required type="password" class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+                            <x-label for="confirm_password" text="{{ lang('users.confirm_password') }}"/>
+                            <x-input name="confirm_password" type="password" required/>
                         </div>
 
                         <div class="mt-5">
-                            <button type="submit" class="inline-flex items-center p-3 appearance-none bg-black border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-black active:bg-black focus:outline-none focus:border-black focus:ring focus:ring-gray-300 disabled:opacity-25 transition">
-                                <i class="fa fa-save mr-2"></i> 
+                            <x-button color="black">
+                                <i class="fa fa-save mr-2"></i>
                                 {{ lang('users.save') }}
-                            </button>
+                            </x-button>
                         </div>
 
                         <input type="hidden" name="name" value="{{ $user->name }}">
@@ -103,19 +103,19 @@
                     <h2>{{ lang('users.delete_account_permanently') }}</h2>
                 </div>
 
-                <div class="w-7/12 rounded bg-white p-7">                    
+                <div class="w-7/12 rounded bg-white p-7">
                     <div>
                         <p>{{ lang('users.delete_account_text') }}</p>
                     </div>
 
                     <div class="mt-5">
-                        <a x-on:click="confirmDelete(event, $el)" href="{{ '/dashboard/users/delete/' . $user->id }}" class="inline-flex items-center p-3 appearance-none bg-red-500 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-red-500 active:bg-red-500 focus:outline-none focus:border-red-500 focus:ring focus:ring-gray-300 disabled:opacity-25 transition">
-                            <i class="fa fa-trash mr-2"></i> 
+                        <x-button-link click="confirmDelete(event, $el)" href="{{ '/dashboard/users/delete/' . $user->id }}" color="red-500">
+                            <i class="fa fa-trash mr-2"></i>
                             {{ lang('users.delete_account') }}
-                        </a>
-                    </div>                    
+                        </x-button-link>
+                    </div>
                 </div>
             </div>
         </div>
-	</div>
+    </div>
 </x-layout-dashboard>
