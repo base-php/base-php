@@ -26,30 +26,27 @@ class User extends Model
     protected $fillable = ['photo', 'name', 'email', 'password', 'role', 'permissions', 'oauth', 'hash', 'date_create', 'date_update'];
 
     /**
-     * Set the user photo.
+     * Interact with the user's photo.
      *
-     * @param  string $value
-     * @return void
+     * @param  string  $value
+     * @return Attribute
      */
-    public function setPhotoAttribute(?string $value)
+    public function photo(): Attribute
     {
-        if ($value != '') {
-            $this->attributes['photo'] = '/resources/assets/img/' . $value;
-        }
-    }
+        return new Attribute(
+            get: function (?string $value) {
+                if ($value == '') {
+                    return 'https://ui-avatars.com/api?size=200&background=000&color=fff&name=' . $this->name;
+                }
 
-    /**
-     * Get the user photo.
-     *
-     * @param  string $value
-     * @return string
-     */
-    public function getPhotoAttribute(?string $value): string
-    {
-        if ($value == '') {
-            return 'https://ui-avatars.com/api?size=200&background=000&color=fff&name=' . $this->name;
-        }
+                return $value;
+            },
 
-        return $value;
+            set: function (?string $value) {
+                if ($value != '') {
+                    return '/resources/assets/img/' . $value;
+                }
+            },
+        );
     }
 }

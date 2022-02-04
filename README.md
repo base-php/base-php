@@ -8,7 +8,7 @@ git clone https://github.com/nisa6delgado/base
 cd base
 composer install
 npm install
-php base create-database
+php base make:database
 php base migrate
 php base server
 ~~~
