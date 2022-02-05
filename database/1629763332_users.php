@@ -1,8 +1,8 @@
 <?php
 
-$schema->dropIfExists('users');
+$schema['default']->dropIfExists('users');
 
-$schema->create('users', function ($table) {
+$schema['default']->create('users', function ($table) {
 	$table->id();
 	$table->string('photo')->nullable();
 	$table->string('name');
