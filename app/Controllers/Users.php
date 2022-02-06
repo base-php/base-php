@@ -53,13 +53,13 @@ class Users extends Controller
         $user = User::create([
             'name'          => request('name'),
             'email'         => request('email'),
-            'password'      => md5(request('password')),
+            'password'      => encrypt(request('password')),
             'photo'         => $file->filename,
             'date_create'   => now('Y-m-d H:i:s'),
             'date_update'   => now('Y-m-d H:i:s')
         ]);
 
-        $user->update(['hash' => md5($user->id)]);
+        $user->update(['hash' => encrypt($user->id)]);
 
         return redirect('/dashboard/users')->with('info', lang('users.store'));
     }
@@ -94,7 +94,7 @@ class Users extends Controller
 
         if (request('password')) {
             $user->update([
-                'password' => md5(request('password')),
+                'password' => encrypt(request('password')),
             ]);
         }
 

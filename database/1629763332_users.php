@@ -29,8 +29,8 @@ for ($i = 0; $i < 99; $i++) {
     $user = App\Models\User::create([
         'name'      => $name,
         'email'     => faker()->email(),
-        'password'  => md5($name)
+        'password'  => encrypt($name)
     ]);
 
-    $user->update(['hash' => md5($user->id)]);
+    $user->update(['hash' => encrypt($user->id)]);
 }
