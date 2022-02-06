@@ -1,4 +1,4 @@
-<x-layout-auth>
+<x-template-auth>
     <div>
         <x-alert/>
 
@@ -43,4 +43,4 @@
             @endif
         </form>
     </div>
-</x-layout-auth>
+</x-template-auth>

@@ -1,4 +1,4 @@
-<x-layout-dashboard active="users">
+<x-template-dashboard active="users">
 	<div class="w-full p-3">
         <h1 class="text-3xl mb-4">{{ lang('users.users') }}</h1>
 
@@ -53,4 +53,4 @@
             </table>
         </div>
     </div>
-</x-layout-dashboard>
+</x-template-dashboard>

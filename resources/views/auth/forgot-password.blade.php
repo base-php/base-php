@@ -1,4 +1,4 @@
-<x-layout-auth>
+<x-template-auth>
     <x-alert/>
 
     <div>
@@ -18,4 +18,4 @@
             </x-button>
         </form>
     </div>
-</x-layout-auth>
+</x-template-auth>

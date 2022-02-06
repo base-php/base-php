@@ -1,4 +1,4 @@
-<x-layout-dashboard title="Editar usuario" active="users">
+<x-template-dashboard title="Editar usuario" active="users">
     <div x-init="$watch('photo', value => preview(value))">
         <div class="w-full p-3">
             <h1 class="text-4xl">{{ lang('users.edit') }}</h1>
@@ -118,4 +118,4 @@
             </div>
         </div>
     </div>
-</x-layout-dashboard>
+</x-template-dashboard>

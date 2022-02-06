@@ -1,4 +1,4 @@
-<x-layout-dashboard active="users">
+<x-template-dashboard active="users">
     <div class="w-full p-3">
         <form action="/dashboard/users/store" method="POST" enctype="multipart/form-data">
             <h1 class="text-4xl">{{ lang('users.create') }}</h1>
@@ -77,4 +77,4 @@
             <x-input type="hidden" name="redirect" value="/dashboard/users/create"/>
         </form>
     </div>
-</x-layout-dashboard>
+</x-template-dashboard>

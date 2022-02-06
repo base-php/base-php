@@ -1,4 +1,4 @@
-<x-layout-auth>
+<x-template-auth>
 	<div>
         <form class="flex flex-col" method="POST" action="{{ '/recover/' . $id }}">
             <input type="hidden" name="id" value="{{ $id }}">
@@ -21,4 +21,4 @@
             </x-button>
         </form>
     </div>
-</x-layout-auth>
+</x-template-auth>
