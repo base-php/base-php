@@ -14,10 +14,10 @@
 $route->auth();
 
 // Home
-$route->get('/', 'Home@index');
+$route->get('/', [Home::class, 'index']);
 
 // Dashboard
-$route->get('/dashboard', 'Dashboard@index');
+$route->get('/dashboard', [Dashboard::class, 'index']);
 
 // Users
-$route->resource('/dashboard/users', 'Users');
+$route->resource('/dashboard/users', Users::class);
