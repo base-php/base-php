@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e1caf6bc20745c6d5380a9d35d147c39",
+    "content-hash": "5e112b2b9a604b25ffee05cfbb592b44",
     "packages": [
         {
             "name": "doctrine/inflector",
@@ -301,12 +301,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/collections.git",
-                "reference": "6af277ea1541ed7420df79cf57ff2f68a8c9ef3a"
+                "reference": "a190f124567da39a2a35b3da8a8399cb67d2f126"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/collections/zipball/6af277ea1541ed7420df79cf57ff2f68a8c9ef3a",
-                "reference": "6af277ea1541ed7420df79cf57ff2f68a8c9ef3a",
+                "url": "https://api.github.com/repos/illuminate/collections/zipball/a190f124567da39a2a35b3da8a8399cb67d2f126",
+                "reference": "a190f124567da39a2a35b3da8a8399cb67d2f126",
                 "shasum": ""
             },
             "require": {
@@ -348,7 +348,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2022-02-15T15:06:44+00:00"
+            "time": "2022-02-15T21:55:26+00:00"
         },
         {
             "name": "illuminate/conditionable",
@@ -1007,12 +1007,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/support.git",
-                "reference": "cb117bc9a3358d60ade85e5a13d6b82f40ee6049"
+                "reference": "f1dc685a2f829f69362752c26d8f7cb486bc3f9a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/support/zipball/cb117bc9a3358d60ade85e5a13d6b82f40ee6049",
-                "reference": "cb117bc9a3358d60ade85e5a13d6b82f40ee6049",
+                "url": "https://api.github.com/repos/illuminate/support/zipball/f1dc685a2f829f69362752c26d8f7cb486bc3f9a",
+                "reference": "f1dc685a2f829f69362752c26d8f7cb486bc3f9a",
                 "shasum": ""
             },
             "require": {
@@ -1068,7 +1068,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2022-02-14T17:31:22+00:00"
+            "time": "2022-02-15T16:04:19+00:00"
         },
         {
             "name": "illuminate/translation",
@@ -4023,12 +4023,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phar-io/manifest.git",
-                "reference": "a47782325a3407ac1428aedf27c31c35f352dafa"
+                "reference": "ad1d1bc76d900fd73b683c345b6c002214ce4c6d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phar-io/manifest/zipball/a47782325a3407ac1428aedf27c31c35f352dafa",
-                "reference": "a47782325a3407ac1428aedf27c31c35f352dafa",
+                "url": "https://api.github.com/repos/phar-io/manifest/zipball/ad1d1bc76d900fd73b683c345b6c002214ce4c6d",
+                "reference": "ad1d1bc76d900fd73b683c345b6c002214ce4c6d",
                 "shasum": ""
             },
             "require": {
@@ -4082,7 +4082,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-02-15T13:03:04+00:00"
+            "time": "2022-02-15T18:57:41+00:00"
         },
         {
             "name": "phar-io/version",
@@ -4371,12 +4371,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-code-coverage.git",
-                "reference": "72841b24ec77b67c7328b4796b8238c34c4d2825"
+                "reference": "6882cdb0a012c5b6783f9b6ee888b91361df1cbc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/72841b24ec77b67c7328b4796b8238c34c4d2825",
-                "reference": "72841b24ec77b67c7328b4796b8238c34c4d2825",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/6882cdb0a012c5b6783f9b6ee888b91361df1cbc",
+                "reference": "6882cdb0a012c5b6783f9b6ee888b91361df1cbc",
                 "shasum": ""
             },
             "require": {
@@ -4440,7 +4440,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-02-11T07:57:53+00:00"
+            "time": "2022-02-16T08:03:51+00:00"
         },
         {
             "name": "phpunit/php-file-iterator",
@@ -5953,16 +5953,16 @@
         },
         {
             "name": "spatie/ignition",
-            "version": "1.0.3",
+            "version": "1.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/ignition.git",
-                "reference": "772a1ba08219afa2d7dae31901f16db414ad7d37"
+                "reference": "617c41d1bf675d95a7bd9adc826ba93d43affe7f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/ignition/zipball/772a1ba08219afa2d7dae31901f16db414ad7d37",
-                "reference": "772a1ba08219afa2d7dae31901f16db414ad7d37",
+                "url": "https://api.github.com/repos/spatie/ignition/zipball/617c41d1bf675d95a7bd9adc826ba93d43affe7f",
+                "reference": "617c41d1bf675d95a7bd9adc826ba93d43affe7f",
                 "shasum": ""
             },
             "require": {
@@ -6020,7 +6020,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-02-13T14:14:39+00:00"
+            "time": "2022-02-16T09:02:42+00:00"
         },
         {
             "name": "symfony/process",
