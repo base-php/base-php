@@ -51,6 +51,8 @@
                     @endforeach
                 </tbody>
             </table>
+
+            {{ $users->links() }}
         </div>
     </div>
 </x-template-dashboard>
