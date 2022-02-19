@@ -24,7 +24,7 @@
                         <th class="text-left p-2 hidden sm:table-cell">{{ lang('users.id') }}</th>
                         <th class="text-left p-2">{{ lang('users.photo') }}</th>
                         <th class="text-left p-2">{{ lang('users.name') }}</th>
-                        <th class="text-lang(left p-2 hidden sm:table-cell">{{ lang('users.email') }}</th>
+                        <th class="text-left p-2 hidden sm:table-cell">{{ lang('users.email') }}</th>
                         <th class="text-left p-2"></th>
                     </tr>
                 </thead>
@@ -51,8 +51,6 @@
                     @endforeach
                 </tbody>
             </table>
-
-            {{ $users->links() }}
         </div>
     </div>
 </x-template-dashboard>
