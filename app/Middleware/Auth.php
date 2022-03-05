@@ -13,9 +13,8 @@ class Auth
 	 */
     public function handle($request, $next)
     {
-    	$url = server('REQUEST_URI') ? server('REQUEST_URI') : server('PATH_INFO');
-
         if (!auth()) {
+            $url = server('uri');
             return redirect("/login?redirect=$url");
         }
 
