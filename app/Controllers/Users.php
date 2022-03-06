@@ -87,8 +87,8 @@ class Users extends Controller
 
         $user = User::find(request('id'));
         $user->update([
-            'name'  => request('name'),
-            'email' => request('email'),
+            'name'          => request('name'),
+            'email'         => request('email'),
             'date_update'   => now('Y-m-d H:i:s')
         ]);
 

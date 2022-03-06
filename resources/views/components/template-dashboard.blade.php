@@ -10,7 +10,7 @@
 
 <link rel="icon" href="{{ asset('img/favicon.svg') }}">
 
-<link rel="stylesheet" href="{{ node('@tailwindcss/forms/dist/forms.css') }}">
+<link rel="stylesheet" href="{{ node('flowbite/dist/flowbite.css') }}">
 <link rel="stylesheet" href="{{ node('@fortawesome/fontawesome-free/css/all.css') }}">
 <link rel="stylesheet" href="{{ node('sweetalert2/dist/sweetalert2.css') }}">
 
@@ -95,6 +95,7 @@
     <input type="hidden" id="confirm_delete_accept" value="{{ lang('users.confirm_delete_accept') }}">
     <input type="hidden" id="confirm_delete_cancel" value="{{ lang('users.confirm_delete_cancel') }}">
 
+    <script src="{{ node('flowbite/dist/flowbite.js') }}" defer></script>
     <script src="{{ node('alpinejs/dist/cdn.js') }}" defer></script>
     <script src="{{ node('sweetalert2/dist/sweetalert2.js') }}"></script>
     <script src="{{ asset('js/main.js') }}"></script>

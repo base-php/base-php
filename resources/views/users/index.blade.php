@@ -4,7 +4,7 @@
 
         <div class="grid grid-cols-2 mb-5">
             <div>
-                <input x-on:keyup="search($el)" autofocus type="text" placeholder="{{ lang('users.search') }}" class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+                <input x-on:keyup="search($el)" autofocus type="text" placeholder="{{ lang('users.search') }}" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
             </div>
 
             <div class="text-right">
