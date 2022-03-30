@@ -99,6 +99,30 @@
 
             <div class="flex">
                 <div class="w-5/12 p-3">
+                    <h1 class="font-semibold text-2xl mb-3">{{ lang('users.2fa_title') }}</h1>
+                    <h2>{{ lang('users.2fa_subtitle') }}</h2>
+                </div>
+
+                <div class="w-7/12 rounded bg-white p-7">
+                    <div>
+                        <h1 class="font-semibold text-2xl mb-3">{{ lang('users.2fa_warning') }}</h1>
+
+                        <p>{{ lang('users.2fa_text') }}</p>
+                    </div>
+
+                    <div class="mt-5">
+                        <x-button-link href="{{ '/dashboard/users/2fa/' . $user->id }}" color="black">
+                            <i class="fa fa-check mr-2"></i>
+                            {{ lang('users.2fa_enable') }}
+                        </x-button-link>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="my-5">
+
+            <div class="flex">
+                <div class="w-5/12 p-3">
                     <h1 class="font-semibold text-2xl mb-3">{{ lang('users.delete_account') }}</h1>
                     <h2>{{ lang('users.delete_account_permanently') }}</h2>
                 </div>
