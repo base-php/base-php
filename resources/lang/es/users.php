@@ -36,7 +36,10 @@ return [
     'delete_photo'               => 'Eliminar foto',
     '2fa_title'                  => 'Autenticación de dos factores',
     '2fa_subtitle'               => 'Agregue seguridad adicional a su cuenta con la autenticación de dos factores',
-    '2fa_warning'                => 'No has habilitado la autenticación de dos factores',
-    '2fa_text'                   => 'Cuando la autenticación de dos factores está habilitada, se le soliticará un token seguro y aleatorio durante la autenticaci{on. Puede recuperar este token de la aplicación Google Autenticator de su teléfono.',
-    '2fa_enable'                 => 'Habilitar'
+    '2fa_disable_warning'        => 'No has habilitado la autenticación de dos factores',
+    '2fa_disable_text'                   => 'Cuando la autenticación de dos factores está habilitada, se le soliticará un token seguro y aleatorio durante la autenticaci{on. Puede recuperar este token de la aplicación Google Autenticator de su teléfono.',
+    '2fa_enable'                 => 'Habilitar',
+    '2fa_enable_warning'         => 'Ha habiltiado la autenticación de dos factores',
+    '2fa_enable_text'            => 'La autenticación de dos factores ahora está habilitada. Escanee el siguiente código QR usando la aplicación de autenticación de su teléfono.',
+    '2fa_disable'                => 'Deshabilitar'
 ];

@@ -95,29 +95,50 @@
                 </div>
             </div>
 
-            <hr class="my-5">
+            @if(class_exists('PragmaRX\Google2FA\Google2FA') && class_exists('Endroid\QrCode\QrCode'))
+                <hr class="my-5">
 
-            <div class="flex">
-                <div class="w-5/12 p-3">
-                    <h1 class="font-semibold text-2xl mb-3">{{ lang('users.2fa_title') }}</h1>
-                    <h2>{{ lang('users.2fa_subtitle') }}</h2>
-                </div>
-
-                <div class="w-7/12 rounded bg-white p-7">
-                    <div>
-                        <h1 class="font-semibold text-2xl mb-3">{{ lang('users.2fa_warning') }}</h1>
-
-                        <p>{{ lang('users.2fa_text') }}</p>
+                <div class="flex">
+                    <div class="w-5/12 p-3">
+                        <h1 class="font-semibold text-2xl mb-3">{{ lang('users.2fa_title') }}</h1>
+                        <h2>{{ lang('users.2fa_subtitle') }}</h2>
                     </div>
 
-                    <div class="mt-5">
-                        <x-button-link href="{{ '/dashboard/users/2fa/' . $user->id }}" color="black">
-                            <i class="fa fa-check mr-2"></i>
-                            {{ lang('users.2fa_enable') }}
-                        </x-button-link>
-                    </div>
+                    @if(auth()->two_fa)
+                        <div class="w-7/12 rounded bg-white p-7">
+                            <div>
+                                <h1 class="font-semibold text-2xl mb-3">{{ lang('users.2fa_enable_warning') }}</h1>
+
+                                <p>{{ lang('users.2fa_enable_text') }}</p>
+
+                                <div>{!! two_fa()->qr() !!}</div>
+
+                                <div class="mt-5">
+                                    <x-button-link href="{{ '/dashboard/users/2fa/' . $user->id }}" color="red-500">
+                                        <i class="fa fa-times mr-2"></i>
+                                        {{ lang('users.2fa_disable') }}
+                                    </x-button-link>
+                                </div>
+                            </div>
+                        </div>
+                    @else
+                        <div class="w-7/12 rounded bg-white p-7">
+                            <div>
+                                <h1 class="font-semibold text-2xl mb-3">{{ lang('users.2fa_disable_warning') }}</h1>
+
+                                <p>{{ lang('users.2fa_disable_text') }}</p>
+                            </div>
+
+                            <div class="mt-5">
+                                <x-button-link href="{{ '/dashboard/users/2fa/' . $user->id }}" color="black">
+                                    <i class="fa fa-check mr-2"></i>
+                                    {{ lang('users.2fa_enable') }}
+                                </x-button-link>
+                            </div>
+                        </div>
+                    @endif
                 </div>
-            </div>
+            @endif
 
             <hr class="my-5">
 
