@@ -111,7 +111,7 @@
 
                                 <p>{{ lang('users.2fa_enable_text') }}</p>
 
-                                <div>{!! two_fa()->qr() !!}</div>
+                                <div>{!! $two_fa->qr($user->two_fa) !!}</div>
 
                                 <div class="mt-5">
                                     <x-button-link href="{{ '/dashboard/users/2fa/' . $user->id }}" color="red-500">

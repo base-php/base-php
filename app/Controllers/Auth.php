@@ -100,6 +100,12 @@ class Auth extends Controller
         return view('auth.recover', compact('id'));
     }
 
+    public function two_fa($id)
+    {
+        two_fa($id);
+        return redirect(server('referer'));
+    }
+
     /**
      * Logout user.
      *

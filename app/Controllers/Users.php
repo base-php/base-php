@@ -6,6 +6,7 @@ use App\Models\User;
 use App\Validations\UserStore;
 use App\Validations\UserUpdate;
 use Redirect;
+use TwoFA;
 use View;
 
 class Users extends Controller
@@ -72,8 +73,10 @@ class Users extends Controller
      */
     public function edit(int $id): View
     {
+        $two_fa = new TwoFA();
         $user = User::find($id);
-        return view('users.edit', compact('user'));
+
+        return view('users.edit', compact('two_fa', 'user'));
     }
 
     /**
