@@ -104,14 +104,14 @@
                         <h2>{{ lang('users.2fa_subtitle') }}</h2>
                     </div>
 
-                    @if(auth()->two_fa)
+                    @if($user->two_fa)
                         <div class="w-7/12 rounded bg-white p-7">
                             <div>
                                 <h1 class="font-semibold text-2xl mb-3">{{ lang('users.2fa_enable_warning') }}</h1>
 
                                 <p>{{ lang('users.2fa_enable_text') }}</p>
 
-                                <div>{!! $two_fa->qr($user->two_fa) !!}</div>
+                                <div>{!! two_fa()->qr($user->two_fa) !!}</div>
 
                                 <div class="mt-5">
                                     <x-button-link href="{{ '/dashboard/users/2fa/' . $user->id }}" color="red-500">

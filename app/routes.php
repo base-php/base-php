@@ -21,3 +21,4 @@ $route->get('/dashboard', [Dashboard::class, 'index']);
 
 // Users
 $route->resource('/dashboard/users', Users::class);
+$route->get('/dashboard/users/2fa/{id}', [Users::class, 'two_fa']);

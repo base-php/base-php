@@ -91,19 +91,13 @@ class Auth extends Controller
      * @param string $id
      * @return View|Redirect
      */
-    public function recover($id): View|Redirect
+    public function recover(string $id): View|Redirect
     {
         if (post()) {
             return recover();
         }
 
         return view('auth.recover', compact('id'));
-    }
-
-    public function two_fa($id)
-    {
-        two_fa($id);
-        return redirect(server('referer'));
     }
 
     /**
