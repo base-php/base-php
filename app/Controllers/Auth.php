@@ -101,6 +101,21 @@ class Auth extends Controller
     }
 
     /**
+     * Show and process 2fa form.
+     *
+     * @param string $id
+     * @return View|Redirect
+     */
+    public function two_fa(string $id): View|Redirect
+    {
+        if (post()) {
+            return two_fa()->verify();
+        }
+
+        return view('auth.2fa', compact('id'));
+    }
+
+    /**
      * Logout user.
      *
      * @return Redirect

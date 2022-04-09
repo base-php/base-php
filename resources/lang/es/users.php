@@ -41,5 +41,6 @@ return [
     '2fa_enable'                 => 'Habilitar',
     '2fa_enable_warning'         => 'Ha habilitado la autenticación de dos factores',
     '2fa_enable_text'            => 'La autenticación de dos factores ahora está habilitada. Escanee el siguiente código QR usando la aplicación de autenticación de su teléfono.',
-    '2fa_disable'                => 'Deshabilitar'
+    '2fa_disable'                => 'Deshabilitar',
+    '2fa_code_error'             => 'Código incorrecto'
 ];
