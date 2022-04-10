@@ -3,8 +3,6 @@
         <form class="flex flex-col" method="POST" action="{{ '/recover/' . $id }}">
             <input type="hidden" name="id" value="{{ $id }}">
 
-            <x-input type="hidden" name="id" value="{{ $id }}/">
-
             <div class="mt-3 mb-5">
                 <x-label for="password" text="{{ lang('auth.password') }}"/>
                 <x-input name="password" required type="password"/>
