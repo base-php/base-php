@@ -109,7 +109,7 @@ class Auth extends Controller
     public function two_fa(string $id): View|Redirect
     {
         if (post()) {
-            return two_fa()->verify();
+            return two_fa();
         }
 
         return view('auth.2fa', compact('id'));

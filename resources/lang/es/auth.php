@@ -1,6 +1,7 @@
 <?php
 
 return [
+    '2fa_error_code'         => 'Código incorrecto',
     'check_email'            => 'Revise su correo electrónico para recuperar su contraseña.',
     'code'                   => 'Código',
     'confirm_password'       => 'Confirmar contraseña',
