@@ -1,10 +1,10 @@
 <?php
 
 return [
-    'profile' => 'Perfil',
+    'home'    => 'Inicio',
     'logout'  => 'Cerrar sesión',
     'menu'    => 'Menú',
-    'home'    => 'Inicio',
-    'users'   => 'Usuarios',
+    'profile' => 'Perfil',
     'text'    => 'Has iniciado sesión',
+    'users'   => 'Usuarios'
 ];

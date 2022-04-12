@@ -1,11 +1,11 @@
 <?php
 
 return [
-    'intro'    => 'Comience rápido y fácilmente su nuevo proyecto con esta estructura base que tiene todo lo requerido para realizar una aplicación web moderna.',
+    'email'    => 'Correo electrónico',
     'explorer' => 'Explora',
+    'info'     => 'Más información',
+    'intro'    => 'Comience rápido y fácilmente su nuevo proyecto con esta estructura base que tiene todo lo requerido para realizar una aplicación web moderna.',
     'login'    => 'Iniciar sesión',
     'register' => 'Registro',
-    'info'     => 'Más información',
-    'web'      => 'Sitio web',
-    'email'    => 'Correo electrónico',
+    'web'      => 'Sitio web'
 ];
