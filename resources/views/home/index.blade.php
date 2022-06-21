@@ -83,7 +83,7 @@
         <hr class="mb-10 mt-10">
 
         <div class="text-center">
-            <p>&copy; 2021</p>
+            <p>&copy; 2022</p>
         </div>
     </div>
 </body>
