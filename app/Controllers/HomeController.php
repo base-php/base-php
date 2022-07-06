@@ -4,7 +4,7 @@ namespace App\Controllers;
 
 use View;
 
-class Home extends Controller
+class HomeController extends Controller
 {
 	/**
 	 * Show home page.

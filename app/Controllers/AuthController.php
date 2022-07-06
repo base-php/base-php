@@ -7,7 +7,7 @@ use Google;
 use Redirect;
 use View;
 
-class Auth extends Controller
+class AuthController extends Controller
 {
     /**
      * Where the user will be redirected when they log in.

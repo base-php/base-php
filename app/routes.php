@@ -14,11 +14,11 @@
 $route->auth();
 
 // Home
-$route->get('/', [Home::class, 'index']);
+$route->get('/', [HomeController::class, 'index']);
 
 // Dashboard
-$route->get('/dashboard', [Dashboard::class, 'index']);
+$route->get('/dashboard', [DashboardController::class, 'index']);
 
 // Users
-$route->resource('/dashboard/users', Users::class);
-$route->get('/dashboard/users/2fa/{id}', [Users::class, 'two_fa']);
+$route->resource('/dashboard/users', UsersController::class);
+$route->get('/dashboard/users/2fa/{id}', [UsersController::class, 'two_fa']);

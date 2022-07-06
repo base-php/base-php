@@ -4,7 +4,7 @@ namespace App\Controllers;
 
 use View;
 
-class Dashboard extends Controller
+class DashboardController extends Controller
 {
 	/**
 	 * Verify if user is logged.
