@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+use Auth;
 use Facebook;
 use Google;
 use Redirect;
@@ -35,7 +36,7 @@ class AuthController extends Controller
     public function register(): View|Redirect
     {
         if (post()) {
-            return register(request());
+            return Auth::register(request());
         }
 
         return view('auth.register');
@@ -48,7 +49,7 @@ class AuthController extends Controller
      */
     public function login(): Redirect
     {
-        return login(request());
+        return Auth::login(request());
     }
 
     /**
@@ -94,7 +95,7 @@ class AuthController extends Controller
     public function recover(string $id): View|Redirect
     {
         if (post()) {
-            return recover();
+            return Auth::recover();
         }
 
         return view('auth.recover', compact('id'));
@@ -122,7 +123,7 @@ class AuthController extends Controller
      */
     public function logout(): Redirect
     {
-        logout();
+        Auth::logout();
         return redirect('/login');
     }
 }
