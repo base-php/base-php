@@ -8,7 +8,7 @@ use App\Validations\UserUpdate;
 use Redirect;
 use View;
 
-class UsersController extends Controller
+class UserController extends Controller
 {
     /**
      * Verify if user is logged.
