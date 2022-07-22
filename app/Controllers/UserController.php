@@ -3,8 +3,8 @@
 namespace App\Controllers;
 
 use App\Models\User;
-use App\Validations\UserStore;
-use App\Validations\UserUpdate;
+use App\Validations\UserStoreValidation;
+use App\Validations\UserUpdateValidation;
 use Redirect;
 use View;
 
@@ -46,7 +46,7 @@ class UserController extends Controller
      *
      * @return Redirect
      */
-    public function store(UserStore $validation): Redirect
+    public function store(UserStoreValidation $validation): Redirect
     {
         $file = request('photo')->save('resources/assets/img');
 
@@ -81,7 +81,7 @@ class UserController extends Controller
      *
      * @return Redirect
      */
-    public function update(UserUpdate $validation): Redirect
+    public function update(UserUpdateValidation $validation): Redirect
     {
         $file = request('photo')->save('resources/assets/img');
 

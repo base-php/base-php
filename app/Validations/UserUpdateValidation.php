@@ -2,7 +2,7 @@
 
 namespace App\Validations;
 
-class UserUpdate extends Validation
+class UserUpdateValidation extends Validation
 {
 	/**
 	* Get the validation rules that apply to the request.
