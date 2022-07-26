@@ -4,7 +4,7 @@ namespace App\Mails;
 
 use View;
 
-class PasswordRecovery extends Mail
+class PasswordRecoveryEmail extends Mail
 {
 	/**
 	 * Set from for email.
