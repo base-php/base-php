@@ -44,6 +44,7 @@ class UserController extends Controller
     /**
      * Store user in database.
      *
+     * @param UserStoreValidation $validation
      * @return Redirect
      */
     public function store(UserStoreValidation $validation): Redirect
@@ -79,6 +80,7 @@ class UserController extends Controller
     /**
      * Update user in database.
      *
+     * @param UserUpdateValidation $validation
      * @return Redirect
      */
     public function update(UserUpdateValidation $validation): Redirect
