@@ -80,7 +80,7 @@ class AuthController extends Controller
     public function forgot_password(): View|Redirect
     {
         if (post()) {
-            return forgot();
+            return Auth::forgot();
         }
 
         return view('auth.forgot-password');
