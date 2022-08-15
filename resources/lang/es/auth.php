@@ -25,6 +25,6 @@ return [
     'register_success'       => 'Usuario registrado, ahora puedes iniciar sesión.',
     'reset'                  => 'Reestablecer contraseña',
     'send_link'              => 'Enviar enlace',
-    'text'                   => '¿Olvidaste tu contraseña? No hay problema. Simplemente dinos tu dirección de correo electrónico y te enviaremos un enlace para reestablecer su contraseña.',
+    'text'                   => '¿Olvidaste tu contraseña? No hay problema. Haz click en el siguiente link para reestablecer tu contraseña.',
     'verify'                 => 'Validar'
 ];
