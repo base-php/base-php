@@ -1,6 +1,6 @@
 {
-    "name": "nisadelgado/base",
-    "description": "Estructura base para proyectos PHP",
+    "name": "base-php/base-php",
+    "description": "Un framework para minimalistas",
     "type": "project",
     "license": "MIT",
     "version": "1.4.6",

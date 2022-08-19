@@ -113,6 +113,8 @@
 
                                 <div>{!! two_fa()->qr($user->two_fa) !!}</div>
 
+                                <p>{{ two_fa()->key() }}</p>
+
                                 <div class="mt-5">
                                     <x-button-link href="{{ '/dashboard/users/2fa/' . $user->id }}" color="red-500">
                                         <i class="fa fa-times mr-2"></i>

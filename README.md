@@ -4,7 +4,7 @@ Comience rápido y fácilmente su nuevo proyecto con esta estructura base que ti
 ## Instalación
 Ejecutar los siguientes comandos en consola:
 ~~~
-git clone https://github.com/nisa6delgado/base
+git clone https://github.com/base-php/base-php
 cd base
 composer install
 npm install
@@ -17,7 +17,7 @@ php base server
 
 Para obtener más información acerca del estado del framework, su uso o cualquier otra duda, visite las siguientes URLs:
 
-- [Twitter](https://twitter.com/nisa6delgado)
-- [Youtube](https://www.youtube.com/channel/UCTgu94owdYN98yBZQnW0ihA)
-- [Sitio web](https://nisadelgado.com)
-- [Correo electrónico](mailto:nisadelgado@gmail.com)
+- [Twitter](https://twitter.com/base-php)
+- [Youtube](https://www.youtube.com/base-php)
+- [Sitio web](https://base-php.com)
+- [Correo electrónico](mailto:info@base-php.com)
