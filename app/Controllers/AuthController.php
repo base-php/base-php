@@ -2,6 +2,8 @@
 
 namespace App\Controllers;
 
+use App\Mails\PasswordRecoveryEmail;
+use App\Models\User;
 use Auth;
 use Facebook;
 use Google;
@@ -36,7 +38,27 @@ class AuthController extends Controller
     public function register(): View|Redirect
     {
         if (post()) {
-            return Auth::register(request());
+            $email = User::where('email', request('email'))->get();
+
+            if ($email->count() > 0) {
+                return redirect('/register')->with('error', lang('auth.email_verified_error'));
+            }
+
+            if (request('password') != request('confirm_password')) {
+                return redirect('/register')->with('error', lang('auth.password_not_match'));
+            }
+
+            $user = User::create([
+                'name'          => request('name'),
+                'email'         => request('email'),
+                'password'      => request('password'),
+                'date_create'   => now('Y-m-d H:i:s'),
+                'date_update'   => now('Y-m-d H:i:s')
+            ]);
+
+            $user->update(['hash' => encrypt($user->id)]);
+
+            return redirect('/login')->with('info', lang('auth.register_success'));
         }
 
         return view('auth.register');
@@ -49,7 +71,20 @@ class AuthController extends Controller
      */
     public function login(): Redirect
     {
-        return Auth::login(request());
+        $user = User::where('email', request('email'))
+            ->where('password', encrypt(request('password')))
+            ->whereNull('oauth')
+            ->first();
+
+        if ($user) {
+            session('id', $user->id);
+
+            $redirect = request('redirect') ? request('redirect') : $this->redirect_login;
+
+            return redirect($redirect);
+        }
+
+        return redirect('/login')->with('error', lang('auth.incorrect_data'));
     }
 
     /**
@@ -80,7 +115,15 @@ class AuthController extends Controller
     public function forgot_password(): View|Redirect
     {
         if (post()) {
-            return Auth::forgot();
+            $user = User::where('email', request('email'))->first();
+
+            if (!$user) {
+                return redirect('/forgot-password')->with('error', lang('auth.email_not_match'));
+            }
+
+            email($user->email, new PasswordRecoveryEmail($user));
+
+            return redirect('/forgot-password')->with('info', lang('auth.check_email'));
         }
 
         return view('auth.forgot-password');
@@ -95,7 +138,20 @@ class AuthController extends Controller
     public function recover(string $id): View|Redirect
     {
         if (post()) {
-            return Auth::recover();
+            $user = User::where('hash', request('id'))->first();
+
+            if (!$user) {
+                return redirect('/login')->with('error', lang('auth.link_invalid'));
+            }
+
+            if (request('password') != request('confirm_password')) {
+                return redirect('/recover/' . request('id'))->with('error', 'Las contraseñas no coinciden.');
+            }
+
+            $user->password = encrypt(request('password'));
+            $user->save();
+
+            return redirect('/login')->with('info', lang('auth.password_not_match'));
         }
 
         return view('auth.recover', compact('id'));
@@ -110,7 +166,8 @@ class AuthController extends Controller
     public function two_fa(string $id): View|Redirect
     {
         if (post()) {
-            return two_fa();
+            $two_fa = new TwoFA;
+            return $two_fa->verify();
         }
 
         return view('auth.2fa', compact('id'));
@@ -123,7 +180,7 @@ class AuthController extends Controller
      */
     public function logout(): Redirect
     {
-        Auth::logout();
+        session()->delete();
         return redirect('/login');
     }
 }
