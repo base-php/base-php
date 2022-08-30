@@ -11,7 +11,7 @@ $schema['default']->create('users', function ($table) {
 	$table->string('role')->nullable();
 	$table->text('permissions')->nullable();
 	$table->string('oauth')->nullable();
-	$table->string('hash')->nullable();
+	$table->string('hash')->nullable()->unique();
     $table->string('two_fa')->nullable();
 	$table->datetime('date_create')->useCurrent();
 	$table->datetime('date_update')->useCurrent()->setCurrentOnUpdate();
