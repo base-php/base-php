@@ -37,25 +37,27 @@
         <hr class="mb-10 mt-10">
 
         <div class="flex">
-            <div class="w-6/12">
-                <h2 class="text-3xl font-semibold">{{ lang('home.explorer') }}</h2>
+            @if(class_exists('App\Controllers\Auth'))
+                <div class="w-6/12">
+                    <h2 class="text-3xl font-semibold">{{ lang('home.explorer') }}</h2>
 
-                <div class="mt-5">
-                    @if(auth())
-                        <a href="/dashboard" class="block">
-                            <i class="fa fa-arrow-right"></i> {{ lang('dashboard.home') }}
-                        </a>
-                    @else
-                        <a href="/login" class="block">
-                            <i class="fa fa-arrow-right"></i> {{ lang('home.login') }}
-                        </a>
+                    <div class="mt-5">
+                        @if(auth())
+                            <a href="/dashboard" class="block">
+                                <i class="fa fa-arrow-right"></i> {{ lang('dashboard.home') }}
+                            </a>
+                        @else
+                            <a href="/login" class="block">
+                                <i class="fa fa-arrow-right"></i> {{ lang('home.login') }}
+                            </a>
 
-                        <a href="/register" class="block">
-                            <i class="fa fa-arrow-right"></i> {{ lang('home.register') }}
-                        </a>
-                    @endif
+                            <a href="/register" class="block">
+                                <i class="fa fa-arrow-right"></i> {{ lang('home.register') }}
+                            </a>
+                        @endif
+                    </div>
                 </div>
-            </div>
+            @endif
 
             <div class="w-6/12">
                 <h2 class="text-3xl font-semibold">{{ lang('home.info') }}</h2>
