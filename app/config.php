@@ -3,7 +3,7 @@
 return [
 	// General.
 	'application_name' 	=> 'Base PHP',
-	'version'			=> '1.4.53',
+	'version'			=> '1.4.76',
 
 	// Region.
 	'language' 			=> 'es',
