@@ -8,8 +8,6 @@ $schema['default']->create('users', function ($table) {
 	$table->string('name');
 	$table->string('email')->unique();
 	$table->string('password');
-	$table->string('role')->nullable();
-	$table->text('permissions')->nullable();
 	$table->string('oauth')->nullable();
 	$table->string('hash')->nullable()->unique();
     $table->string('two_fa')->nullable();
