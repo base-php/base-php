@@ -37,7 +37,7 @@
         <hr class="mb-10 mt-10">
 
         <div class="flex">
-            @if(class_exists('App\Controllers\Auth'))
+            @if(class_exists('App\Controllers\AuthController'))
                 <div class="w-6/12">
                     <h2 class="text-3xl font-semibold">{{ lang('home.explorer') }}</h2>
 
