@@ -32,7 +32,7 @@
             "App\\": "app/"
         },
         "files": [
-            "vendor/base-php/core/autoload.php"
+            "vendor/base-php/core/bootstrap/autoload.php"
         ]
     },
     "repositories": [
