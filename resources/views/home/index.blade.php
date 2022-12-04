@@ -26,6 +26,8 @@
             <i class="fa fa-shapes"></i> {{ config('application_name') }}
         </h1>
 
+        <small>[Framework: {{ config('version') }} | PHP: {{ phpversion() }}]</small>
+
         <hr class="mb-10 mt-10">
 
         <div class="flex">
