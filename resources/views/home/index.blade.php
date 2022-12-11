@@ -87,7 +87,7 @@
         <hr class="mb-10 mt-10">
 
         <div class="text-center">
-            <p>&copy; 2022</p>
+            <p>&copy; {{ now('Y') }}</p>
         </div>
     </div>
 </body>

@@ -5,7 +5,7 @@ Comience rápido y fácilmente su nuevo proyecto con esta estructura base que ti
 Ejecutar los siguientes comandos en consola:
 ~~~
 git clone https://github.com/base-php/base-php
-cd base
+cd base-php
 composer install
 npm install
 php base make:database
