@@ -4,11 +4,19 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
+<<<<<<< HEAD
     "content-hash": "0fc454049b96f6017b67e0ff260ef61d",
     "packages": [
         {
             "name": "base-php/core",
             "version": "1.5.37",
+=======
+    "content-hash": "ca43e828a6cea78244b769cb7c83fb7a",
+    "packages": [
+        {
+            "name": "base-php/core",
+            "version": "1.3.57",
+>>>>>>> af0875afe04624c72c307284a5c60ae1a8578dbc
             "dist": {
                 "type": "zip",
                 "url": "https://github.com/base-php/core/archive/refs/heads/main.zip"
