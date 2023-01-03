@@ -3,7 +3,7 @@
     "description": "Un framework para minimalistas",
     "type": "project",
     "license": "MIT",
-
+    "version": "1.5.40",
     "minimum-stability": "dev",
     "authors": [
         {
@@ -12,7 +12,7 @@
         }
     ],
     "require": {
-
+        "base-php/core": "1.5.40",
         "illuminate/database": "9.45.1",
         "illuminate/pagination": "9.45.1",
         "illuminate/routing": "9.45.1",
@@ -40,7 +40,7 @@
             "type": "package",
             "package": {
                 "name": "base-php/core",
-
+                "version": "1.5.40",
                 "dist": {
                     "url": "https://github.com/base-php/core/archive/refs/heads/main.zip",
                     "type": "zip"
