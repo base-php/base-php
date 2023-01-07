@@ -2,35 +2,37 @@
 
 return [
 	// General.
-	'application_name' 	=> 'Base PHP',
-	'version'			=> '1.5.40',
+	'application_name' => 'Base PHP',
+	'version' => '1.5.40',
 
 	// Region.
-	'language' 			=> 'es',
-	'timezone' 			=> 'America/Caracas',
-	'charset'			=> 'utf-8',
+	'language' => 'es',
+	'timezone' => 'America/Caracas',
+	'charset' => 'utf-8',
 	
 	// Environment.
-	'environment' 		=> 'development',
-	'errors' 			=> true,
+	'environment' => 'development',
+	'errors' => true,
+	'maintenance' => false,
 
 	// Database.
-	'database' 			=> [
+	'database' => [
 		[
-            'name'      => 'default',
-            'driver'    => 'mysql',
-            'host'      => 'localhost',
-            'username'  => 'root',
-            'password'  => '',
-            'database'  => 'base',
+            'name' => 'default',
+            'driver' => 'mysql',
+            'host' => 'localhost',
+            'username' => 'root',
+            'password' => '',
+            'database' => 'base',
+            'port' => '3306'
         ]
 	],
 
-	// Needed to send emails locally.
+	// Emails in localhost.
 	'smtp' 				=> [
-		'host' 			=> '',
-		'username' 		=> '',
-		'password'		=> '',
-		'port'			=> ''
+		'host' => '',
+		'username' => '',
+		'password' => '',
+		'port' => ''
 	]
 ];
