@@ -28,26 +28,26 @@ class User extends Model
     /**
      * Set the user photo.
      *
-     * @param  string $value
+     * @param  string  $value
      * @return void
      */
     public function setPhotoAttribute(?string $value)
     {
         if ($value != '') {
-            $this->attributes['photo'] = '/resources/assets/img/' . $value;
+            $this->attributes['photo'] = '/resources/assets/img/'.$value;
         }
     }
 
     /**
      * Get the user photo.
      *
-     * @param  string $value
+     * @param  string  $value
      * @return string
      */
     public function getPhotoAttribute(?string $value): string
     {
         if ($value == '') {
-            return 'https://ui-avatars.com/api?size=200&background=000&color=fff&name=' . $this->name;
+            return 'https://ui-avatars.com/api?size=200&background=000&color=fff&name='.$this->name;
         }
 
         return $value;

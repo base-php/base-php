@@ -23,6 +23,7 @@
     },
     "require-dev": {
         "fakerphp/faker": "1.21.0",
+        "laravel/pint": "1.4.0",
         "nunomaduro/collision": "6.4.0",
         "phpunit/phpunit": "9.5.27",
         "psy/psysh": "0.11.10",
