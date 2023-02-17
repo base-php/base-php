@@ -25,7 +25,7 @@
         "fakerphp/faker": "1.21.0",
         "laravel/pint": "1.4.1",
         "nunomaduro/collision": "6.4.0",
-        "phpunit/phpunit": "9.5.28",
+        "pestphp/pest": "1.22.4",
         "psy/psysh": "0.11.12",
         "spatie/ignition": "1.4.3"
     },
@@ -57,5 +57,10 @@
         "post-install-cmd": [
             "composer dump-autoload --optimize"
         ]
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
     }
 }
