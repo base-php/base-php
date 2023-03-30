@@ -23,7 +23,19 @@ class User extends Model
      *
      * $var array
      */
-    protected $fillable = ['photo', 'name', 'email', 'password', 'role', 'permissions', 'oauth', 'hash', 'two_fa', 'date_create', 'date_update'];
+    protected $fillable = [
+        'photo',
+        'name',
+        'email',
+        'password',
+        'permissions',
+        'oauth',
+        'hash',
+        'two_fa',
+        'date_verified_email',
+        'date_create',
+        'date_update'
+    ];
 
     /**
      * Set the user photo.
