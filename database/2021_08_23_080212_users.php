@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('oauth')->nullable();
             $table->string('hash')->nullable()->unique();
             $table->string('two_fa')->nullable();
+            $table->text('sessions')->nullable();
             $table->datetime('date_verified_email')->nullable();
             $table->datetime('date_create')->useCurrent();
             $table->datetime('date_update')->useCurrent()->setCurrentOnUpdate();

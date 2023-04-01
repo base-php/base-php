@@ -32,6 +32,7 @@ class User extends Model
         'oauth',
         'hash',
         'two_fa',
+        'sessions',
         'date_verified_email',
         'date_create',
         'date_update'
