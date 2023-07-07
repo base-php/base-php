@@ -3,7 +3,7 @@
     "description": "Un framework para minimalistas",
     "type": "project",
     "license": "MIT",
-    "version": "1.6.73",
+    "version": "1.7.0",
     "minimum-stability": "dev",
     "authors": [
         {
@@ -12,22 +12,22 @@
         }
     ],
     "require": {
-        "base-php/core": "1.6.73",
-        "illuminate/database": "10.13.0",
-        "illuminate/pagination": "10.13.0",
-        "illuminate/routing": "10.13.0",
-        "illuminate/validation": "10.13.0",
-        "illuminate/view": "10.13.0",
+        "base-php/core": "1.7.0",
+        "illuminate/database": "10.14.1",
+        "illuminate/pagination": "10.14.1",
+        "illuminate/routing": "10.14.1",
+        "illuminate/validation": "10.14.1",
+        "illuminate/view": "10.14.1",
         "league/flysystem": "3.15.1",
         "phpmailer/phpmailer": "6.8.0"
     },
     "require-dev": {
-        "fakerphp/faker": "1.22.0",
-        "laravel/pint": "1.10.0",
-        "nunomaduro/collision": "7.5.2",
-        "pestphp/pest": "2.6.1",
+        "fakerphp/faker": "1.23.0",
+        "laravel/pint": "1.10.3",
+        "nunomaduro/collision": "7.7.0",
+        "pestphp/pest": "2.8.2",
         "psy/psysh": "0.11.18",
-        "spatie/ignition": "1.8.0"
+        "spatie/ignition": "1.9.0"
     },
     "autoload": {
         "psr-4": {
@@ -42,7 +42,7 @@
             "type": "package",
             "package": {
                 "name": "base-php/core",
-                "version": "1.6.73",
+                "version": "1.7.0",
                 "dist": {
                     "url": "https://github.com/base-php/core/archive/refs/heads/main.zip",
                     "type": "zip"
