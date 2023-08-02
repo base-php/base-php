@@ -3,7 +3,7 @@
     "description": "Un framework para minimalistas",
     "type": "project",
     "license": "MIT",
-    "version": "1.7.0",
+    "version": "1.7.5",
     "minimum-stability": "dev",
     "authors": [
         {
@@ -12,21 +12,21 @@
         }
     ],
     "require": {
-        "base-php/core": "1.7.0",
-        "illuminate/database": "10.14.1",
-        "illuminate/pagination": "10.14.1",
-        "illuminate/routing": "10.14.1",
-        "illuminate/validation": "10.14.1",
-        "illuminate/view": "10.14.1",
+        "base-php/core": "1.7.5",
+        "illuminate/database": "10.17.0",
+        "illuminate/pagination": "10.17.0",
+        "illuminate/routing": "10.17.0",
+        "illuminate/validation": "10.17.0",
+        "illuminate/view": "10.17.0",
         "league/flysystem": "3.15.1",
         "phpmailer/phpmailer": "6.8.0"
     },
     "require-dev": {
         "fakerphp/faker": "1.23.0",
-        "laravel/pint": "1.10.3",
+        "laravel/pint": "1.10.5",
         "nunomaduro/collision": "7.7.0",
-        "pestphp/pest": "2.8.2",
-        "psy/psysh": "0.11.18",
+        "pestphp/pest": "2.11.0",
+        "psy/psysh": "0.11.20",
         "spatie/ignition": "1.9.0"
     },
     "autoload": {
@@ -42,7 +42,7 @@
             "type": "package",
             "package": {
                 "name": "base-php/core",
-                "version": "1.7.0",
+                "version": "1.7.5",
                 "dist": {
                     "url": "https://github.com/base-php/core/archive/refs/heads/main.zip",
                     "type": "zip"
