@@ -65,19 +65,27 @@
                 <h2 class="text-3xl font-semibold">{{ lang('home.info') }}</h2>
 
                 <div class="mt-5">
-                    <a target="_blank" href="https://twitter.com/nisa6delgado" class="block">
-                        <i class="fab fa-twitter"></i> Twitter
+                    <a target="_blank" href="https://github.com/base-php" class="block">
+                        <i class="fab fa-github"></i> Github
                     </a>
 
-                    <a target="_blank" href="https://www.youtube.com/channel/UCTgu94owdYN98yBZQnW0ihA" class="block">
+                    <a target="_blank" href="https://wa.me/123456789" class="block">
+                        <i class="fab fa-whatsapp"></i> Whataspp
+                    </a>
+
+                    <a target="_blank" href="https://twitter.com/base-php" class="block">
+                        <i class="fab fa-x-twitter"></i> X
+                    </a>
+
+                    <a target="_blank" href="https://youtube.com/base-php" class="block">
                         <i class="fab fa-youtube"></i> Youtube
                     </a>
 
-                    <a target="_blank" href="https://nisadelgado.com" class="block">
+                    <a target="_blank" href="https://base-php.com" class="block">
                         <i class="fas fa-globe-americas"></i> {{ lang('home.web') }}
                     </a>
 
-                    <a target="_blank" href="mailto:nisadelgado@gmail.com" class="block">
+                    <a target="_blank" href="mailto:info@base-php.com" class="block">
                         <i class="fas fa-envelope"></i> {{ lang('home.email') }}
                     </a>
                 </div>
