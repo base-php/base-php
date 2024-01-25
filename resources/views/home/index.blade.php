@@ -32,7 +32,9 @@
 
         <div class="flex">
             <div class="w-6/12">
-                <p class="text-2xl">{{ lang('home.intro') }}</p>
+                <p class="text-2xl">
+                    {{ lang('Quickly and easily start your new project with this base framework that has everything required to make a modern web application.') }}
+                </p>
             </div>
         </div>
 
@@ -46,15 +48,15 @@
                     <div class="mt-5">
                         @if(auth())
                             <a href="/dashboard" class="block">
-                                <i class="fa fa-arrow-right"></i> {{ lang('dashboard.home') }}
+                                <i class="fa fa-arrow-right"></i> {{ lang('Dashboard') }}
                             </a>
                         @else
                             <a href="/login" class="block">
-                                <i class="fa fa-arrow-right"></i> {{ lang('home.login') }}
+                                <i class="fa fa-arrow-right"></i> {{ lang('Login') }}
                             </a>
 
                             <a href="/register" class="block">
-                                <i class="fa fa-arrow-right"></i> {{ lang('home.register') }}
+                                <i class="fa fa-arrow-right"></i> {{ lang('Register') }}
                             </a>
                         @endif
                     </div>
@@ -62,7 +64,7 @@
             @endif
 
             <div class="w-6/12">
-                <h2 class="text-3xl font-semibold">{{ lang('home.info') }}</h2>
+                <h2 class="text-3xl font-semibold">{{ lang('More info') }}</h2>
 
                 <div class="mt-5">
                     <a target="_blank" href="https://github.com/base-php" class="block">
@@ -82,11 +84,11 @@
                     </a>
 
                     <a target="_blank" href="https://base-php.com" class="block">
-                        <i class="fas fa-globe-americas"></i> {{ lang('home.web') }}
+                        <i class="fas fa-globe-americas"></i> {{ lang('Web site') }}
                     </a>
 
                     <a target="_blank" href="mailto:info@base-php.com" class="block">
-                        <i class="fas fa-envelope"></i> {{ lang('home.email') }}
+                        <i class="fas fa-envelope"></i> {{ lang('Email') }}
                     </a>
                 </div>
             </div>
