@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('password');
             $table->string('oauth')->nullable();
             $table->string('hash')->nullable()->unique();
-            $table->string('two_fa')->nullable();
+            $table->string('2fa')->nullable();
             $table->text('sessions')->nullable();
             $table->datetime('date_verified_email')->nullable();
             $table->datetime('date_create')->useCurrent();
