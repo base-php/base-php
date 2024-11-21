@@ -19,12 +19,8 @@ return [
     'database' => [
         [
             'name' => 'default',
-            'driver' => 'mysql',
-            'host' => 'localhost',
-            'username' => 'root',
-            'password' => '',
-            'database' => 'base',
-            'port' => '3306',
+            'driver' => 'sqlite',
+            'database' => 'database/database',
         ],
     ],
 

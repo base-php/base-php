@@ -55,7 +55,8 @@
             "composer clear-cache"
         ],
         "post-install-cmd": [
-            "composer dump-autoload --optimize"
+            "composer dump-autoload --optimize",
+            "php base migrate"
         ]
     },
     "config": {
