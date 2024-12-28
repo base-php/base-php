@@ -8,9 +8,13 @@ git clone https://github.com/base-php/base-php
 cd base-php
 composer install
 npm install
-php base make:database
-php base migrate
+
+// Local PHP server...
 php base server
+
+// Docker...
+php base docker:install
+php base docker:up
 ~~~
 
 ## Mas información

@@ -19,7 +19,8 @@
         "illuminate/validation": "11.34.2",
         "illuminate/view": "11.34.2",
         "league/flysystem": "3.29.1",
-        "phpmailer/phpmailer": "6.9.3"
+        "phpmailer/phpmailer": "6.9.3",
+        "symfony/yaml": "7.2.0"
     },
     "require-dev": {
         "fakerphp/faker": "1.24.1",
