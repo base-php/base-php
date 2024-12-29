@@ -43,7 +43,7 @@
         <div class="flex">
             @if(class_exists('App\Controllers\AuthController'))
                 <div class="w-6/12">
-                    <h2 class="text-3xl font-semibold">{{ lang('home.explorer') }}</h2>
+                    <h2 class="text-3xl font-semibold">{{ lang('Explore') }}</h2>
 
                     <div class="mt-5">
                         @if(auth())
