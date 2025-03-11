@@ -2,6 +2,9 @@
 Comience rápido y fácilmente su nuevo proyecto con esta estructura base que tiene todo lo requerido para realizar una aplicación web moderna.
 
 ## Instalación
+
+*Aquí haría falta incluir instalar el driver de PDO para la DB a utilizar, de otro modo fallará el comando php base create-database y subsiguientes*
+
 Ejecutar los siguientes comandos en consola:
 ~~~
 git clone https://github.com/base-php/base-php
