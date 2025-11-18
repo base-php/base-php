@@ -52,6 +52,9 @@
         }
     ],
     "scripts": {
+        "dev": [
+            "php base serve"
+        ],
         "pre-install-cmd": [
             "composer clear-cache"
         ],
