@@ -3,7 +3,7 @@
     "description": "Un framework para minimalistas",
     "type": "project",
     "license": "MIT",
-    "version": "1.9.87",
+    "version": "1.10.19",
     "minimum-stability": "dev",
     "authors": [
         {
@@ -12,22 +12,22 @@
         }
     ],
     "require": {
-        "base-php/core": "1.9.87",
-        "illuminate/database": "12.0.1",
-        "illuminate/pagination": "12.0.1",
-        "illuminate/routing": "12.0.1",
-        "illuminate/validation": "12.0.1",
-        "illuminate/view": "12.0.1",
-        "league/flysystem": "3.29.1",
-        "phpmailer/phpmailer": "6.9.3",
-        "symfony/yaml": "7.2.3"
+        "base-php/core": "1.10.19",
+        "illuminate/database": "12.39.0",
+        "illuminate/pagination": "12.39.0",
+        "illuminate/routing": "12.39.0",
+        "illuminate/validation": "12.39.0",
+        "illuminate/view": "12.39.0",
+        "league/flysystem": "3.30.2",
+        "phpmailer/phpmailer": "7.0.0",
+        "symfony/yaml": "7.3.5"
     },
     "require-dev": {
         "fakerphp/faker": "1.24.1",
-        "laravel/pint": "1.21.0",
-        "nunomaduro/collision": "8.6.1",
-        "pestphp/pest": "3.7.4",
-        "psy/psysh": "0.12.7",
+        "laravel/pint": "1.25.1",
+        "nunomaduro/collision": "8.8.3",
+        "pestphp/pest": "4.1.4",
+        "psy/psysh": "0.12.14",
         "spatie/ignition": "1.15.1"
     },
     "autoload": {
@@ -43,7 +43,7 @@
             "type": "package",
             "package": {
                 "name": "base-php/core",
-                "version": "1.9.87",
+                "version": "1.10.19",
                 "dist": {
                     "url": "https://github.com/base-php/core/archive/refs/heads/main.zip",
                     "type": "zip"
